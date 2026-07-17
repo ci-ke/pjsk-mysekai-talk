@@ -22,11 +22,11 @@ jobs:
 
       - run: node scripts/generate-catalog.mjs
 
-      - name: Commit data to master
+      - name: Commit data to main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add public/data/catalog.json public/data/catalog.min.json
+          git add public/data/
           git diff --staged --quiet || git commit -m "data: update catalog [skip ci]"
           git push
 
