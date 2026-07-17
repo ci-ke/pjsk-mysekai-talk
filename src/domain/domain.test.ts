@@ -135,7 +135,7 @@ describe("catalog and filters", () => {
     const entries = createBlueprintEntries(minimalCatalog, progress);
     expect(entries[0].fixture?.id).toBe(100);
     expect(entries[0].owned).toBe(true);
-    expect(entries[0].talkGroups[0].readState).toBe("partial");
+    expect(entries[0].talkGroups[0].readState).toBe("unread");
     expect(entries[0].talkGroups[0].readCount).toBe(1);
   });
 

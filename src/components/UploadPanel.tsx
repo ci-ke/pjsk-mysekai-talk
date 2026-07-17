@@ -2,6 +2,11 @@ import { useRef, useState } from "react";
 import type { UserProgress } from "../types";
 import { formatTimestamp } from "../domain/format";
 
+const FORMAT_LABELS: Record<string, string> = {
+  mysekai: "My SEKAI 抓包",
+  suite: "Suite 响应",
+};
+
 interface UploadPanelProps {
   progress: UserProgress;
   error: string;
@@ -24,9 +29,10 @@ export default function UploadPanel({ progress, error, onFile, onClear }: Upload
         <span className="eyebrow">本地处理 · 不上传</span>
         <h2>导入 My SEKAI 抓包数据</h2>
         <p>
-          选择包含 <code>userMysekaiBlueprints</code> 的 JSON 文件，浏览器会在本地计算蓝图和家具对话进度。
+          选择 My SEKAI 抓包 JSON 或 Suite 响应 JSON，浏览器自动识别格式并在本地计算蓝图和家具对话进度。
         </p>
         <div className="upload-hints">
+          <span>自动识别 My SEKAI / Suite</span>
           <span>支持 compact 对话格式</span>
           <span>数据缓存于浏览器本地</span>
         </div>
@@ -70,6 +76,9 @@ export default function UploadPanel({ progress, error, onFile, onClear }: Upload
           <div>
             <span className="status-dot status-dot-success" />
             <strong>{progress.sourceFileName}</strong>
+            {progress.detectedFormat && (
+              <small>格式：{FORMAT_LABELS[progress.detectedFormat] ?? progress.detectedFormat}</small>
+            )}
             {progress.updatedAt && <small>数据时间：{formatTimestamp(progress.updatedAt)}</small>}
           </div>
           <button className="button button-quiet" type="button" onClick={onClear}>清除数据</button>

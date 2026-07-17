@@ -7,13 +7,6 @@ interface TalkViewerProps {
   catalog: Catalog;
 }
 
-function getSharedReadState(group: EnrichedTalkGroup) {
-  if (group.readState === "unknown") return { label: "?", className: "unknown" };
-  return group.readCount > 0
-    ? { label: "已读", className: "read" }
-    : { label: "未读", className: "unread" };
-}
-
 /** 按索引配对 talkId → 家具名，数量不等时用回退名 */
 function formatTalkFurniturePairs(group: EnrichedTalkGroup, catalog: Catalog): string[] {
   const fixtureNames = group.fixtureIds.map(
@@ -33,7 +26,6 @@ export default function TalkViewer({ group, catalog }: TalkViewerProps) {
   const [error, setError] = useState("");
 
   const firstTalk = group.talks[0];
-  const sharedState = getSharedReadState(group);
   const pairs = formatTalkFurniturePairs(group, catalog);
 
   async function loadContent() {
@@ -68,9 +60,6 @@ export default function TalkViewer({ group, catalog }: TalkViewerProps) {
       <div className="talk-summary-row">
         <span className="talk-summary-label">对话</span>
         <span className="talk-summary-ids">{pairs.join("\u2009·\u2009")}</span>
-        <span className={`talk-item-status talk-item-status-${sharedState.className}`}>
-          {sharedState.label}
-        </span>
       </div>
 
       {firstTalk && (

@@ -146,13 +146,16 @@ export default function FilterBar({
           <span>对话状态</span>
           <select
             value={filters.talk}
-            disabled={!talkDataAvailable}
             onChange={(event) => set("talk", event.target.value as TalkFilter)}
           >
-            <option value="all">全部对话（包含无对话）</option>
+            <option value="all">全部（包含无对话）</option>
             <option value="hasTalks">全部对话</option>
-            <option value="unread">仅未解锁 / 未读</option>
-            <option value="read">仅已解锁 / 已读</option>
+            {talkDataAvailable && (
+              <>
+                <option value="unread">仅未读</option>
+                <option value="read">仅已读</option>
+              </>
+            )}
           </select>
         </label>
         <label className="field">

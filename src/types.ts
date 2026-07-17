@@ -88,7 +88,7 @@ export interface Catalog {
   unitNames: Record<string, string>;
 }
 
-export type ReadState = "unknown" | "unread" | "partial" | "read";
+export type ReadState = "unknown" | "unread" | "read";
 
 export interface EnrichedTalkGroup extends TalkGroupRecord {
   readCount: number;
@@ -116,10 +116,12 @@ export interface UserProgress {
   talkDataAvailable: boolean;
   sourceFileName?: string;
   updatedAt?: number;
+  detectedFormat?: DataSourceFormat;
 }
 
 export type OwnershipFilter = "all" | "owned" | "unowned";
 export type TalkFilter = "all" | "hasTalks" | "read" | "unread";
+export type DataSourceFormat = "mysekai" | "suite";
 
 export interface CharacterSelection {
   characterId: number | null;

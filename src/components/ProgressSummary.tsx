@@ -7,6 +7,11 @@ interface ProgressSummaryProps {
   progress: UserProgress;
 }
 
+const FORMAT_LABELS: Record<string, string> = {
+  mysekai: "My SEKAI 抓包",
+  suite: "Suite 响应",
+};
+
 function StatCard({ label, value, detail, tone }: { label: string; value: string; detail: string; tone: string }) {
   return (
     <div className={`stat-card stat-${tone}`}>
@@ -24,6 +29,13 @@ export default function ProgressSummary({ all, filtered, progress }: ProgressSum
   const talkDetail = progress.talkDataAvailable
     ? `${all.readTalks}/${all.totalTalks} · ${formatPercent(all.readTalks, all.totalTalks)}`
     : "上传包含对话记录的文件后显示";
+
+  const statusValue = progress.sourceFileName ? "已载入" : "未载入";
+  const statusDetail = progress.detectedFormat
+    ? FORMAT_LABELS[progress.detectedFormat] ?? progress.detectedFormat
+    : progress.sourceFileName
+      ? "状态来自本地文件"
+      : "请先选择 JSON";
 
   return (
     <section className="summary-grid" aria-label="收集进度">
@@ -47,8 +59,8 @@ export default function ProgressSummary({ all, filtered, progress }: ProgressSum
       />
       <StatCard
         label="数据状态"
-        value={progress.sourceFileName ? "已载入" : "未载入"}
-        detail={progress.sourceFileName ? "状态来自本地文件" : "请先选择 JSON"}
+        value={statusValue}
+        detail={statusDetail}
         tone="green"
       />
     </section>

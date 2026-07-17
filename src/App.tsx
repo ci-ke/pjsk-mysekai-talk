@@ -31,10 +31,14 @@ function emptyProgress(): UserProgress {
   };
 }
 
+function loadInitialState(): UserProgress {
+  return loadProgress() ?? emptyProgress();
+}
+
 export default function App() {
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState("");
-  const [progress, setProgress] = useState<UserProgress>(() => loadProgress() ?? emptyProgress());
+  const [progress, setProgress] = useState<UserProgress>(loadInitialState);
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
@@ -188,7 +192,7 @@ export default function App() {
         )}
         {progress.sourceFileName && !progress.talkDataAvailable && (
           <NoticeBanner tone="warning">
-            已识别蓝图数据，但文件中没有 <code>userMysekaiCharacterTalks</code>；对话目录仍会展示，状态暂时记为未知。
+            已识别蓝图数据，但文件中没有角色对话记录；对话目录仍会展示，状态暂时记为未知。
           </NoticeBanner>
         )}
 

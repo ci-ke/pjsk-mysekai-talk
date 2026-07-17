@@ -42,7 +42,6 @@ function enrichTalkGroup(group: TalkGroupRecord, progress: UserProgress): Enrich
   const readCount = readTalkIds.length;
   let readState: EnrichedTalkGroup["readState"] = "unread";
   if (readCount === totalCount && totalCount > 0) readState = "read";
-  else if (readCount > 0) readState = "partial";
 
   return {
     ...group,

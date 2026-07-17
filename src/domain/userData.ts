@@ -86,7 +86,6 @@ function normalizeBlueprintIds(value: unknown): Set<number> {
 }
 
 function addTalkStatus(map: Map<number, boolean>, id: number, status: boolean) {
-  // 多份合并数据中只要有一次已读，就按已读处理。
   map.set(id, Boolean(map.get(id) || status));
 }
 
@@ -129,7 +128,30 @@ export function normalizeTalkStatuses(value: unknown): Map<number, boolean> {
   return result;
 }
 
-export function parseUserJson(input: unknown, sourceFileName?: string): UserProgress {
+export function parseUserJson(
+  input: unknown,
+  sourceFileName?: string
+): UserProgress {
+  if (!isRecord(input)) {
+    throw new UserDataError("JSON 顶层不是对象，无法读取数据。");
+  }
+
+  // 自动识别格式：mysekai 顶层有 updatedResources，suite 顶层无 updatedResources 但有 userMysekaiCharacterTalks
+  const isMysekai = "updatedResources" in input;
+  const isSuite = !isMysekai && "userMysekaiCharacterTalks" in input;
+
+  if (isMysekai) {
+    return parseMysekaiFormat(input, sourceFileName);
+  }
+  if (isSuite) {
+    return parseSuiteFormat(input, sourceFileName);
+  }
+  throw new UserDataError(
+    "无法识别数据格式。JSON 顶层缺少 updatedResources（My SEKAI 抓包）或 userMysekaiCharacterTalks（Suite 响应）。"
+  );
+}
+
+function parseMysekaiFormat(input: Record<string, unknown>, sourceFileName?: string): UserProgress {
   const resources = extractUpdatedResources(input);
   const blueprintSource = findFirstProperty(resources, ["userMysekaiBlueprints"], 2);
   const talkSource = findFirstProperty(resources, ["userMysekaiCharacterTalks"], 2);
@@ -156,10 +178,30 @@ export function parseUserJson(input: unknown, sourceFileName?: string): UserProg
     talkDataAvailable,
     sourceFileName,
     updatedAt: updatedAt ?? undefined,
+    detectedFormat: "mysekai",
   };
 }
 
-export function parseUserJsonText(text: string, sourceFileName?: string): UserProgress {
+function parseSuiteFormat(input: Record<string, unknown>, sourceFileName?: string): UserProgress {
+  const talkValue = input.userMysekaiCharacterTalks;
+  const talkDataAvailable = talkValue !== undefined;
+  const updatedAt = asFiniteNumber(input.now);
+
+  return {
+    ownedBlueprintIds: new Set(),
+    talkReadById: normalizeTalkStatuses(talkValue),
+    blueprintDataAvailable: false,
+    talkDataAvailable,
+    sourceFileName,
+    updatedAt: updatedAt ?? undefined,
+    detectedFormat: "suite",
+  };
+}
+
+export function parseUserJsonText(
+  text: string,
+  sourceFileName?: string
+): UserProgress {
   let parsed: unknown;
   try {
     parsed = JSON.parse(text);

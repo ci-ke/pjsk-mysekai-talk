@@ -14,9 +14,8 @@ interface BlueprintCardProps {
 function TalkState({ group }: { group: EnrichedTalkGroup }) {
   const stateText = {
     unknown: "状态未知",
-    unread: "未解锁 / 未读",
-    partial: "部分已读",
-    read: "已解锁 / 已读",
+    unread: "未读",
+    read: "已读",
   }[group.readState];
   return <span className={`talk-state talk-state-${group.readState}`}>{stateText}</span>;
 }

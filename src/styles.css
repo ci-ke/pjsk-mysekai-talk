@@ -47,6 +47,7 @@ code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.88em; ba
 .upload-hints { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 19px; }
 .upload-hints span { color: #7b87a0; font-size: 0.77rem; }
 .upload-hints span + span::before { content: "·"; margin-right: 8px; color: #a3acc0; }
+
 .drop-zone { display: flex; min-height: 190px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; padding: 22px; border: 1.5px dashed #b7c5e7; border-radius: 18px; color: #7180a3; background: linear-gradient(145deg, rgba(238, 245, 255, 0.74), rgba(254, 242, 250, 0.62)); transition: border-color 0.2s, transform 0.2s, background 0.2s; }
 .drop-zone.is-dragging { transform: translateY(-2px); border-color: #6d8ee6; background: #eaf0ff; }
 .drop-zone strong { color: #52658f; font-size: 0.98rem; }
@@ -137,7 +138,6 @@ code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.88em; ba
 .talk-id-list { display: block; margin-top: 3px; color: #9ba4b6; font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.64rem; }
 .talk-state { display: inline-flex; flex: none; padding: 4px 7px; border-radius: 7px; font-size: 0.63rem; font-weight: 900; }
 .talk-state-read { color: #43816c; background: #e3f5ed; }
-.talk-state-partial { color: #987439; background: #fff4d9; }
 .talk-state-unread { color: #a65369; background: #fff0f3; }
 .talk-state-unknown { color: #7d6a9f; background: #f1ebfa; }
 .talk-group-meta { display: flex; flex-direction: column; gap: 4px; margin-top: 9px; color: #7e899f; font-size: 0.69rem; line-height: 1.45; }
@@ -158,13 +158,6 @@ code { font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.88em; ba
   font-family: "SFMono-Regular", Consolas, monospace; font-size: 0.66rem;
   word-break: break-all;
 }
-.talk-item-status {
-  display: inline-flex; align-items: center; padding: 2px 5px; border-radius: 5px;
-  font-size: 0.57rem; font-weight: 800; white-space: nowrap;
-}
-.talk-item-status-read    { color: #43816c; background: #e3f5ed; }
-.talk-item-status-unread  { color: #a65369; background: #fff0f3; }
-.talk-item-status-unknown { color: #7d6a9f; background: #f1ebfa; }
 
 .talk-script-area { margin-top: 8px; }
 .talk-script-toggle { font-size: 0.64rem; }
