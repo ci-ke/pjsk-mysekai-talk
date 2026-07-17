@@ -4,10 +4,9 @@
  * 用法:
  *   node scripts/generate-catalog.mjs                        # 拉取全部五种语言
  *   node scripts/generate-catalog.mjs --lang=cn              # 仅拉取简体中文
- *   node scripts/generate-catalog.mjs --lang=cn --source=../local-master/master  # 指定本地路径
- *   MASTER_DATA_DIR=../master node scripts/generate-catalog.mjs --lang=jp         # 环境变量指定
+ *   node scripts/generate-catalog.mjs --lang=cn --source=../local-data/master  # 指定本地路径
  *
- * 远程拉取时自动检测系统代理（环境变量 → WinHTTP → IE 注册表）。
+ * 支持的语言: cn jp tw en kr
  */
 
 import fs from "node:fs/promises";
@@ -183,7 +182,7 @@ function makeReader(baseSource, isRemote) {
         if (!required) return [];
         throw new Error(
           `无法从远程获取 ${url}: ${error.message}\n` +
-          "提示: 使用 --source=<本地master目录> 或设置 MASTER_DATA_DIR 环境变量指定本地路径"
+          "提示: 使用 --source=<本地数据目录> 指定本地路径"
         );
       }
     }
