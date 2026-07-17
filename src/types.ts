@@ -17,6 +17,7 @@ export interface BlueprintRecord {
   isAvailableWithoutPossession: boolean;
   fixtureId: number | null;
   fixtureName: string | null;
+  isVirtual?: boolean;
 }
 
 export interface FixtureRecord {
@@ -38,6 +39,7 @@ export interface TalkAssetRecord {
   assetbundleName: string;
   lua: string;
   conditionGroupId: number;
+  isHidden?: boolean;
 }
 
 export interface TalkGroupRecord {
@@ -48,6 +50,7 @@ export interface TalkGroupRecord {
   talkIds: number[];
   characterUnitIds: number[];
   characterIds: number[];
+  hasHiddenTalks?: boolean;
   talks: TalkAssetRecord[];
 }
 
@@ -72,10 +75,13 @@ export interface GenreRecord {
   name: string;
 }
 
+export type Lang = "cn" | "jp" | "tw" | "en" | "kr";
+
 export interface Catalog {
   schemaVersion: number;
   source: string;
   masterVersion: string | number | null;
+  lang: Lang;
   blueprints: BlueprintRecord[];
   fixtures: FixtureRecord[];
   talkGroups: TalkGroupRecord[];
@@ -103,6 +109,7 @@ export interface BlueprintEntry {
   fixture: FixtureRecord | null;
   owned: boolean;
   ownershipKnown: boolean;
+  isVirtual: boolean;
   talkGroups: EnrichedTalkGroup[];
   allTalkGroups: EnrichedTalkGroup[];
   mainGenreName: string;
@@ -119,7 +126,7 @@ export interface UserProgress {
   detectedFormat?: DataSourceFormat;
 }
 
-export type OwnershipFilter = "all" | "owned" | "unowned";
+export type OwnershipFilter = "all" | "owned" | "unowned" | "realOnly" | "noBlueprint";
 export type TalkFilter = "all" | "hasTalks" | "read" | "unread";
 export type DataSourceFormat = "mysekai" | "suite";
 
@@ -139,6 +146,7 @@ export interface FilterState {
 
 export interface EntrySummary {
   totalBlueprints: number;
+  totalRealBlueprints: number;
   ownedBlueprints: number;
   totalTalks: number;
   readTalks: number;

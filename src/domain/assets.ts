@@ -1,14 +1,20 @@
-import type { FixtureRecord, TalkAssetRecord } from "../types";
+import type { FixtureRecord, Lang, TalkAssetRecord } from "../types";
 
-const DEFAULT_ASSET_BASE = "https://storage.exmeaning.com/sekai-cn-assets";
+const ASSET_BASES: Record<Lang, string> = {
+  cn: "https://storage.exmeaning.com/sekai-cn-assets",
+  jp: "https://storage.exmeaning.com/sekai-jp-assets",
+  tw: "https://storage.exmeaning.com/sekai-tw-assets",
+  en: "https://storage.exmeaning.com/sekai-en-assets",
+  kr: "https://storage.exmeaning.com/sekai-kr-assets",
+};
 
-export function getAssetBaseUrl() {
-  return (import.meta.env.VITE_ASSET_BASE_URL || DEFAULT_ASSET_BASE).replace(/\/$/, "");
+export function getAssetBaseUrl(lang: Lang) {
+  return ASSET_BASES[lang] || ASSET_BASES.cn;
 }
 
-export function getFixtureThumbnailUrl(fixture: FixtureRecord | null) {
+export function getFixtureThumbnailUrl(fixture: FixtureRecord | null, lang: Lang) {
   if (!fixture?.assetbundleName) return "/placeholder.svg";
-  const base = getAssetBaseUrl();
+  const base = getAssetBaseUrl(lang);
   if (fixture.mysekaiFixtureType === "surface_appearance") {
     const layout = fixture.mysekaiSettableLayoutType || "wall_appearance";
     return `${base}/mysekai/thumbnail/surface_appearance/${fixture.assetbundleName}/tex_${fixture.assetbundleName}_${layout}_1.png`;
@@ -24,8 +30,8 @@ export function getInitials(text: string) {
   return text.trim().slice(0, 2) || "?";
 }
 
-export function getTalkScriptUrl(talk: TalkAssetRecord) {
-  return `${getAssetBaseUrl()}/${talk.assetbundleName}/${talk.lua}.lua`;
+export function getTalkScriptUrl(talk: TalkAssetRecord, lang: Lang) {
+  return `${getAssetBaseUrl(lang)}/${talk.assetbundleName}/${talk.lua}.lua`;
 }
 
 /**

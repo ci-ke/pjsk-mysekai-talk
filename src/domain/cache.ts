@@ -1,7 +1,8 @@
-import type { UserProgress } from "../types";
+import type { Lang, UserProgress } from "../types";
 import { parseUserJsonText } from "./userData";
 
 const STORAGE_KEY = "mysekai-user-data";
+const LANG_KEY = "mysekai-lang";
 
 interface CachedPayload {
   rawText: string;
@@ -37,4 +38,26 @@ export function clearProgress() {
   } catch {
     // 静默忽略
   }
+}
+
+/** 保存语言选择 */
+export function saveLang(lang: Lang) {
+  try {
+    localStorage.setItem(LANG_KEY, lang);
+  } catch {
+    // 静默忽略
+  }
+}
+
+/** 读取语言选择，默认 cn */
+export function loadLang(): Lang {
+  try {
+    const value = localStorage.getItem(LANG_KEY);
+    if (value === "cn" || value === "jp" || value === "tw" || value === "en" || value === "kr") {
+      return value;
+    }
+  } catch {
+    // 静默忽略
+  }
+  return "cn";
 }

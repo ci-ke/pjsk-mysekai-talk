@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import catalogJson from "../../public/data/catalog.json";
+import catalogJson from "../../public/data/catalog-cn.json";
 import { createBlueprintEntries, getCharacterUnitIds, getEntrySummary } from "./catalog";
 import { filterBlueprintEntries } from "./filters";
 import { parseUserJson, normalizeTalkStatuses, UserDataError } from "./userData";
@@ -11,6 +11,7 @@ const minimalCatalog: Catalog = {
   schemaVersion: 1,
   source: "test",
   masterVersion: 1,
+  lang: "cn",
   blueprints: [
     {
       id: 10,
@@ -172,6 +173,7 @@ describe("catalog and filters", () => {
     const summary = getEntrySummary(createBlueprintEntries(minimalCatalog, progress));
     expect(summary).toMatchObject({
       totalBlueprints: 1,
+      totalRealBlueprints: 1,
       ownedBlueprints: 1,
       totalTalks: 2,
       readTalks: 2,

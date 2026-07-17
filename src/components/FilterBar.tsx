@@ -1,5 +1,13 @@
 import { getGenreUsage } from "../domain/catalog";
-import type { Catalog, FilterState, OwnershipFilter, TalkFilter, UnitKey } from "../types";
+import type { Catalog, FilterState, Lang, OwnershipFilter, TalkFilter, UnitKey } from "../types";
+
+const LANG_LABELS: Record<Lang, string> = {
+  cn: "简体中文",
+  jp: "日本語",
+  tw: "繁體中文",
+  en: "English",
+  kr: "한국어",
+};
 
 interface FilterBarProps {
   catalog: Catalog;
@@ -11,6 +19,8 @@ interface FilterBarProps {
   sortBy: "id" | "name" | "progress";
   sortDirection: "asc" | "desc";
   onSortChange: (sortBy: "id" | "name" | "progress", direction: "asc" | "desc") => void;
+  lang: Lang;
+  onLangChange: (lang: Lang) => void;
 }
 
 export default function FilterBar({
@@ -23,6 +33,8 @@ export default function FilterBar({
   sortBy,
   sortDirection,
   onSortChange,
+  lang,
+  onLangChange,
 }: FilterBarProps) {
   const selectedCharacter = catalog.characters.find(
     (character) => character.id === filters.character.characterId
@@ -94,6 +106,14 @@ export default function FilterBar({
         <button className="button button-quiet" type="button" onClick={onReset}>重置筛选</button>
       </div>
       <div className="filter-grid">
+        <label className="field">
+          <span>数据区服</span>
+          <select value={lang} onChange={(e) => onLangChange(e.target.value as Lang)}>
+            {(Object.keys(LANG_LABELS) as Lang[]).map((l) => (
+              <option key={l} value={l}>{LANG_LABELS[l]}</option>
+            ))}
+          </select>
+        </label>
         <label className="field field-wide">
           <span>搜索家具名称 / ID</span>
           <input
@@ -107,12 +127,13 @@ export default function FilterBar({
           <span>蓝图状态</span>
           <select
             value={filters.ownership}
-            disabled={!blueprintDataAvailable}
             onChange={(event) => set("ownership", event.target.value as OwnershipFilter)}
           >
-            <option value="all">全部蓝图</option>
-            <option value="owned">仅已持有</option>
-            <option value="unowned">仅未持有</option>
+            <option value="all">全部家具</option>
+            <option value="realOnly">全部蓝图</option>
+            <option value="owned" disabled={!blueprintDataAvailable}>仅已持有</option>
+            <option value="unowned" disabled={!blueprintDataAvailable}>仅未持有</option>
+            <option value="noBlueprint">无需蓝图</option>
           </select>
         </label>
         <label className="field">

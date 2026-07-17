@@ -33,6 +33,8 @@ export function filterBlueprintEntries(
       return { ...entry, talkGroups };
     })
     .filter((entry) => {
+      if (state.ownership === "noBlueprint" && !entry.isVirtual) return false;
+      if ((state.ownership === "owned" || state.ownership === "unowned" || state.ownership === "realOnly") && entry.isVirtual) return false;
       if (state.ownership === "owned" && (!entry.ownershipKnown || !entry.owned)) return false;
       if (state.ownership === "unowned" && entry.ownershipKnown && entry.owned) return false;
 
@@ -85,7 +87,7 @@ export function sortBlueprintEntries(
       const bRead = b.talkGroups.reduce((sum, group) => sum + group.readCount, 0);
       result = aRead - bRead;
     } else {
-      result = a.blueprint.id - b.blueprint.id;
+      result = a.blueprint.craftTargetId - b.blueprint.craftTargetId;
     }
     return result * directionValue;
   });

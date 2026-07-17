@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import type { UserProgress } from "../types";
+import type { Lang, UserProgress } from "../types";
 import { formatTimestamp } from "../domain/format";
 
 const FORMAT_LABELS: Record<string, string> = {
@@ -10,11 +10,12 @@ const FORMAT_LABELS: Record<string, string> = {
 interface UploadPanelProps {
   progress: UserProgress;
   error: string;
+  lang: Lang;
   onFile: (file: File) => Promise<void>;
   onClear: () => void;
 }
 
-export default function UploadPanel({ progress, error, onFile, onClear }: UploadPanelProps) {
+export default function UploadPanel({ progress, error, lang: _lang, onFile, onClear }: UploadPanelProps) {
   const inputRef = useRef<HTMLInputElement>(null);
   const [dragging, setDragging] = useState(false);
 

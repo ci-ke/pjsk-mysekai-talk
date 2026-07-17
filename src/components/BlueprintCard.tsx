@@ -1,5 +1,5 @@
 import { useMemo, useState } from "react";
-import type { BlueprintEntry, Catalog, EnrichedTalkGroup } from "../types";
+import type { BlueprintEntry, Catalog, EnrichedTalkGroup, Lang } from "../types";
 import { getCharacterColor, getFixtureThumbnailUrl, getInitials } from "../domain/assets";
 import { getGroupCharacterNames, getUnitName } from "../domain/catalog";
 import TalkViewer from "./TalkViewer";
@@ -9,6 +9,7 @@ interface BlueprintCardProps {
   catalog: Catalog;
   expanded: boolean;
   onToggle: () => void;
+  lang: Lang;
 }
 
 function TalkState({ group }: { group: EnrichedTalkGroup }) {
@@ -20,10 +21,10 @@ function TalkState({ group }: { group: EnrichedTalkGroup }) {
   return <span className={`talk-state talk-state-${group.readState}`}>{stateText}</span>;
 }
 
-export default function BlueprintCard({ entry, catalog, expanded, onToggle }: BlueprintCardProps) {
+export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang }: BlueprintCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
-  const imageUrl = imageFailed ? "/placeholder.svg" : getFixtureThumbnailUrl(fixture);
+  const imageUrl = imageFailed ? "/placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
   const talkCount = entry.talkGroups.reduce((sum, group) => sum + group.totalCount, 0);
   const readCount = entry.talkGroups.reduce((sum, group) => sum + group.readCount, 0);
   const uniqueCharacters = useMemo(
@@ -34,7 +35,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
   return (
     <article className={`blueprint-card${entry.owned ? " is-owned" : " is-unowned"}`}>
       <div className="blueprint-card-top">
-        <div className={`fixture-image${!entry.owned && entry.ownershipKnown ? " is-dimmed" : ""}`}>
+        <div className={`fixture-image${!entry.owned && entry.ownershipKnown && !entry.isVirtual ? " is-dimmed" : ""}`}>
           <img
             src={imageUrl}
             alt={fixture?.name || entry.blueprint.fixtureName || `家具 ${entry.blueprint.id}`}
@@ -46,8 +47,8 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
         <div className="blueprint-card-copy">
           <div className="card-title-row">
             <h3>{fixture?.name || entry.blueprint.fixtureName || "未关联家具"}</h3>
-            <span className={`ownership-badge ${entry.ownershipKnown ? (entry.owned ? "owned" : "unowned") : "unknown"}`}>
-              {entry.ownershipKnown ? (entry.owned ? "已持有" : "未持有") : "未导入"}
+            <span className={`ownership-badge ${entry.isVirtual ? "virtual" : entry.ownershipKnown ? (entry.owned ? "owned" : "unowned") : "unknown"}`}>
+              {entry.isVirtual ? "无需蓝图" : entry.ownershipKnown ? (entry.owned ? "已持有" : "未持有") : "未导入"}
             </span>
           </div>
           <p className="card-subtitle">
@@ -108,8 +109,11 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
               return (
                 <div className="talk-group" key={group.id}>
                   <div className="talk-group-heading">
-                    <div>
+                    <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
                       <strong>对话组 #{group.archiveId}</strong>
+                      {group.hasHiddenTalks && (
+                        <span className="tag tag-soft">隐藏</span>
+                      )}
                     </div>
                     <TalkState group={group} />
                   </div>
@@ -125,7 +129,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
                       ? "上传包含 userMysekaiCharacterTalks 的数据后可显示已读状态。"
                       : `已读 ${group.readCount} / ${group.totalCount}`}
                   </div>
-                  <TalkViewer group={group} catalog={catalog} />
+                  <TalkViewer group={group} catalog={catalog} lang={lang} />
                 </div>
               );
             })

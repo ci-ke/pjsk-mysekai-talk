@@ -71,8 +71,9 @@ export function createBlueprintEntries(
     return {
       blueprint,
       fixture,
-      owned: progress.ownedBlueprintIds.has(blueprint.id),
-      ownershipKnown: progress.blueprintDataAvailable,
+      owned: blueprint.isVirtual ? true : progress.ownedBlueprintIds.has(blueprint.id),
+      ownershipKnown: blueprint.isVirtual ? true : progress.blueprintDataAvailable,
+      isVirtual: Boolean(blueprint.isVirtual),
       talkGroups: allTalkGroups,
       allTalkGroups,
       mainGenreName: fixture?.mysekaiFixtureMainGenreId
@@ -118,17 +119,18 @@ export function getGroupCharacterNames(catalog: Catalog, group: TalkGroupRecord)
 export function getEntrySummary(entries: BlueprintEntry[]): EntrySummary {
   const talkStates = new Map<number, boolean | undefined>();
   let ownedBlueprints = 0;
+  let totalRealBlueprints = 0;
   let ownershipKnown = false;
 
   for (const entry of entries) {
     ownershipKnown ||= entry.ownershipKnown;
     if (entry.owned) ownedBlueprints += 1;
+    if (!entry.isVirtual) totalRealBlueprints += 1;
     for (const group of entry.talkGroups) {
       const readIds = new Set(group.readTalkIds);
       for (const talkId of group.talkIds) {
         const current = group.readState === "unknown" ? undefined : readIds.has(talkId);
         const previous = talkStates.get(talkId);
-        // 同一条对话可能因多家具条件出现在多个蓝图中，已读状态优先。
         if (previous !== true && (current === true || previous === undefined || !talkStates.has(talkId))) {
           talkStates.set(talkId, current);
         }
@@ -145,6 +147,7 @@ export function getEntrySummary(entries: BlueprintEntry[]): EntrySummary {
 
   return {
     totalBlueprints: entries.length,
+    totalRealBlueprints,
     ownedBlueprints: ownershipKnown ? ownedBlueprints : 0,
     totalTalks: talkStates.size,
     readTalks,

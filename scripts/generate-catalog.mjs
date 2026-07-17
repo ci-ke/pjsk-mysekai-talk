@@ -1,10 +1,11 @@
 /**
- * 从 haruki-sekai-sc-master 最新数据生成 public/data/catalog.json。
+ * 从 Haruki 仓库拉取 master 数据，生成 public/data/catalog-{lang}.json。
  *
  * 用法:
- *   node scripts/generate-catalog.mjs                        # 从 GitHub 远程拉取（需网络）
- *   node scripts/generate-catalog.mjs --source=../haruki-sekai-sc-master/master     # 指定本地 master 目录
- *   MASTER_DATA_DIR=../master node scripts/generate-catalog.mjs  # 通过环境变量指定
+ *   node scripts/generate-catalog.mjs                        # 拉取全部五种语言
+ *   node scripts/generate-catalog.mjs --lang=cn              # 仅拉取简体中文
+ *   node scripts/generate-catalog.mjs --lang=cn --source=../local-master/master  # 指定本地路径
+ *   MASTER_DATA_DIR=../master node scripts/generate-catalog.mjs --lang=jp         # 环境变量指定
  *
  * 远程拉取时自动检测系统代理（环境变量 → WinHTTP → IE 注册表）。
  */
@@ -17,34 +18,51 @@ import https from "node:https";
 import http from "node:http";
 import { URL } from "node:url";
 
+// ── 语言配置 ──
+
+/**
+ * Haruki 仓库 URL 模板。
+ * {prefix} — 语言前缀：cn→sc-, jp→空, tw→tc-, en→en-, kr→kr-
+ */
+const HARUKI_MASTER_TEMPLATE =
+  "https://raw.githubusercontent.com/Team-Haruki/haruki-sekai-{prefix}master/refs/heads/main/master";
+
+const LANG_PREFIX = {
+  cn: "sc-",
+  jp: "",
+  tw: "tc-",
+  en: "en-",
+  kr: "kr-",
+};
+
+const ALL_LANGS = Object.keys(LANG_PREFIX);
+
+// ── 参数解析 ──
+
+const langArg = process.argv.find((a) => a.startsWith("--lang="));
+const langs = langArg
+  ? [langArg.slice("--lang=".length)]
+  : ALL_LANGS;
+
+const sourceArg = process.argv.find((a) => a.startsWith("--source="));
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const projectRoot = path.resolve(__dirname, "..");
+
+// ── 工具函数 ──
+
 /** 从远程 URL 或本地路径中提取数据源名称 */
 function getSourceName(raw) {
   if (/^https?:\/\//.test(raw)) {
-    // raw.githubusercontent.com/Team-Haruki/REPO/refs/heads/main/master → REPO
     const segments = new URL(raw).pathname.split("/").filter(Boolean);
     return segments[1] || "unknown";
   }
   return path.basename(path.resolve(raw, ".."));
 }
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
-const projectRoot = path.resolve(__dirname, "..");
-
-const REMOTE_BASE =
-  "https://raw.githubusercontent.com/Team-Haruki/haruki-sekai-sc-master/refs/heads/main/master";
-
-const sourceArg = process.argv.find((arg) => arg.startsWith("--source="));
-const rawSource =
-  sourceArg?.slice("--source=".length) ||
-  process.env.MASTER_DATA_DIR ||
-  REMOTE_BASE;
-
-const isRemote = /^https?:\/\//.test(rawSource);
-
 /** 检测 Windows 系统代理（环境变量 → WinHTTP → IE 设置） */
 function detectSystemProxy() {
-  // 环境变量优先
   const envProxy =
     process.env.https_proxy || process.env.HTTPS_PROXY ||
     process.env.http_proxy || process.env.HTTP_PROXY ||
@@ -53,7 +71,6 @@ function detectSystemProxy() {
 
   if (process.platform !== "win32") return null;
 
-  // Wi-Fi 等场景使用 WinHTTP 代理
   try {
     const output = execSync("netsh winhttp show proxy", {
       encoding: "utf8",
@@ -64,9 +81,8 @@ function detectSystemProxy() {
       const server = match[1].trim();
       return server.startsWith("http") ? server : `http://${server}`;
     }
-  } catch { /* 可能没有权限 */ }
+  } catch { /* */ }
 
-  // 回退：读 IE 代理设置（注册表）
   try {
     const output = execSync(
       'reg query "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings" /v ProxyServer 2>nul',
@@ -77,17 +93,14 @@ function detectSystemProxy() {
       const server = match[1].trim();
       return server.startsWith("http") ? server : `http://${server}`;
     }
-  } catch { /* 未配置 */ }
+  } catch { /* */ }
 
   return null;
 }
 
 const proxyUrl = detectSystemProxy();
-if (proxyUrl && isRemote) {
-  console.log(`使用代理: ${proxyUrl}`);
-}
 
-/** 通过 HTTP CONNECT 代理发起 HTTPS 请求，返回 fetch 兼容的 Response */
+/** 通过 HTTP CONNECT 代理发起 HTTPS 请求 */
 async function proxyFetch(targetUrl, options = {}) {
   const target = new URL(targetUrl);
   const proxy = new URL(proxyUrl);
@@ -132,7 +145,7 @@ async function proxyFetch(targetUrl, options = {}) {
   });
 }
 
-const outputPath = path.join(projectRoot, "public", "data", "catalog.json");
+// ── 数据读取 ──
 
 const requiredFiles = [
   "mysekaiBlueprints",
@@ -150,37 +163,53 @@ const requiredFiles = [
   "unitProfiles",
 ];
 
-async function readJson(name, { required = true } = {}) {
-  if (isRemote) {
-    const url = `${rawSource.replace(/\/$/, "")}/${name}.json`;
-    const fetcher = proxyUrl ? proxyFetch : fetch;
-    const controller = new AbortController();
-    const timer = setTimeout(() => controller.abort(), 30000);
-    try {
-      const response = await fetcher(url, { signal: controller.signal });
-      clearTimeout(timer);
-      if (!response.ok) {
+function makeReader(baseSource, isRemote) {
+  return async function readJson(name, { required = true } = {}) {
+    if (isRemote) {
+      const url = `${baseSource.replace(/\/$/, "")}/${name}.json`;
+      const fetcher = proxyUrl ? proxyFetch : fetch;
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), 30000);
+      try {
+        const response = await fetcher(url, { signal: controller.signal });
+        clearTimeout(timer);
+        if (!response.ok) {
+          if (!required) return [];
+          throw new Error(`无法获取 ${url}: ${response.status} ${response.statusText}`);
+        }
+        return response.json();
+      } catch (error) {
+        clearTimeout(timer);
         if (!required) return [];
-        throw new Error(`无法获取 ${url}: ${response.status} ${response.statusText}`);
+        throw new Error(
+          `无法从远程获取 ${url}: ${error.message}\n` +
+          "提示: 使用 --source=<本地master目录> 或设置 MASTER_DATA_DIR 环境变量指定本地路径"
+        );
       }
-      return response.json();
-    } catch (error) {
-      clearTimeout(timer);
-      if (!required) return [];
-      throw new Error(
-        `无法从远程获取 ${url}: ${error.message}\n` +
-        `提示: 使用 --source=<本地master目录> 或设置 MASTER_DATA_DIR 环境变量指定本地路径`
-      );
     }
-  }
-  const filePath = path.join(rawSource, `${name}.json`);
-  try {
-    return JSON.parse(await fs.readFile(filePath, "utf8"));
-  } catch (error) {
-    if (!required) return [];
-    throw new Error(`无法读取 MasterData ${filePath}: ${error.message}`);
-  }
+    const filePath = path.join(baseSource, `${name}.json`);
+    try {
+      return JSON.parse(await fs.readFile(filePath, "utf8"));
+    } catch (error) {
+      if (!required) return [];
+      throw new Error(`无法读取 MasterData ${filePath}: ${error.message}`);
+    }
+  };
 }
+
+async function readVersion(readJson) {
+  try {
+    // 远程时尝试 versions/current_version.json
+    // 本地时也尝试相对路径
+    const version = await readJson("../versions/current_version", { required: false });
+    if (version && (version.dataVersion || version.cdnVersion)) {
+      return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
+    }
+  } catch { /* */ }
+  return null;
+}
+
+// ── 主逻辑 ──
 
 function asNumber(value) {
   const number = Number(value);
@@ -199,24 +228,7 @@ function addToMap(map, key, value) {
   map.get(key).push(value);
 }
 
-async function readVersion() {
-  try {
-    if (isRemote) {
-      const versionUrl = rawSource.replace(/\/master\/?$/, "/versions/current_version.json");
-      const response = await (proxyUrl ? proxyFetch : fetch)(versionUrl, { signal: AbortSignal.timeout(15000) });
-      if (!response.ok) return null;
-      const version = await response.json();
-      return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
-    }
-    const versionPath = path.resolve(rawSource, "../versions/current_version.json");
-    const version = JSON.parse(await fs.readFile(versionPath, "utf8"));
-    return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
-  } catch {
-    return null;
-  }
-}
-
-async function main() {
+async function buildCatalog(readJson, sourceName) {
   const data = Object.fromEntries(
     await Promise.all(requiredFiles.map(async (name) => [name, await readJson(name)]))
   );
@@ -236,12 +248,9 @@ async function main() {
     .sort((a, b) => a.id - b.id);
 
   const blueprintTargetIds = new Set(blueprints.map((item) => item.craftTargetId));
-  const fixtureById = new Map(data.mysekaiFixtures.map((item) => [asNumber(item.id), item]));
 
-  const fixtures = [...blueprintTargetIds]
-    .map((id) => fixtureById.get(id))
-    .filter(Boolean)
-    .filter((item) => item.mysekaiFixtureType !== "gate")
+  // ── 家具：全量纳入（含 gate，不限有无蓝图）──
+  const fixtures = data.mysekaiFixtures
     .map((item) => ({
       id: asNumber(item.id),
       mysekaiFixtureType: item.mysekaiFixtureType,
@@ -255,12 +264,14 @@ async function main() {
       isDisassembled: Boolean(item.isDisassembled),
       mysekaiFixtureTagGroup: item.mysekaiFixtureTagGroup || {},
     }))
+    .filter((item) => item.id !== null)
     .sort((a, b) => a.id - b.id);
 
   const fixtureIds = new Set(fixtures.map((item) => item.id));
   const fixtureMap = new Map(fixtures.map((item) => [item.id, item]));
   const blueprintByTarget = new Map(blueprints.map((item) => [item.craftTargetId, item]));
 
+  // ── 角色与单位 ──
   const characterUnits = data.gameCharacterUnits
     .map((item) => ({
       id: asNumber(item.id),
@@ -288,6 +299,7 @@ async function main() {
     .filter((item) => item.id !== null)
     .sort((a, b) => a.id - b.id);
 
+  // ── 角色组 ──
   const characterGroups = data.mysekaiGameCharacterUnitGroups
     .map((item) => ({
       id: asNumber(item.id),
@@ -296,6 +308,7 @@ async function main() {
     .filter((item) => item.id !== null);
   const characterGroupById = new Map(characterGroups.map((item) => [item.id, item.unitIds]));
 
+  // ── 对话条件 ──
   const conditionIdsByFixture = new Map();
   for (const condition of data.mysekaiCharacterTalkConditions) {
     if (condition.mysekaiCharacterTalkConditionType !== "mysekai_fixture_id") continue;
@@ -333,7 +346,8 @@ async function main() {
           const characterUnitGroupId = asNumber(talk.mysekaiGameCharacterUnitGroupId);
           if (talkId === null || archiveId === null || characterUnitGroupId === null) continue;
           const archive = archiveById.get(archiveId);
-          if (!archive || archive.archiveDisplayType !== "normal") continue;
+          if (!archive) continue;
+          const isHidden = archive.archiveDisplayType === "hide";
 
           const key = `${archiveId}:${characterUnitGroupId}`;
           if (!talkGroupMap.has(key)) {
@@ -345,11 +359,13 @@ async function main() {
               talkIds: new Set(),
               characterUnitIds: new Set(characterGroupById.get(characterUnitGroupId) || []),
               talks: new Map(),
+              hasHiddenTalks: false,
             });
           }
           const group = talkGroupMap.get(key);
           group.fixtureIds.add(fixtureId);
           group.talkIds.add(talkId);
+          if (isHidden) group.hasHiddenTalks = true;
           for (const unitId of characterGroupById.get(characterUnitGroupId) || []) {
             group.characterUnitIds.add(unitId);
           }
@@ -358,6 +374,7 @@ async function main() {
             assetbundleName: talk.assetbundleName || "",
             lua: talk.lua || "",
             conditionGroupId,
+            isHidden,
           });
         }
       }
@@ -369,6 +386,7 @@ async function main() {
       id: group.id,
       archiveId: group.archiveId,
       characterUnitGroupId: group.characterUnitGroupId,
+      hasHiddenTalks: group.hasHiddenTalks,
       fixtureIds: [...group.fixtureIds].sort((a, b) => a - b),
       talkIds: [...group.talkIds].sort((a, b) => a - b),
       characterUnitIds: [...group.characterUnitIds].sort((a, b) => a - b),
@@ -389,10 +407,47 @@ async function main() {
       .sort((a, b) => a.id - b.id)
   );
 
-  const catalog = {
+  const masterVersion = await readVersion(readJson);
+
+  // ── 虚拟蓝图：所有无真实蓝图的家具 ──
+  const virtualCount = fixtures.filter((f) => !blueprintTargetIds.has(f.id)).length;
+  if (virtualCount > 0) {
+    console.log(`  虚拟蓝图: ${virtualCount} 个 (无蓝图家具)`);
+  }
+  for (const fixture of fixtures) {
+    if (blueprintTargetIds.has(fixture.id)) continue;
+    const vb = {
+      id: -fixture.id, // 负 ID 避免与真实蓝图冲突
+      seq: -fixture.id,
+      craftTargetId: fixture.id,
+      isVirtual: true,
+      name: fixture.name || null,
+      rarity: null,
+      assetbundleName: null,
+      mysekaiFixtureType: null,
+      mysekaiFixtureMainGenreId: null,
+      mysekaiFixtureSubGenreId: null,
+      mysekaiSettableLayoutType: null,
+      isAvailableWithoutPossession: false,
+      releaseCondition: null,
+      obtainFlavorText: null,
+    };
+    blueprints.push(vb);
+    blueprintTargetIds.add(vb.craftTargetId);
+    blueprintByTarget.set(vb.craftTargetId, vb);
+  }
+  blueprints.sort((a, b) => {
+    // 虚拟蓝图排在最后
+    if (a.isVirtual && !b.isVirtual) return 1;
+    if (!a.isVirtual && b.isVirtual) return -1;
+    return a.id - b.id;
+  });
+
+  return {
     schemaVersion: 1,
-    source: getSourceName(rawSource),
-    masterVersion: await readVersion(),
+    source: sourceName,
+    masterVersion,
+    lang: null, // 由调用方设置
     blueprints: blueprints.map((blueprint) => ({
       ...blueprint,
       fixtureId: blueprintTargetIds.has(blueprint.craftTargetId) ? blueprint.craftTargetId : null,
@@ -410,15 +465,57 @@ async function main() {
       data.unitProfiles.map((item) => [item.unit, item.unitName || item.unit])
     ),
   };
+}
 
-  await fs.mkdir(path.dirname(outputPath), { recursive: true });
-  await fs.writeFile(outputPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
-  console.log(`已生成 ${outputPath}`);
+// ── 入口 ──
 
-  const compactPath = outputPath.replace(/\.json$/, ".min.json");
-  await fs.writeFile(compactPath, JSON.stringify(catalog), "utf8");
-  console.log(`已生成 ${compactPath}`);
-  console.log(`蓝图: ${catalog.blueprints.length}，家具: ${catalog.fixtures.length}，对话组: ${catalog.talkGroups.length}`);
+async function main() {
+  for (const lang of langs) {
+    let baseSource;
+    let isRemote;
+    let sourceName;
+
+    if (sourceArg) {
+      // 自定义源：覆盖默认 URL
+      const raw = sourceArg.slice("--source=".length);
+      isRemote = /^https?:\/\//.test(raw);
+      baseSource = isRemote ? raw : path.resolve(raw);
+      sourceName = getSourceName(raw);
+    } else {
+      // 从 Haruki 获取
+      const prefix = LANG_PREFIX[lang];
+      baseSource = HARUKI_MASTER_TEMPLATE.replace("{prefix}", prefix ?? "");
+      isRemote = true;
+      sourceName = `haruki-sekai-${prefix}master`;
+    }
+
+    console.log(`\n[${lang}] ${isRemote ? "远程" : "本地"}: ${baseSource}`);
+
+    const readJson = makeReader(baseSource, isRemote);
+
+    try {
+      const catalog = await buildCatalog(readJson, sourceName);
+      catalog.lang = lang;
+
+      const outDir = path.join(projectRoot, "public", "data");
+      await fs.mkdir(outDir, { recursive: true });
+
+      const outPath = path.join(outDir, `catalog-${lang}.json`);
+      await fs.writeFile(outPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
+      console.log(`  已生成 ${outPath}`);
+
+      const compactPath = path.join(outDir, `catalog-${lang}.min.json`);
+      await fs.writeFile(compactPath, JSON.stringify(catalog), "utf8");
+      console.log(`  已生成 ${compactPath}`);
+      console.log(`  蓝图: ${catalog.blueprints.length}，家具: ${catalog.fixtures.length}，对话组: ${catalog.talkGroups.length}`);
+    } catch (error) {
+      console.error(`  [${lang}] 失败: ${error.stack || error.message || error}`);
+      // 非单语言模式时继续处理其他语言
+      if (langs.length === 1) {
+        process.exitCode = 1;
+      }
+    }
+  }
 }
 
 main().catch((error) => {

@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import UploadPanel from "./components/UploadPanel";
 import ProgressSummary from "./components/ProgressSummary";
 import FilterBar from "./components/FilterBar";
@@ -7,11 +7,18 @@ import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
 import { parseUserJsonText, UserDataError } from "./domain/userData";
-import { loadProgress, saveProgress, clearProgress } from "./domain/cache";
+import { loadProgress, saveProgress, clearProgress, saveLang, loadLang } from "./domain/cache";
 import { formatPercent } from "./domain/format";
-import type { Catalog, FilterState, UserProgress } from "./types";
+import type { Catalog, FilterState, Lang, UserProgress } from "./types";
 
 const PAGE_SIZE = 36;
+const LANG_LABELS: Record<Lang, string> = {
+  cn: "简体中文",
+  jp: "日本語",
+  tw: "繁體中文",
+  en: "English",
+  kr: "한국어",
+};
 
 const initialFilters: FilterState = {
   ownership: "all",
@@ -31,14 +38,16 @@ function emptyProgress(): UserProgress {
   };
 }
 
-function loadInitialState(): UserProgress {
-  return loadProgress() ?? emptyProgress();
+function loadInitialState(): { progress: UserProgress; lang: Lang } {
+  return { progress: loadProgress() ?? emptyProgress(), lang: loadLang() };
 }
 
 export default function App() {
+  const [lang, setLang] = useState<Lang>(loadInitialState().lang);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState("");
-  const [progress, setProgress] = useState<UserProgress>(loadInitialState);
+  const [{ progress: initProgress, lang: _initLang }] = useState(loadInitialState);
+  const [progress, setProgress] = useState<UserProgress>(initProgress);
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
@@ -47,14 +56,26 @@ export default function App() {
   const [jumpInput, setJumpInput] = useState("");
   const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
 
+  const loadCatalog = useCallback(async (l: Lang) => {
+    setCatalog(null);
+    setCatalogError("");
+    try {
+      const res = await fetch(`${import.meta.env.BASE_URL}data/catalog-${l}.min.json`);
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      setCatalog(data as Catalog);
+    } catch (err) {
+      setCatalogError(err instanceof Error ? err.message : "加载数据目录失败");
+    }
+  }, []);
+
   useEffect(() => {
-    fetch(`${import.meta.env.BASE_URL}data/catalog.min.json`)
-      .then((res) => {
-        if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        return res.json();
-      })
-      .then((data) => setCatalog(data as Catalog))
-      .catch((err) => setCatalogError(err.message || "加载数据目录失败"));
+    loadCatalog(lang);
+  }, [lang, loadCatalog]);
+
+  const handleLangChange = useCallback((next: Lang) => {
+    setLang(next);
+    saveLang(next);
   }, []);
 
   const allEntries = useMemo(
@@ -168,7 +189,7 @@ export default function App() {
             把 `/msb` 带到浏览器：导入自己的抓包 JSON，快速找出还没拿到的蓝图和角色家具对话。
           </p>
           <div className="hero-meta">
-            <span>{catalog.source ?? "—"} v{catalog.masterVersion ?? "—"}</span>
+            <span>{LANG_LABELS[catalog.lang]} · {catalog.source ?? "—"} v{catalog.masterVersion ?? "—"}</span>
             <span>纯本地计算</span>
             <span>无需账号</span>
           </div>
@@ -181,6 +202,7 @@ export default function App() {
         <UploadPanel
           progress={progress}
           error={uploadError}
+          lang={lang}
           onFile={handleFile}
           onClear={clearData}
         />
@@ -196,7 +218,7 @@ export default function App() {
           </NoticeBanner>
         )}
 
-        <ProgressSummary all={allSummary} filtered={filteredSummary} progress={progress} />
+        <ProgressSummary all={allSummary} filtered={filteredSummary} progress={progress} catalog={catalog} />
         <FilterBar
           catalog={catalog}
           filters={filters}
@@ -210,13 +232,15 @@ export default function App() {
             setSortBy(nextSortBy);
             setSortDirection(nextDirection);
           }}
+          lang={lang}
+          onLangChange={handleLangChange}
         />
 
         <section className="results-section">
           <div className="results-heading">
             <div>
-              <span className="eyebrow">Blueprint index</span>
-              <h2>{hasFilters ? "筛选结果" : "全部家具蓝图"}</h2>
+              <span className="eyebrow">My SEKAI 家具</span>
+              <h2>{hasFilters ? "筛选结果" : "全部家具"}</h2>
             </div>
             <div className="results-count">
               <strong>{filteredEntries.length}</strong>
@@ -247,6 +271,7 @@ export default function App() {
                   catalog={catalog}
                   expanded={expandedIds.has(entry.blueprint.id)}
                   onToggle={() => toggleExpanded(entry.blueprint.id)}
+                  lang={lang}
                 />
               ))}
             </div>

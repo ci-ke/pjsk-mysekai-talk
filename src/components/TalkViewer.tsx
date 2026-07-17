@@ -1,10 +1,11 @@
 import { useState } from "react";
-import type { Catalog, EnrichedTalkGroup } from "../types";
+import type { Catalog, EnrichedTalkGroup, Lang } from "../types";
 import { getTalkScriptUrl, parseTalkScript } from "../domain/assets";
 
 interface TalkViewerProps {
   group: EnrichedTalkGroup;
   catalog: Catalog;
+  lang: Lang;
 }
 
 /** 按索引配对 talkId → 家具名，数量不等时用回退名 */
@@ -19,7 +20,7 @@ function formatTalkFurniturePairs(group: EnrichedTalkGroup, catalog: Catalog): s
   return group.talks.map((talk) => `#${talk.id}`);
 }
 
-export default function TalkViewer({ group, catalog }: TalkViewerProps) {
+export default function TalkViewer({ group, catalog, lang }: TalkViewerProps) {
   const [expanded, setExpanded] = useState(false);
   const [content, setContent] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -37,7 +38,7 @@ export default function TalkViewer({ group, catalog }: TalkViewerProps) {
     setLoading(true);
     setError("");
     try {
-      const url = getTalkScriptUrl(firstTalk);
+      const url = getTalkScriptUrl(firstTalk, lang);
       const res = await fetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const text = await res.text();
