@@ -2,6 +2,7 @@ import { useMemo, useState } from "react";
 import type { BlueprintEntry, Catalog, EnrichedTalkGroup } from "../types";
 import { getCharacterColor, getFixtureThumbnailUrl, getInitials } from "../domain/assets";
 import { getGroupCharacterNames, getUnitName } from "../domain/catalog";
+import TalkViewer from "./TalkViewer";
 
 interface BlueprintCardProps {
   entry: BlueprintEntry;
@@ -110,7 +111,6 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
                   <div className="talk-group-heading">
                     <div>
                       <strong>对话组 #{group.archiveId}</strong>
-                      <span className="talk-id-list">ID：{group.talkIds.join(", ")}</span>
                     </div>
                     <TalkState group={group} />
                   </div>
@@ -126,6 +126,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle }: Bl
                       ? "上传包含 userMysekaiCharacterTalks 的数据后可显示已读状态。"
                       : `已读 ${group.readCount} / ${group.totalCount}`}
                   </div>
+                  <TalkViewer group={group} catalog={catalog} />
                 </div>
               );
             })

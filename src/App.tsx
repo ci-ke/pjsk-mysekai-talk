@@ -40,6 +40,7 @@ export default function App() {
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [page, setPage] = useState(1);
+  const [jumpInput, setJumpInput] = useState("");
   const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
 
   useEffect(() => {
@@ -110,6 +111,18 @@ export default function App() {
       else next.add(blueprintId);
       return next;
     });
+  }
+
+  function collapseAll() {
+    setExpandedIds(new Set());
+  }
+
+  function handleJump() {
+    const target = Number(jumpInput);
+    if (Number.isFinite(target) && target >= 1 && target <= totalPages) {
+      setPage(target);
+      setJumpInput("");
+    }
   }
 
   const hasFilters =
@@ -204,6 +217,11 @@ export default function App() {
             <div className="results-count">
               <strong>{filteredEntries.length}</strong>
               <span> / {allEntries.length} 件</span>
+              {expandedIds.size > 0 && (
+                <button className="button button-quiet" type="button" onClick={collapseAll}>
+                  全部收起
+                </button>
+              )}
             </div>
           </div>
 
@@ -239,6 +257,22 @@ export default function App() {
               <button className="button button-quiet" type="button" disabled={page >= totalPages} onClick={() => setPage((value) => value + 1)}>
                 下一页 →
               </button>
+              <form
+                className="pagination-jump"
+                onSubmit={(e) => { e.preventDefault(); handleJump(); }}
+              >
+                <input
+                  className="jump-input"
+                  type="number"
+                  min={1}
+                  max={totalPages}
+                  value={jumpInput}
+                  onChange={(e) => setJumpInput(e.target.value)}
+                  placeholder={`1-${totalPages}`}
+                  aria-label="跳转到指定页"
+                />
+                <button className="button button-quiet" type="submit">跳转</button>
+              </form>
             </nav>
           )}
         </section>
