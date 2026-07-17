@@ -2,7 +2,7 @@ import { getCharacterUnitIds } from "./catalog";
 import type { BlueprintEntry, Catalog, FilterState, EnrichedTalkGroup } from "../types";
 
 function groupMatchesTalkFilter(group: EnrichedTalkGroup, filter: FilterState["talk"]) {
-  if (filter === "all" || group.readState === "unknown") return true;
+  if (filter === "all" || filter === "hasTalks" || group.readState === "unknown") return true;
   if (filter === "read") return group.readState === "read";
   return group.readState !== "read";
 }

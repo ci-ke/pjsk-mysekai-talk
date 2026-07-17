@@ -152,3 +152,48 @@ export function getEntrySummary(entries: BlueprintEntry[]): EntrySummary {
     unknownTalks,
   };
 }
+
+export interface GenreUsage {
+  /** 有 fixture 的主分类 ID 集合 */
+  activeMainGenreIds: Set<number>;
+  /** mainGenreId → 该主分类下的副分类 ID 集合 */
+  subGenreIdsByMain: Map<number, Set<number>>;
+  /** 需要消歧的副分类名称 → 对应的 id 列表 */
+  ambiguousSubGenreNames: Map<string, number[]>;
+}
+
+/** 根据 catalog 中的 fixture 数据计算实际使用的分类 */
+export function getGenreUsage(catalog: Catalog): GenreUsage {
+  const activeMainGenreIds = new Set<number>();
+  const subGenreIdsByMain = new Map<number, Set<number>>();
+  const nameToIds = new Map<string, number[]>();
+  const subNameById = new Map(catalog.genres.sub.map((g) => [g.id, g.name]));
+
+  for (const fixture of catalog.fixtures) {
+    const mainId = fixture.mysekaiFixtureMainGenreId;
+    if (mainId == null) continue;
+    activeMainGenreIds.add(mainId);
+
+    if (!subGenreIdsByMain.has(mainId)) {
+      subGenreIdsByMain.set(mainId, new Set());
+    }
+
+    const subId = fixture.mysekaiFixtureSubGenreId;
+    if (subId != null) {
+      subGenreIdsByMain.get(mainId)!.add(subId);
+      const name = subNameById.get(subId);
+      if (name) {
+        if (!nameToIds.has(name)) nameToIds.set(name, []);
+        const ids = nameToIds.get(name)!;
+        if (!ids.includes(subId)) ids.push(subId);
+      }
+    }
+  }
+
+  const ambiguousSubGenreNames = new Map<string, number[]>();
+  for (const [name, ids] of nameToIds) {
+    if (ids.length > 1) ambiguousSubGenreNames.set(name, ids);
+  }
+
+  return { activeMainGenreIds, subGenreIdsByMain, ambiguousSubGenreNames };
+}

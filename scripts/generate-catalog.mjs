@@ -1,15 +1,137 @@
+/**
+ * 从 haruki-sekai-sc-master 最新数据生成 src/data/catalog.json。
+ *
+ * 用法:
+ *   node scripts/generate-catalog.mjs                        # 从 GitHub 远程拉取（需网络）
+ *   node scripts/generate-catalog.mjs --source=../haruki-sekai-sc-master/master     # 指定本地 master 目录
+ *   MASTER_DATA_DIR=../master node scripts/generate-catalog.mjs  # 通过环境变量指定
+ *
+ * 远程拉取时自动检测系统代理（环境变量 → WinHTTP → IE 注册表）。
+ */
+
 import fs from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { execSync } from "node:child_process";
+import https from "node:https";
+import http from "node:http";
+import { URL } from "node:url";
+
+/** 从远程 URL 或本地路径中提取数据源名称 */
+function getSourceName(raw) {
+  if (/^https?:\/\//.test(raw)) {
+    // raw.githubusercontent.com/Team-Haruki/REPO/refs/heads/main/master → REPO
+    const segments = new URL(raw).pathname.split("/").filter(Boolean);
+    return segments[1] || "unknown";
+  }
+  return path.basename(path.resolve(raw, ".."));
+}
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const projectRoot = path.resolve(__dirname, "..");
+
+const REMOTE_BASE =
+  "https://raw.githubusercontent.com/Team-Haruki/haruki-sekai-sc-master/refs/heads/main/master";
+
 const sourceArg = process.argv.find((arg) => arg.startsWith("--source="));
-const defaultSource = path.resolve(__dirname, "../../haruki-sekai-sc-master/master");
-const sourceDir = path.resolve(
-  sourceArg ? sourceArg.slice("--source=".length) : process.env.MASTER_DATA_DIR || defaultSource
-);
+const rawSource =
+  sourceArg?.slice("--source=".length) ||
+  process.env.MASTER_DATA_DIR ||
+  REMOTE_BASE;
+
+const isRemote = /^https?:\/\//.test(rawSource);
+
+/** 检测 Windows 系统代理（环境变量 → WinHTTP → IE 设置） */
+function detectSystemProxy() {
+  // 环境变量优先
+  const envProxy =
+    process.env.https_proxy || process.env.HTTPS_PROXY ||
+    process.env.http_proxy || process.env.HTTP_PROXY ||
+    process.env.all_proxy || process.env.ALL_PROXY;
+  if (envProxy) return envProxy;
+
+  if (process.platform !== "win32") return null;
+
+  // Wi-Fi 等场景使用 WinHTTP 代理
+  try {
+    const output = execSync("netsh winhttp show proxy", {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+    });
+    const match = output.match(/代理服务器\s*:\s*(.+)/) || output.match(/Proxy Server\s*:\s*(.+)/i);
+    if (match && match[1].trim() !== "" && !match[1].includes("direct")) {
+      const server = match[1].trim();
+      return server.startsWith("http") ? server : `http://${server}`;
+    }
+  } catch { /* 可能没有权限 */ }
+
+  // 回退：读 IE 代理设置（注册表）
+  try {
+    const output = execSync(
+      'reg query "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Internet Settings" /v ProxyServer 2>nul',
+      { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }
+    );
+    const match = output.match(/ProxyServer\s+REG_SZ\s+(.+)/i);
+    if (match && match[1].trim()) {
+      const server = match[1].trim();
+      return server.startsWith("http") ? server : `http://${server}`;
+    }
+  } catch { /* 未配置 */ }
+
+  return null;
+}
+
+const proxyUrl = detectSystemProxy();
+if (proxyUrl && isRemote) {
+  console.log(`使用代理: ${proxyUrl}`);
+}
+
+/** 通过 HTTP CONNECT 代理发起 HTTPS 请求，返回 fetch 兼容的 Response */
+async function proxyFetch(targetUrl, options = {}) {
+  const target = new URL(targetUrl);
+  const proxy = new URL(proxyUrl);
+
+  return new Promise((resolve, reject) => {
+    const req = http.request({
+      host: proxy.hostname,
+      port: proxy.port || 8080,
+      method: "CONNECT",
+      path: `${target.hostname}:${target.port || 443}`,
+      headers: proxy.username
+        ? { "Proxy-Authorization": `Basic ${Buffer.from(`${proxy.username}:${proxy.password || ""}`).toString("base64")}` }
+        : {},
+    });
+
+    req.on("connect", (_res, socket) => {
+      const opts = {
+        socket,
+        host: target.hostname,
+        port: target.port || 443,
+        path: target.pathname + target.search,
+        method: options.method || "GET",
+        headers: { ...options.headers },
+      };
+      const hreq = https.request(opts, (hres) => {
+        resolve(
+          new Response(hres, {
+            status: hres.statusCode,
+            statusText: hres.statusMessage,
+          })
+        );
+      });
+      hreq.on("error", reject);
+      hreq.end();
+    });
+
+    req.on("error", reject);
+    req.setTimeout(15000, () => {
+      req.destroy(new Error("代理连接超时"));
+    });
+    req.end();
+  });
+}
+
 const outputPath = path.join(projectRoot, "src", "data", "catalog.json");
 
 const requiredFiles = [
@@ -25,10 +147,33 @@ const requiredFiles = [
   "characterArchiveMysekaiCharacterTalkGroups",
   "mysekaiFixtureMainGenres",
   "mysekaiFixtureSubGenres",
+  "unitProfiles",
 ];
 
 async function readJson(name, { required = true } = {}) {
-  const filePath = path.join(sourceDir, `${name}.json`);
+  if (isRemote) {
+    const url = `${rawSource.replace(/\/$/, "")}/${name}.json`;
+    const fetcher = proxyUrl ? proxyFetch : fetch;
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), 30000);
+    try {
+      const response = await fetcher(url, { signal: controller.signal });
+      clearTimeout(timer);
+      if (!response.ok) {
+        if (!required) return [];
+        throw new Error(`无法获取 ${url}: ${response.status} ${response.statusText}`);
+      }
+      return response.json();
+    } catch (error) {
+      clearTimeout(timer);
+      if (!required) return [];
+      throw new Error(
+        `无法从远程获取 ${url}: ${error.message}\n` +
+        `提示: 使用 --source=<本地master目录> 或设置 MASTER_DATA_DIR 环境变量指定本地路径`
+      );
+    }
+  }
+  const filePath = path.join(rawSource, `${name}.json`);
   try {
     return JSON.parse(await fs.readFile(filePath, "utf8"));
   } catch (error) {
@@ -56,9 +201,16 @@ function addToMap(map, key, value) {
 
 async function readVersion() {
   try {
-    const versionPath = path.resolve(sourceDir, "../versions/current_version.json");
+    if (isRemote) {
+      const versionUrl = rawSource.replace(/\/master\/?$/, "/versions/current_version.json");
+      const response = await (proxyUrl ? proxyFetch : fetch)(versionUrl, { signal: AbortSignal.timeout(15000) });
+      if (!response.ok) return null;
+      const version = await response.json();
+      return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
+    }
+    const versionPath = path.resolve(rawSource, "../versions/current_version.json");
     const version = JSON.parse(await fs.readFile(versionPath, "utf8"));
-    return version.cdnVersion ?? version.data_version ?? version.dataVersion ?? null;
+    return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
   } catch {
     return null;
   }
@@ -239,7 +391,7 @@ async function main() {
 
   const catalog = {
     schemaVersion: 1,
-    source: path.basename(path.resolve(sourceDir, "..")),
+    source: getSourceName(rawSource),
     masterVersion: await readVersion(),
     blueprints: blueprints.map((blueprint) => ({
       ...blueprint,
@@ -254,14 +406,9 @@ async function main() {
       main: genres[0],
       sub: genres[1],
     },
-    unitNames: {
-      light_sound: "Leo/need",
-      idol: "MORE MORE JUMP！",
-      street: "Vivid BAD SQUAD",
-      theme_park: "Wonderlands×Showtime",
-      school_refusal: "25时，在夜之中。",
-      piapro: "VIRTUAL SINGER",
-    },
+    unitNames: Object.fromEntries(
+      data.unitProfiles.map((item) => [item.unit, item.unitName || item.unit])
+    ),
   };
 
   await fs.mkdir(path.dirname(outputPath), { recursive: true });

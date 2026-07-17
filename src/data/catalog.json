@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "haruki-sekai-sc-master",
-  "masterVersion": 150,
+  "masterVersion": "6.0.0.43",
   "blueprints": [
     {
       "id": 1,
@@ -132647,7 +132647,7 @@
     "idol": "MORE MORE JUMP！",
     "street": "Vivid BAD SQUAD",
     "theme_park": "Wonderlands×Showtime",
-    "school_refusal": "25时，在夜之中。",
-    "piapro": "VIRTUAL SINGER"
+    "school_refusal": "25点，Nightcord见。",
+    "piapro": "虚拟歌手"
   }
 }

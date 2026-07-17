@@ -119,7 +119,7 @@ export interface UserProgress {
 }
 
 export type OwnershipFilter = "all" | "owned" | "unowned";
-export type TalkFilter = "all" | "read" | "unread";
+export type TalkFilter = "all" | "hasTalks" | "read" | "unread";
 
 export interface CharacterSelection {
   characterId: number | null;

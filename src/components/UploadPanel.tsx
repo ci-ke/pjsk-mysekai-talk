@@ -28,7 +28,7 @@ export default function UploadPanel({ progress, error, onFile, onClear }: Upload
         </p>
         <div className="upload-hints">
           <span>支持 compact 对话格式</span>
-          <span>不会写入服务器或浏览器存储</span>
+          <span>数据缓存于浏览器本地</span>
         </div>
       </div>
       <div

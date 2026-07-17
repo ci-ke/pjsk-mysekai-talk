@@ -1,3 +1,4 @@
+import { getGenreUsage } from "../domain/catalog";
 import type { Catalog, FilterState, OwnershipFilter, TalkFilter, UnitKey } from "../types";
 
 interface FilterBarProps {
@@ -29,6 +30,44 @@ export default function FilterBar({
   const unitOptions = selectedCharacter
     ? [...new Map(selectedCharacter.unitVariants.map((variant) => [variant.unit, variant])).values()]
     : [];
+
+  const genreUsage = getGenreUsage(catalog);
+  const activeMainGenres = catalog.genres.main.filter(
+    (g) => g.id !== 1 && genreUsage.activeMainGenreIds.has(g.id)
+  );
+  const mainNameById = new Map(catalog.genres.main.map((g) => [g.id, g.name]));
+
+  // 选中的主分类下的副分类 ID 集合；未选时用全部副分类
+  const scopedSubGenreIds =
+    filters.mainGenreId != null
+      ? genreUsage.subGenreIdsByMain.get(filters.mainGenreId) ?? new Set()
+      : new Set(catalog.genres.sub.filter((g) => g.id !== 1).map((g) => g.id));
+
+  /** 为副分类生成消歧标签：若名称跨主分类重复，附加主分类名 */
+  function subGenreLabel(sub: { id: number; name: string }) {
+    const ambiguous = genreUsage.ambiguousSubGenreNames.get(sub.name);
+    if (!ambiguous || ambiguous.length <= 1) return sub.name;
+    // 该副分类名对应的所有 id 中，找出各自归属的主分类
+    const mainNames: string[] = [];
+    for (const sid of ambiguous) {
+      for (const [mainId, subIds] of genreUsage.subGenreIdsByMain) {
+        if (subIds.has(sid)) {
+          const mn = mainNameById.get(mainId);
+          if (mn && !mainNames.includes(mn)) mainNames.push(mn);
+        }
+      }
+    }
+    if (mainNames.length <= 1) return sub.name;
+    // 只有一个主分类选了当前 id 时可以用简称
+    const myMains: string[] = [];
+    for (const [mainId, subIds] of genreUsage.subGenreIdsByMain) {
+      if (subIds.has(sub.id)) {
+        const mn = mainNameById.get(mainId);
+        if (mn) myMains.push(mn);
+      }
+    }
+    return `${sub.name}（${myMains.join("·")}）`;
+  }
 
   const set = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
     onChange({ ...filters, [key]: value });
@@ -110,7 +149,8 @@ export default function FilterBar({
             disabled={!talkDataAvailable}
             onChange={(event) => set("talk", event.target.value as TalkFilter)}
           >
-            <option value="all">全部对话</option>
+            <option value="all">全部对话（包含无对话）</option>
+            <option value="hasTalks">全部对话</option>
             <option value="unread">仅未解锁 / 未读</option>
             <option value="read">仅已解锁 / 已读</option>
           </select>
@@ -119,10 +159,13 @@ export default function FilterBar({
           <span>主分类</span>
           <select
             value={filters.mainGenreId ?? ""}
-            onChange={(event) => set("mainGenreId", event.target.value ? Number(event.target.value) : null)}
+            onChange={(event) => {
+              const mainId = event.target.value ? Number(event.target.value) : null;
+              onChange({ ...filters, mainGenreId: mainId, subGenreId: null });
+            }}
           >
             <option value="">全部分类</option>
-            {catalog.genres.main.filter((genre) => genre.id !== 1).map((genre) => (
+            {activeMainGenres.map((genre) => (
               <option key={genre.id} value={genre.id}>{genre.name}</option>
             ))}
           </select>
@@ -134,9 +177,11 @@ export default function FilterBar({
             onChange={(event) => set("subGenreId", event.target.value ? Number(event.target.value) : null)}
           >
             <option value="">全部子分类</option>
-            {catalog.genres.sub.filter((genre) => genre.id !== 1).map((genre) => (
-              <option key={genre.id} value={genre.id}>{genre.name}</option>
-            ))}
+            {catalog.genres.sub
+              .filter((genre) => genre.id !== 1 && scopedSubGenreIds.has(genre.id))
+              .map((genre) => (
+                <option key={genre.id} value={genre.id}>{subGenreLabel(genre)}</option>
+              ))}
           </select>
         </label>
         <label className="field">

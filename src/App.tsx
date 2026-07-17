@@ -8,6 +8,7 @@ import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
 import { parseUserJsonText, UserDataError } from "./domain/userData";
+import { loadProgress, saveProgress, clearProgress } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, UserProgress } from "./types";
 
@@ -33,7 +34,7 @@ function emptyProgress(): UserProgress {
 }
 
 export default function App() {
-  const [progress, setProgress] = useState<UserProgress>(emptyProgress);
+  const [progress, setProgress] = useState<UserProgress>(() => loadProgress() ?? emptyProgress());
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
@@ -64,12 +65,15 @@ export default function App() {
 
   async function handleFile(file: File) {
     setUploadError("");
+    clearProgress();
     if (file.size > 20 * 1024 * 1024) {
       setUploadError("文件超过 20 MB，请确认上传的是单个 My SEKAI JSON。 ");
       return;
     }
     try {
-      const parsed = parseUserJsonText(await file.text(), file.name);
+      const rawText = await file.text();
+      const parsed = parseUserJsonText(rawText, file.name);
+      saveProgress(rawText, file.name);
       setProgress(parsed);
       setFilters(initialFilters);
       setPage(1);
@@ -80,6 +84,7 @@ export default function App() {
   }
 
   function clearData() {
+    clearProgress();
     setProgress(emptyProgress());
     setUploadError("");
     setFilters(initialFilters);
@@ -114,7 +119,7 @@ export default function App() {
             把 `/msb` 带到浏览器：导入自己的抓包 JSON，快速找出还没拿到的蓝图和角色家具对话。
           </p>
           <div className="hero-meta">
-            <span>简中服 MasterData v{catalog.masterVersion ?? "—"}</span>
+            <span>{catalog.source ?? "—"} v{catalog.masterVersion ?? "—"}</span>
             <span>纯本地计算</span>
             <span>无需账号</span>
           </div>
@@ -213,7 +218,7 @@ export default function App() {
           </div>
           <div>
             <span>蓝图完成率：{progress.blueprintDataAvailable ? formatPercent(allSummary.ownedBlueprints, allSummary.totalBlueprints) : "—"}</span>
-            <span>本页不保存上传内容</span>
+            <span>数据仅存于当前浏览器</span>
           </div>
         </footer>
       </main>
