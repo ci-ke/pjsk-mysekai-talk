@@ -1,5 +1,5 @@
 /**
- * 从 haruki-sekai-sc-master 最新数据生成 src/data/catalog.json。
+ * 从 haruki-sekai-sc-master 最新数据生成 public/data/catalog.json。
  *
  * 用法:
  *   node scripts/generate-catalog.mjs                        # 从 GitHub 远程拉取（需网络）
@@ -132,7 +132,7 @@ async function proxyFetch(targetUrl, options = {}) {
   });
 }
 
-const outputPath = path.join(projectRoot, "src", "data", "catalog.json");
+const outputPath = path.join(projectRoot, "public", "data", "catalog.json");
 
 const requiredFiles = [
   "mysekaiBlueprints",
@@ -414,6 +414,10 @@ async function main() {
   await fs.mkdir(path.dirname(outputPath), { recursive: true });
   await fs.writeFile(outputPath, `${JSON.stringify(catalog, null, 2)}\n`, "utf8");
   console.log(`已生成 ${outputPath}`);
+
+  const compactPath = outputPath.replace(/\.json$/, ".min.json");
+  await fs.writeFile(compactPath, JSON.stringify(catalog), "utf8");
+  console.log(`已生成 ${compactPath}`);
   console.log(`蓝图: ${catalog.blueprints.length}，家具: ${catalog.fixtures.length}，对话组: ${catalog.talkGroups.length}`);
 }
 

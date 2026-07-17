@@ -1,5 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import catalogData from "./data/catalog.json";
 import UploadPanel from "./components/UploadPanel";
 import ProgressSummary from "./components/ProgressSummary";
 import FilterBar from "./components/FilterBar";
@@ -12,7 +11,6 @@ import { loadProgress, saveProgress, clearProgress } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, UserProgress } from "./types";
 
-const catalog = catalogData as Catalog;
 const PAGE_SIZE = 36;
 
 const initialFilters: FilterState = {
@@ -34,6 +32,8 @@ function emptyProgress(): UserProgress {
 }
 
 export default function App() {
+  const [catalog, setCatalog] = useState<Catalog | null>(null);
+  const [catalogError, setCatalogError] = useState("");
   const [progress, setProgress] = useState<UserProgress>(() => loadProgress() ?? emptyProgress());
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
@@ -42,14 +42,25 @@ export default function App() {
   const [page, setPage] = useState(1);
   const [expandedIds, setExpandedIds] = useState<Set<number>>(new Set());
 
+  useEffect(() => {
+    fetch(`${import.meta.env.BASE_URL}data/catalog.min.json`)
+      .then((res) => {
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        return res.json();
+      })
+      .then((data) => setCatalog(data as Catalog))
+      .catch((err) => setCatalogError(err.message || "加载数据目录失败"));
+  }, []);
+
   const allEntries = useMemo(
-    () => createBlueprintEntries(catalog, progress),
-    [progress]
+    () => catalog ? createBlueprintEntries(catalog, progress) : [],
+    [catalog, progress]
   );
   const filteredEntries = useMemo(() => {
+    if (!catalog) return [];
     const filtered = filterBlueprintEntries(allEntries, catalog, filters);
     return sortBlueprintEntries(filtered, sortBy, sortDirection);
-  }, [allEntries, filters, sortBy, sortDirection]);
+  }, [catalog, allEntries, filters, sortBy, sortDirection]);
   const allSummary = useMemo(() => getEntrySummary(allEntries), [allEntries]);
   const filteredSummary = useMemo(() => getEntrySummary(filteredEntries), [filteredEntries]);
   const totalPages = Math.max(1, Math.ceil(filteredEntries.length / PAGE_SIZE));
@@ -111,7 +122,28 @@ export default function App() {
 
   return (
     <div className="app-shell">
-      <header className="hero">
+      {catalogError ? (
+        <main className="content-wrap">
+          <div className="empty-state panel">
+            <div className="empty-state-icon">!</div>
+            <h3>数据目录加载失败</h3>
+            <p>{catalogError}</p>
+            <button className="button button-primary" type="button" onClick={() => window.location.reload()}>
+              重试
+            </button>
+          </div>
+        </main>
+      ) : !catalog ? (
+        <main className="content-wrap">
+          <div className="empty-state panel">
+            <div className="empty-state-icon">⟳</div>
+            <h3>正在加载数据目录…</h3>
+            <p>从服务器获取最新的家具与对话数据。</p>
+          </div>
+        </main>
+      ) : (
+        <>
+          <header className="hero">
         <div className="hero-inner">
           <div className="hero-kicker"><span className="hero-mark">MS</span> My SEKAI · 浏览器工具</div>
           <h1>蓝图与家具对话收集情况</h1>
@@ -222,6 +254,8 @@ export default function App() {
           </div>
         </footer>
       </main>
+        </>
+      )}
     </div>
   );
 }

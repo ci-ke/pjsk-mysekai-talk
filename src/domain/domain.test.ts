@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import catalogJson from "../data/catalog.json";
+import catalogJson from "../../public/data/catalog.json";
 import { createBlueprintEntries, getCharacterUnitIds, getEntrySummary } from "./catalog";
 import { filterBlueprintEntries } from "./filters";
 import { parseUserJson, normalizeTalkStatuses, UserDataError } from "./userData";
