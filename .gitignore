@@ -1,1 +1,28 @@
 refer
+.narrafork
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+coverage/
+
+# Vite
+.vite/
+*.tsbuildinfo
+vite.config.js
+vite.config.d.ts
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
