@@ -148,7 +148,7 @@ export interface EntrySummary {
   totalBlueprints: number;
   totalRealBlueprints: number;
   ownedBlueprints: number;
-  totalTalks: number;
-  readTalks: number;
-  unknownTalks: number;
+  totalGroups: number;
+  readGroups: number;
+  unknownGroups: number;
 }

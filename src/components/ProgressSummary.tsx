@@ -36,7 +36,7 @@ export default function ProgressSummary({ all, filtered, progress, catalog }: Pr
     ? `${all.ownedBlueprints}/${all.totalRealBlueprints} · ${formatPercent(all.ownedBlueprints, all.totalRealBlueprints)}`
     : "上传文件后显示";
   const talkDetail = progress.talkDataAvailable
-    ? `${all.readTalks}/${all.totalTalks} · ${formatPercent(all.readTalks, all.totalTalks)}`
+    ? `${all.readGroups}/${all.totalGroups} · ${formatPercent(all.readGroups, all.totalGroups)}`
     : "上传包含对话记录的文件后显示";
 
   const statusValue = progress.sourceFileName ? "已载入" : "未载入";
@@ -57,14 +57,14 @@ export default function ProgressSummary({ all, filtered, progress, catalog }: Pr
       />
       <StatCard
         label="角色家具对话"
-        value={progress.talkDataAvailable ? `${all.readTalks} / ${all.totalTalks}` : "—"}
+        value={progress.talkDataAvailable ? `${all.readGroups} / ${all.totalGroups}` : "—"}
         detail={talkDetail}
         tone="pink"
       />
         <StatCard
         label="当前筛选"
         value={`${filtered.totalBlueprints} 件`}
-        detail={`蓝图目录共 ${all.totalRealBlueprints} 件 + ${all.totalBlueprints - all.totalRealBlueprints} 虚拟`}
+        detail={`蓝图目录共 ${all.totalRealBlueprints} 件 + ${all.totalBlueprints - all.totalRealBlueprints} 无蓝图家具`}
         tone="purple"
       />
       <StatCard

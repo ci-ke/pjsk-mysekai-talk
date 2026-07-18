@@ -1,5 +1,5 @@
 import { getGenreUsage } from "../domain/catalog";
-import type { Catalog, FilterState, Lang, OwnershipFilter, TalkFilter, UnitKey } from "../types";
+import type { Catalog, FilterState, Lang, OwnershipFilter, TalkFilter } from "../types";
 
 const LANG_LABELS: Record<Lang, string> = {
   cn: "简体中文",
@@ -8,6 +8,8 @@ const LANG_LABELS: Record<Lang, string> = {
   en: "English",
   kr: "한국어",
 };
+
+const MIKU_ID = 21;
 
 interface FilterBarProps {
   catalog: Catalog;
@@ -36,12 +38,46 @@ export default function FilterBar({
   lang,
   onLangChange,
 }: FilterBarProps) {
-  const selectedCharacter = catalog.characters.find(
-    (character) => character.id === filters.character.characterId
-  );
-  const unitOptions = selectedCharacter
-    ? [...new Map(selectedCharacter.unitVariants.map((variant) => [variant.unit, variant])).values()]
-    : [];
+  // 角色选项：Miku 按团体拆分成多条，其余角色各一条
+  const characterOptions: Array<{ unitId: number; label: string; characterId: number; unit: string }> = [];
+  for (const character of catalog.characters) {
+    for (const variant of character.unitVariants) {
+      const unitName = catalog.unitNames[variant.unit] || variant.unit;
+      characterOptions.push({
+        unitId: variant.id,
+        label: character.id === MIKU_ID ? `${character.name} · ${unitName}` : character.name,
+        characterId: character.id,
+        unit: variant.unit,
+      });
+    }
+  }
+
+  // 当前选中的 characterUnitId
+  const selectedUnitId = (() => {
+    const { characterId, unit } = filters.character;
+    if (characterId === null) return "";
+    const match = catalog.characterUnits.find(
+      (u) => u.gameCharacterId === characterId && u.unit === unit
+    );
+    if (match) return String(match.id);
+    // 未选 unit 时回退到该角色的第一个 variant
+    const first = catalog.characterUnits.find((u) => u.gameCharacterId === characterId);
+    return first ? String(first.id) : "";
+  })();
+
+  const handleCharacterChange = (raw: string) => {
+    if (!raw) {
+      onChange({ ...filters, character: { characterId: null, unit: null } });
+      return;
+    }
+    const unitId = Number(raw);
+    const unitRecord = catalog.characterUnits.find((u) => u.id === unitId);
+    if (!unitRecord) return;
+    onChange({
+      ...filters,
+      character: { characterId: unitRecord.gameCharacterId, unit: unitRecord.unit },
+    });
+  };
 
   const genreUsage = getGenreUsage(catalog);
   const activeMainGenres = catalog.genres.main.filter(
@@ -83,17 +119,6 @@ export default function FilterBar({
 
   const set = <K extends keyof FilterState>(key: K, value: FilterState[K]) => {
     onChange({ ...filters, [key]: value });
-  };
-
-  const setCharacter = (characterId: number | null) => {
-    onChange({
-      ...filters,
-      character: { characterId, unit: null },
-    });
-  };
-
-  const setUnit = (unit: UnitKey | null) => {
-    onChange({ ...filters, character: { ...filters.character, unit } });
   };
 
   return (
@@ -138,28 +163,10 @@ export default function FilterBar({
         </label>
         <label className="field">
           <span>角色</span>
-          <select
-            value={filters.character.characterId ?? ""}
-            onChange={(event) => setCharacter(event.target.value ? Number(event.target.value) : null)}
-          >
+          <select value={selectedUnitId} onChange={(e) => handleCharacterChange(e.target.value)}>
             <option value="">全部角色</option>
-            {catalog.characters.map((character) => (
-              <option key={character.id} value={character.id}>{character.name}</option>
-            ))}
-          </select>
-        </label>
-        <label className="field">
-          <span>虚拟歌手团体</span>
-          <select
-            value={filters.character.unit ?? ""}
-            disabled={!selectedCharacter || unitOptions.length <= 1}
-            onChange={(event) => setUnit((event.target.value || null) as UnitKey | null)}
-          >
-            <option value="">全部团体版本</option>
-            {unitOptions.map((variant) => (
-              <option key={variant.unit} value={variant.unit}>
-                {catalog.unitNames[variant.unit] || variant.unit}
-              </option>
+            {characterOptions.map((opt) => (
+              <option key={opt.unitId} value={opt.unitId}>{opt.label}</option>
             ))}
           </select>
         </label>

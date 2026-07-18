@@ -25,8 +25,8 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
   const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
   const imageUrl = imageFailed ? "/placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
-  const talkCount = entry.talkGroups.reduce((sum, group) => sum + group.totalCount, 0);
-  const readCount = entry.talkGroups.reduce((sum, group) => sum + group.readCount, 0);
+  const totalGroups = entry.talkGroups.length;
+  const readGroups = entry.talkGroups.filter((group) => group.readState === "read").length;
   const uniqueCharacters = useMemo(
     () => [...new Set(entry.talkGroups.flatMap((group) => getGroupCharacterNames(catalog, group)))],
     [catalog, entry.talkGroups]
@@ -62,7 +62,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
           </div>
           <div className="card-progress-line">
             <span>角色家具对话</span>
-            <strong>{entry.talkGroups.length ? `${readCount} / ${talkCount}` : "无关联对话"}</strong>
+            <strong>{totalGroups ? `${readGroups} / ${totalGroups}` : "无关联对话"}</strong>
           </div>
           {uniqueCharacters.length > 0 && (
             <div className="character-summary">

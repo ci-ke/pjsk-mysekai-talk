@@ -41,7 +41,7 @@ function enrichTalkGroup(group: TalkGroupRecord, progress: UserProgress): Enrich
   const readTalkIds = group.talkIds.filter((id) => progress.talkReadById.get(id) === true);
   const readCount = readTalkIds.length;
   let readState: EnrichedTalkGroup["readState"] = "unread";
-  if (readCount === totalCount && totalCount > 0) readState = "read";
+  if (readCount > 0) readState = "read";
 
   return {
     ...group,
@@ -117,41 +117,32 @@ export function getGroupCharacterNames(catalog: Catalog, group: TalkGroupRecord)
 }
 
 export function getEntrySummary(entries: BlueprintEntry[]): EntrySummary {
-  const talkStates = new Map<number, boolean | undefined>();
   let ownedBlueprints = 0;
   let totalRealBlueprints = 0;
   let ownershipKnown = false;
+  const seenGroupIds = new Set<string>();
+  let readGroups = 0;
+  let unknownGroups = 0;
 
   for (const entry of entries) {
     ownershipKnown ||= entry.ownershipKnown;
     if (entry.owned) ownedBlueprints += 1;
     if (!entry.isVirtual) totalRealBlueprints += 1;
     for (const group of entry.talkGroups) {
-      const readIds = new Set(group.readTalkIds);
-      for (const talkId of group.talkIds) {
-        const current = group.readState === "unknown" ? undefined : readIds.has(talkId);
-        const previous = talkStates.get(talkId);
-        if (previous !== true && (current === true || previous === undefined || !talkStates.has(talkId))) {
-          talkStates.set(talkId, current);
-        }
-      }
+      if (seenGroupIds.has(group.id)) continue;
+      seenGroupIds.add(group.id);
+      if (group.readState === "read") readGroups++;
+      else if (group.readState === "unknown") unknownGroups++;
     }
-  }
-
-  let readTalks = 0;
-  let unknownTalks = 0;
-  for (const state of talkStates.values()) {
-    if (state === true) readTalks += 1;
-    if (state === undefined) unknownTalks += 1;
   }
 
   return {
     totalBlueprints: entries.length,
     totalRealBlueprints,
     ownedBlueprints: ownershipKnown ? ownedBlueprints : 0,
-    totalTalks: talkStates.size,
-    readTalks,
-    unknownTalks,
+    totalGroups: seenGroupIds.size,
+    readGroups,
+    unknownGroups,
   };
 }
 

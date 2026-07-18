@@ -136,7 +136,7 @@ describe("catalog and filters", () => {
     const entries = createBlueprintEntries(minimalCatalog, progress);
     expect(entries[0].fixture?.id).toBe(100);
     expect(entries[0].owned).toBe(true);
-    expect(entries[0].talkGroups[0].readState).toBe("unread");
+    expect(entries[0].talkGroups[0].readState).toBe("read");
     expect(entries[0].talkGroups[0].readCount).toBe(1);
   });
 
@@ -175,9 +175,9 @@ describe("catalog and filters", () => {
       totalBlueprints: 1,
       totalRealBlueprints: 1,
       ownedBlueprints: 1,
-      totalTalks: 2,
-      readTalks: 2,
-      unknownTalks: 0,
+      totalGroups: 1,
+      readGroups: 1,
+      unknownGroups: 0,
     });
   });
 
