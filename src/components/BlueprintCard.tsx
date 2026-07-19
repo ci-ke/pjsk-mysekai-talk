@@ -10,9 +10,14 @@ interface BlueprintCardProps {
   expanded: boolean;
   onToggle: () => void;
   lang: Lang;
+  checkedOffIds: Set<number>;
+  onToggleCheckOff: (groupId: number) => void;
 }
 
-function TalkState({ group }: { group: EnrichedTalkGroup }) {
+function TalkState({ group, checkedOff }: { group: EnrichedTalkGroup; checkedOff: boolean }) {
+  if (checkedOff) {
+    return <span className="talk-state talk-state-checked-off">已读</span>;
+  }
   const stateText = {
     unknown: "状态未知",
     unread: "未读",
@@ -21,12 +26,12 @@ function TalkState({ group }: { group: EnrichedTalkGroup }) {
   return <span className={`talk-state talk-state-${group.readState}`}>{stateText}</span>;
 }
 
-export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang }: BlueprintCardProps) {
+export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang, checkedOffIds, onToggleCheckOff }: BlueprintCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
   const imageUrl = imageFailed ? "/placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
   const totalGroups = entry.talkGroups.length;
-  const readGroups = entry.talkGroups.filter((group) => group.readState === "read").length;
+  const readGroups = entry.talkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
   const uniqueCharacters = useMemo(
     () => [...new Set(entry.talkGroups.flatMap((group) => getGroupCharacterNames(catalog, group)))],
     [catalog, entry.talkGroups]
@@ -90,22 +95,23 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
         <span className="muted-label">
           {entry.talkGroups.length ? `${entry.talkGroups.length} 个对话组` : "暂无角色家具对话"}
         </span>
-        <button className="button button-link" type="button" onClick={onToggle} aria-expanded={expanded}>
-          {expanded ? "收起详情 ↑" : "查看对话详情 ↓"}
-        </button>
+        {entry.talkGroups.length > 0 && (
+          <button className="button button-link" type="button" onClick={onToggle} aria-expanded={expanded}>
+            {expanded ? "收起详情 ↑" : "查看对话详情 ↓"}
+          </button>
+        )}
       </div>
-      {expanded && (
+      {expanded && entry.talkGroups.length > 0 && (
         <div className="talk-details">
-          {entry.talkGroups.length === 0 ? (
-            <p className="empty-inline">该家具目前没有可展示的角色家具对话关联。</p>
-          ) : (
-            entry.talkGroups.map((group) => {
+          {entry.talkGroups.map((group) => {
               const groupUnits = [...new Set(
                 group.characterUnitIds.map((unitId) => catalog.characterUnits.find((unit) => unit.id === unitId)?.unit)
               )].filter((unit): unit is string => Boolean(unit));
               const furnitureNames = group.fixtureIds
                 .map((id) => catalog.fixtures.find((item) => item.id === id)?.name)
                 .filter(Boolean);
+              const isCheckedOff = checkedOffIds.has(group.id);
+              const isUnread = group.readState === "unread";
               return (
                 <div className="talk-group" key={group.id}>
                   <div className="talk-group-heading">
@@ -115,7 +121,20 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
                         <span className="tag tag-soft">隐藏</span>
                       )}
                     </div>
-                    <TalkState group={group} />
+                    <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                      {isUnread && (
+                        <button
+                          className={`check-off-btn${isCheckedOff ? " check-off-btn-active" : ""}`}
+                          type="button"
+                          title={isCheckedOff ? "取消已读标记" : "标记为已读"}
+                          onClick={() => onToggleCheckOff(group.id)}
+                          aria-label={isCheckedOff ? "取消已读标记" : "标记为已读"}
+                        >
+                          {isCheckedOff ? "☑" : "☐"}
+                        </button>
+                      )}
+                      <TalkState group={group} checkedOff={isUnread && isCheckedOff} />
+                    </div>
                   </div>
                   <div className="talk-group-meta">
                     <span>角色：{getGroupCharacterNames(catalog, group).join("、") || "未知"}</span>
@@ -124,16 +143,11 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
                     )}
                     <span>家具条件：{furnitureNames.join("、") || "未知"}</span>
                   </div>
-                  <div className="talk-progress-detail">
-                    {group.readState === "unknown"
-                      ? "上传包含 userMysekaiCharacterTalks 的数据后可显示已读状态。"
-                      : `已读 ${group.readCount} / ${group.totalCount}`}
-                  </div>
                   <TalkViewer group={group} catalog={catalog} lang={lang} />
                 </div>
               );
             })
-          )}
+          }
         </div>
       )}
     </article>

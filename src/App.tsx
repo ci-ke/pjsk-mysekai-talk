@@ -7,7 +7,7 @@ import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
 import { parseUserJsonText, UserDataError } from "./domain/userData";
-import { loadProgress, saveProgress, clearProgress, saveLang, loadLang } from "./domain/cache";
+import { loadProgress, saveProgress, clearProgress, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, Lang, UserProgress } from "./types";
 
@@ -38,16 +38,17 @@ function emptyProgress(): UserProgress {
   };
 }
 
-function loadInitialState(): { progress: UserProgress; lang: Lang } {
-  return { progress: loadProgress() ?? emptyProgress(), lang: loadLang() };
+function loadInitialState(): { progress: UserProgress; lang: Lang; checkedOffIds: Set<number> } {
+  return { progress: loadProgress() ?? emptyProgress(), lang: loadLang(), checkedOffIds: loadCheckedOff() };
 }
 
 export default function App() {
   const [lang, setLang] = useState<Lang>(loadInitialState().lang);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState("");
-  const [{ progress: initProgress, lang: _initLang }] = useState(loadInitialState);
+  const [{ progress: initProgress, lang: _initLang, checkedOffIds: initCheckedOffIds }] = useState(loadInitialState);
   const [progress, setProgress] = useState<UserProgress>(initProgress);
+  const [checkedOffIds, setCheckedOffIds] = useState<Set<number>>(initCheckedOffIds);
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
@@ -103,6 +104,7 @@ export default function App() {
   async function handleFile(file: File) {
     setUploadError("");
     clearProgress();
+    clearCheckedOff();
     if (file.size > 20 * 1024 * 1024) {
       setUploadError("文件超过 20 MB，请确认上传的是单个 My SEKAI JSON。 ");
       return;
@@ -112,6 +114,7 @@ export default function App() {
       const parsed = parseUserJsonText(rawText, file.name);
       saveProgress(rawText, file.name);
       setProgress(parsed);
+      setCheckedOffIds(new Set());
       setFilters(initialFilters);
       setPage(1);
       setExpandedIds(new Set());
@@ -122,7 +125,9 @@ export default function App() {
 
   function clearData() {
     clearProgress();
+    clearCheckedOff();
     setProgress(emptyProgress());
+    setCheckedOffIds(new Set());
     setUploadError("");
     setFilters(initialFilters);
     setPage(1);
@@ -134,6 +139,19 @@ export default function App() {
       const next = new Set(current);
       if (next.has(blueprintId)) next.delete(blueprintId);
       else next.add(blueprintId);
+      return next;
+    });
+  }
+
+  function handleToggleCheckOff(groupId: number) {
+    setCheckedOffIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(groupId)) {
+        next.delete(groupId);
+      } else {
+        next.add(groupId);
+      }
+      saveCheckedOff(next);
       return next;
     });
   }
@@ -272,6 +290,8 @@ export default function App() {
                   expanded={expandedIds.has(entry.blueprint.id)}
                   onToggle={() => toggleExpanded(entry.blueprint.id)}
                   lang={lang}
+                  checkedOffIds={checkedOffIds}
+                  onToggleCheckOff={handleToggleCheckOff}
                 />
               ))}
             </div>

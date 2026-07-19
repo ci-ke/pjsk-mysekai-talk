@@ -3,6 +3,7 @@ import { parseUserJsonText } from "./userData";
 
 const STORAGE_KEY = "mysekai-user-data";
 const LANG_KEY = "mysekai-lang";
+const CHECKED_OFF_KEY = "mysekai-checked-off";
 
 interface CachedPayload {
   rawText: string;
@@ -60,4 +61,33 @@ export function loadLang(): Lang {
     // 静默忽略
   }
   return "cn";
+}
+
+/** 从 localStorage 恢复手动划掉的对话组 ID 集合 */
+export function loadCheckedOff(): Set<number> {
+  try {
+    const raw = localStorage.getItem(CHECKED_OFF_KEY);
+    if (!raw) return new Set();
+    return new Set(JSON.parse(raw) as number[]);
+  } catch {
+    return new Set();
+  }
+}
+
+/** 将手动划掉的对话组 ID 集合存入 localStorage */
+export function saveCheckedOff(ids: Set<number>) {
+  try {
+    localStorage.setItem(CHECKED_OFF_KEY, JSON.stringify([...ids]));
+  } catch {
+    // 静默忽略
+  }
+}
+
+/** 清除手动划掉记录 */
+export function clearCheckedOff() {
+  try {
+    localStorage.removeItem(CHECKED_OFF_KEY);
+  } catch {
+    // 静默忽略
+  }
 }

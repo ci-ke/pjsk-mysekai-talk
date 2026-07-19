@@ -120,7 +120,7 @@ export function getEntrySummary(entries: BlueprintEntry[]): EntrySummary {
   let ownedBlueprints = 0;
   let totalRealBlueprints = 0;
   let ownershipKnown = false;
-  const seenGroupIds = new Set<string>();
+  const seenGroupIds = new Set<number>();
   let readGroups = 0;
   let unknownGroups = 0;
 
