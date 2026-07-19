@@ -110,7 +110,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
                 <div className="talk-group" key={group.id}>
                   <div className="talk-group-heading">
                     <div style={{ display: "flex", alignItems: "center", gap: 6, flexWrap: "wrap" }}>
-                      <strong>对话组 #{group.archiveId}</strong>
+                      <strong>对话组 #{group.id}</strong>
                       {group.hasHiddenTalks && (
                         <span className="tag tag-soft">隐藏</span>
                       )}

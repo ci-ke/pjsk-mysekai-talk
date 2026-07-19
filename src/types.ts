@@ -9,12 +9,9 @@ export type UnitKey =
 
 export interface BlueprintRecord {
   id: number;
-  mysekaiCraftType: string;
   craftTargetId: number;
   isEnableSketch: boolean;
   isObtainedByConvert: boolean;
-  craftCountLimit: number | null;
-  isAvailableWithoutPossession: boolean;
   fixtureId: number | null;
   fixtureName: string | null;
   isVirtual?: boolean;
@@ -24,32 +21,23 @@ export interface FixtureRecord {
   id: number;
   mysekaiFixtureType: string;
   name: string;
-  flavorText: string;
   mysekaiFixtureMainGenreId: number | null;
   mysekaiFixtureSubGenreId: number | null;
   mysekaiSettableLayoutType: string | null;
   assetbundleName: string;
-  isAssembled: boolean;
-  isDisassembled: boolean;
-  mysekaiFixtureTagGroup: Record<string, number>;
 }
 
 export interface TalkAssetRecord {
   id: number;
   assetbundleName: string;
   lua: string;
-  conditionGroupId: number;
-  isHidden?: boolean;
 }
 
 export interface TalkGroupRecord {
-  id: string;
-  archiveId: number;
-  characterUnitGroupId: number;
+  id: number;
   fixtureIds: number[];
   talkIds: number[];
   characterUnitIds: number[];
-  characterIds: number[];
   hasHiddenTalks?: boolean;
   talks: TalkAssetRecord[];
 }
@@ -63,10 +51,7 @@ export interface CharacterUnitRecord {
 
 export interface CharacterRecord {
   id: number;
-  firstName: string;
-  givenName: string;
   name: string;
-  unit: UnitKey;
   unitVariants: CharacterUnitRecord[];
 }
 

@@ -7,6 +7,34 @@
  *   node scripts/generate-catalog.mjs --lang=cn --source=../local-data/master  # 指定本地路径
  *
  * 支持的语言: cn jp tw en kr
+ *
+ * ── 对话组解析原理 ──
+ *
+ * 涉及 4 张 master 表，关系链如下：
+ *
+ *   mysekaiCharacterTalks                     talk 记录
+ *     .id                                     → talk ID
+ *     .mysekaiGameCharacterUnitGroupId        → mysekaiGameCharacterUnitGroups 查参与角色
+ *     .mysekaiCharacterTalkConditionGroupId   → mysekaiCharacterTalkConditionGroups 查条件组
+ *     .characterArchiveMysekaiCharacterTalkGroupId → characterArchiveMysekaiCharacterTalkGroups 查对话组
+ *
+ *   mysekaiCharacterTalkConditionGroups       条件组 ↔ 条件 关联
+ *     .mysekaiCharacterTalkConditionId        → mysekaiCharacterTalkConditions
+ *     .groupId                                → mysekaiCharacterTalks.mysekaiCharacterTalkConditionGroupId
+ *
+ *   mysekaiCharacterTalkConditions            条件 → 家具 映射
+ *     .mysekaiCharacterTalkConditionType      → "mysekai_fixture_id"
+ *     .mysekaiCharacterTalkConditionTypeValue → fixtureId
+ *
+ *   characterArchiveMysekaiCharacterTalkGroups 对话归档
+ *     .id                                     → archiveId
+ *     .archiveDisplayType                     → "hide" 则整组标记 hasHiddenTalks
+ *
+ * 解析时按 fixtureId → conditionId → conditionGroupId → talk 逐层遍历，
+ * 以 archiveId 为 key 聚合（archiveId 全局唯一）：
+ *   - fixtureIds      同一组内涉及的多件家具
+ *   - talkIds         同组内的多个 talk
+ *   - characterUnitIds 参与角色的 unit variant ID
  */
 
 import fs from "node:fs/promises";
@@ -103,8 +131,18 @@ const proxyUrl = detectSystemProxy();
 async function proxyFetch(targetUrl, options = {}) {
   const target = new URL(targetUrl);
   const proxy = new URL(proxyUrl);
+  const { signal } = options;
 
   return new Promise((resolve, reject) => {
+    let settled = false;
+    const cleanup = () => {}; // 由下方实现
+
+    const done = (err, result) => {
+      if (settled) return;
+      settled = true;
+      if (err) reject(err); else resolve(result);
+    };
+
     const req = http.request({
       host: proxy.hostname,
       port: proxy.port || 8080,
@@ -115,16 +153,30 @@ async function proxyFetch(targetUrl, options = {}) {
         : {},
     });
 
+    const abort = () => {
+      req.destroy(new Error("请求已取消"));
+    };
+    if (signal) {
+      if (signal.aborted) { abort(); return; }
+      signal.addEventListener("abort", abort, { once: true });
+    }
+
     req.on("connect", (_res, socket) => {
-      const opts = {
+      // CONNECT 成功后清理 signal 监听
+      if (signal) signal.removeEventListener("abort", abort);
+
+      const hreq = https.request({
         socket,
         host: target.hostname,
         port: target.port || 443,
         path: target.pathname + target.search,
         method: options.method || "GET",
         headers: { ...options.headers },
-      };
-      const hreq = https.request(opts, (hres) => {
+        agent: false, // 不复用连接，用完即关
+      }, (hres) => {
+        // 响应体消费完后销毁 socket
+        hres.on("end", () => socket.destroy());
+        hres.on("error", () => socket.destroy());
         resolve(
           new Response(hres, {
             status: hres.statusCode,
@@ -132,14 +184,18 @@ async function proxyFetch(targetUrl, options = {}) {
           })
         );
       });
-      hreq.on("error", reject);
+
+      hreq.on("error", (e) => done(e));
+      if (signal) {
+        const onAbort = () => { hreq.destroy(new Error("请求已取消")); };
+        signal.addEventListener("abort", onAbort, { once: true });
+        hreq.on("close", () => signal.removeEventListener("abort", onAbort));
+      }
       hreq.end();
     });
 
-    req.on("error", reject);
-    req.setTimeout(15000, () => {
-      req.destroy(new Error("代理连接超时"));
-    });
+    req.on("error", (e) => done(e));
+    req.setTimeout(15000, () => done(new Error("代理连接超时")));
     req.end();
   });
 }
@@ -236,12 +292,9 @@ async function buildCatalog(readJson, sourceName) {
     .filter((item) => item.mysekaiCraftType === "mysekai_fixture")
     .map((item) => ({
       id: asNumber(item.id),
-      mysekaiCraftType: item.mysekaiCraftType,
       craftTargetId: asNumber(item.craftTargetId),
       isEnableSketch: Boolean(item.isEnableSketch),
       isObtainedByConvert: Boolean(item.isObtainedByConvert),
-      craftCountLimit: item.craftCountLimit ?? null,
-      isAvailableWithoutPossession: Boolean(item.isAvailableWithoutPossession),
     }))
     .filter((item) => item.id !== null && item.craftTargetId !== null)
     .sort((a, b) => a.id - b.id);
@@ -254,14 +307,10 @@ async function buildCatalog(readJson, sourceName) {
       id: asNumber(item.id),
       mysekaiFixtureType: item.mysekaiFixtureType,
       name: item.name || `家具 ${item.id}`,
-      flavorText: item.flavorText || "",
       mysekaiFixtureMainGenreId: asNumber(item.mysekaiFixtureMainGenreId),
       mysekaiFixtureSubGenreId: asNumber(item.mysekaiFixtureSubGenreId),
       mysekaiSettableLayoutType: item.mysekaiSettableLayoutType || null,
       assetbundleName: item.assetbundleName || "",
-      isAssembled: Boolean(item.isAssembled),
-      isDisassembled: Boolean(item.isDisassembled),
-      mysekaiFixtureTagGroup: item.mysekaiFixtureTagGroup || {},
     }))
     .filter((item) => item.id !== null)
     .sort((a, b) => a.id - b.id);
@@ -279,7 +328,6 @@ async function buildCatalog(readJson, sourceName) {
       colorCode: item.colorCode || null,
     }))
     .filter((item) => item.id !== null && item.gameCharacterId !== null);
-  const unitById = new Map(characterUnits.map((item) => [item.id, item]));
   const visitableUnitIds = new Set(
     data.mysekaiGateCharacterLotteries.map((item) => asNumber(item.gameCharacterUnitId)).filter(Boolean)
   );
@@ -287,10 +335,7 @@ async function buildCatalog(readJson, sourceName) {
   const characters = data.gameCharacters
     .map((item) => ({
       id: asNumber(item.id),
-      firstName: item.firstName || "",
-      givenName: item.givenName || "",
       name: `${item.firstName || ""}${item.givenName || ""}`,
-      unit: item.unit || "",
       unitVariants: characterUnits
         .filter((unit) => unit.gameCharacterId === asNumber(item.id) && visitableUnitIds.has(unit.id))
         .sort((a, b) => a.id - b.id),
@@ -307,7 +352,7 @@ async function buildCatalog(readJson, sourceName) {
     .filter((item) => item.id !== null);
   const characterGroupById = new Map(characterGroups.map((item) => [item.id, item.unitIds]));
 
-  // ── 对话条件 ──
+  // ── 对话组解析（见文件头原理说明）──
   const conditionIdsByFixture = new Map();
   for (const condition of data.mysekaiCharacterTalkConditions) {
     if (condition.mysekaiCharacterTalkConditionType !== "mysekai_fixture_id") continue;
@@ -348,12 +393,10 @@ async function buildCatalog(readJson, sourceName) {
           if (!archive) continue;
           const isHidden = archive.archiveDisplayType === "hide";
 
-          const key = `${archiveId}:${characterUnitGroupId}`;
+          const key = archiveId;
           if (!talkGroupMap.has(key)) {
             talkGroupMap.set(key, {
-              id: key,
-              archiveId,
-              characterUnitGroupId,
+              id: archiveId,
               fixtureIds: new Set(),
               talkIds: new Set(),
               characterUnitIds: new Set(characterGroupById.get(characterUnitGroupId) || []),
@@ -372,8 +415,6 @@ async function buildCatalog(readJson, sourceName) {
             id: talkId,
             assetbundleName: talk.assetbundleName || "",
             lua: talk.lua || "",
-            conditionGroupId,
-            isHidden,
           });
         }
       }
@@ -383,21 +424,14 @@ async function buildCatalog(readJson, sourceName) {
   const talkGroups = [...talkGroupMap.values()]
     .map((group) => ({
       id: group.id,
-      archiveId: group.archiveId,
-      characterUnitGroupId: group.characterUnitGroupId,
       hasHiddenTalks: group.hasHiddenTalks,
       fixtureIds: [...group.fixtureIds].sort((a, b) => a - b),
       talkIds: [...group.talkIds].sort((a, b) => a - b),
       characterUnitIds: [...group.characterUnitIds].sort((a, b) => a - b),
-      characterIds: [...group.characterUnitIds]
-        .map((unitId) => unitById.get(unitId)?.gameCharacterId)
-        .filter(Boolean)
-        .filter((id, index, list) => list.indexOf(id) === index)
-        .sort((a, b) => a - b),
       talks: [...group.talks.values()].sort((a, b) => a.id - b.id),
     }))
     .filter((group) => group.fixtureIds.some((id) => fixtureMap.has(id)))
-    .sort((a, b) => a.archiveId - b.archiveId || a.characterUnitGroupId - b.characterUnitGroupId);
+    .sort((a, b) => a.id - b.id);
 
   const genres = [data.mysekaiFixtureMainGenres, data.mysekaiFixtureSubGenres].map((items) =>
     items
@@ -408,39 +442,30 @@ async function buildCatalog(readJson, sourceName) {
 
   const masterVersion = await readVersion(readJson);
 
-  // ── 虚拟蓝图：所有无真实蓝图的家具 ──
+  // ── 无蓝图家具：所有无真实蓝图的家具 ──
+  const realBlueprintCount = blueprints.length;
   const virtualCount = fixtures.filter((f) => !blueprintTargetIds.has(f.id)).length;
-  if (virtualCount > 0) {
-    console.log(`  虚拟蓝图: ${virtualCount} 个 (无蓝图家具)`);
-  }
   for (const fixture of fixtures) {
     if (blueprintTargetIds.has(fixture.id)) continue;
     const vb = {
-      id: -fixture.id, // 负 ID 避免与真实蓝图冲突
-      seq: -fixture.id,
+      id: -fixture.id,
       craftTargetId: fixture.id,
       isVirtual: true,
-      name: fixture.name || null,
-      rarity: null,
-      assetbundleName: null,
-      mysekaiFixtureType: null,
-      mysekaiFixtureMainGenreId: null,
-      mysekaiFixtureSubGenreId: null,
-      mysekaiSettableLayoutType: null,
-      isAvailableWithoutPossession: false,
-      releaseCondition: null,
-      obtainFlavorText: null,
+      isEnableSketch: false,
+      isObtainedByConvert: false,
     };
     blueprints.push(vb);
     blueprintTargetIds.add(vb.craftTargetId);
     blueprintByTarget.set(vb.craftTargetId, vb);
   }
   blueprints.sort((a, b) => {
-    // 虚拟蓝图排在最后
+    // 无蓝图家具排在最后
     if (a.isVirtual && !b.isVirtual) return 1;
     if (!a.isVirtual && b.isVirtual) return -1;
     return a.id - b.id;
   });
+
+  console.log(`  真实蓝图: ${realBlueprintCount}，无蓝图家具: ${virtualCount}，家具: ${fixtures.length}，对话组: ${talkGroups.length}`);
 
   return {
     schemaVersion: 1,
@@ -506,7 +531,6 @@ async function main() {
       const compactPath = path.join(outDir, `catalog-${lang}.min.json`);
       await fs.writeFile(compactPath, JSON.stringify(catalog), "utf8");
       console.log(`  已生成 ${compactPath}`);
-      console.log(`  蓝图: ${catalog.blueprints.length}，家具: ${catalog.fixtures.length}，对话组: ${catalog.talkGroups.length}`);
     } catch (error) {
       console.error(`  [${lang}] 失败: ${error.stack || error.message || error}`);
       // 非单语言模式时继续处理其他语言
@@ -515,6 +539,7 @@ async function main() {
       }
     }
   }
+  process.exit(process.exitCode || 0);
 }
 
 main().catch((error) => {
