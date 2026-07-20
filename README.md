@@ -7,7 +7,7 @@
 - **全量家具目录** — 涵盖所有家具（含门 Gate），每个家具都有对应的蓝图条目（真实蓝图或无蓝图家具）
 - **多语言支持** — 简体中文 / 日本語 / 繁體中文 / English / 한국어，独立数据文件
 - **蓝图收集追踪** — 上传 My SEKAI 抓包 JSON，自动解析已持有的蓝图列表
-- **角色家具对话进度** — 以对话组为单位统计已读/未读状态（组内任一对话已读即算整组已读），含隐藏对话标记
+- **角色家具对话进度** — 以对话组为单位统计已读/未读状态（组内任一对话已读即算整组已读），含隐藏对话标记；支持手动划掉未读对话组（浏览器缓存）
 - **多维度筛选** — 持有状态（全部家具 / 全部蓝图 / 已持有 / 未持有 / 无需蓝图）、角色、团体、对话状态、主副分类、关键词搜索
 - **对话脚本查看** — 展开对话组，加载并查看具体对话台本
 
@@ -46,7 +46,7 @@ npm run data:sync
 ```
 ├── .github/workflows/     # CI/CD
 │   ├── deploy-pages.yml   # 页面部署（push 触发或手动）
-│   └── update-data.yml    # 数据更新（每日定时或手动，不触发构建）
+│   └── update-data.yml    # 每日定时拉取最新数据并提交到 main，间接触发部署
 ├── public/data/           # 编译时 COPY 到 dist，运行时 fetch 加载
 ├── scripts/
 │   └── generate-catalog.mjs  # 从 Haruki master 生成多语言 catalog JSON
@@ -96,8 +96,8 @@ node scripts/generate-catalog.mjs --lang=cn --source=../local-data/master
 
 项目通过 GitHub Actions 部署到 GitHub Pages：
 
-- `deploy-pages.yml` — 代码 push 时自动构建部署，也可手动触发
-- `update-data.yml` — 每日 UTC 00:00 自动更新 catalog 数据并直接部署数据文件（不触发整站构建）
+- **`deploy-pages.yml`** — 代码 push 到 main 时自动构建并部署完整网站，也可手动触发
+- **`update-data.yml`** — 每日 UTC 00:00 自动从 Haruki 仓库拉取最新 master 数据，提交到 main 分支；该提交会间接触发 `deploy-pages.yml` 完成重新部署
 
 需要在仓库 Settings → Pages 中设置 Source 为 **GitHub Actions**。
 
