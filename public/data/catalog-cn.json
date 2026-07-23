@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "source": "haruki-sekai-sc-master",
-  "masterVersion": "6.0.0.43",
+  "masterVersion": "6.0.0.44",
   "lang": "cn",
   "blueprints": [
     {
@@ -6739,6 +6739,318 @@
       "isObtainedByConvert": true,
       "fixtureId": 1028,
       "fixtureName": "浪漫花园的丝柏"
+    },
+    {
+      "id": 1032,
+      "craftTargetId": 1032,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1032,
+      "fixtureName": "[限定风格 vol.2]咲希的玩偶/S"
+    },
+    {
+      "id": 1033,
+      "craftTargetId": 1033,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1033,
+      "fixtureName": "[限定风格 vol.2]咲希的玩偶/M"
+    },
+    {
+      "id": 1034,
+      "craftTargetId": 1034,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1034,
+      "fixtureName": "[限定风格 vol.2]咲希的玩偶/L"
+    },
+    {
+      "id": 1035,
+      "craftTargetId": 1035,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1035,
+      "fixtureName": "[限定风格 vol.2]遥的玩偶/S"
+    },
+    {
+      "id": 1036,
+      "craftTargetId": 1036,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1036,
+      "fixtureName": "[限定风格 vol.2]遥的玩偶/M"
+    },
+    {
+      "id": 1037,
+      "craftTargetId": 1037,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1037,
+      "fixtureName": "[限定风格 vol.2]遥的玩偶/L"
+    },
+    {
+      "id": 1038,
+      "craftTargetId": 1038,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1038,
+      "fixtureName": "[限定风格 vol.2]杏的玩偶/S"
+    },
+    {
+      "id": 1039,
+      "craftTargetId": 1039,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1039,
+      "fixtureName": "[限定风格 vol.2]杏的玩偶/M"
+    },
+    {
+      "id": 1040,
+      "craftTargetId": 1040,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1040,
+      "fixtureName": "[限定风格 vol.2]杏的玩偶/L"
+    },
+    {
+      "id": 1041,
+      "craftTargetId": 1041,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1041,
+      "fixtureName": "[限定风格 vol.2]司的玩偶/S"
+    },
+    {
+      "id": 1042,
+      "craftTargetId": 1042,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1042,
+      "fixtureName": "[限定风格 vol.2]司的玩偶/M"
+    },
+    {
+      "id": 1043,
+      "craftTargetId": 1043,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1043,
+      "fixtureName": "[限定风格 vol.2]司的玩偶/L"
+    },
+    {
+      "id": 1044,
+      "craftTargetId": 1044,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1044,
+      "fixtureName": "[限定风格 vol.2]真冬的玩偶/S"
+    },
+    {
+      "id": 1045,
+      "craftTargetId": 1045,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1045,
+      "fixtureName": "[限定风格 vol.2]真冬的玩偶/M"
+    },
+    {
+      "id": 1046,
+      "craftTargetId": 1046,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1046,
+      "fixtureName": "[限定风格 vol.2]真冬的玩偶/L"
+    },
+    {
+      "id": 1047,
+      "craftTargetId": 1047,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1047,
+      "fixtureName": "[限定风格 vol.2]未来的玩偶/S"
+    },
+    {
+      "id": 1048,
+      "craftTargetId": 1048,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1048,
+      "fixtureName": "[限定风格 vol.2]未来的玩偶/M"
+    },
+    {
+      "id": 1049,
+      "craftTargetId": 1049,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1049,
+      "fixtureName": "[限定风格 vol.2]未来的玩偶/L"
+    },
+    {
+      "id": 1050,
+      "craftTargetId": 1050,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1050,
+      "fixtureName": "[限定风格 vol.2]铃的玩偶/S"
+    },
+    {
+      "id": 1051,
+      "craftTargetId": 1051,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1051,
+      "fixtureName": "[限定风格 vol.2]铃的玩偶/M"
+    },
+    {
+      "id": 1052,
+      "craftTargetId": 1052,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1052,
+      "fixtureName": "[限定风格 vol.2]铃的玩偶/L"
+    },
+    {
+      "id": 1068,
+      "craftTargetId": 1068,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1068,
+      "fixtureName": "[限定风格 vol.2]志步玩偶/S"
+    },
+    {
+      "id": 1069,
+      "craftTargetId": 1069,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1069,
+      "fixtureName": "[限定风格 vol.2]志步玩偶/M"
+    },
+    {
+      "id": 1070,
+      "craftTargetId": 1070,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1070,
+      "fixtureName": "[限定风格 vol.2]志步玩偶/L"
+    },
+    {
+      "id": 1071,
+      "craftTargetId": 1071,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1071,
+      "fixtureName": "[限定风格 vol.2]实乃理玩偶/S"
+    },
+    {
+      "id": 1072,
+      "craftTargetId": 1072,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1072,
+      "fixtureName": "[限定风格 vol.2]实乃理玩偶/M"
+    },
+    {
+      "id": 1073,
+      "craftTargetId": 1073,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1073,
+      "fixtureName": "[限定风格 vol.2]实乃理玩偶/L"
+    },
+    {
+      "id": 1074,
+      "craftTargetId": 1074,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1074,
+      "fixtureName": "[限定风格 vol.2]冬弥玩偶/S"
+    },
+    {
+      "id": 1075,
+      "craftTargetId": 1075,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1075,
+      "fixtureName": "[限定风格 vol.2]冬弥玩偶/M"
+    },
+    {
+      "id": 1076,
+      "craftTargetId": 1076,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1076,
+      "fixtureName": "[限定风格 vol.2]冬弥玩偶/L"
+    },
+    {
+      "id": 1077,
+      "craftTargetId": 1077,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1077,
+      "fixtureName": "[限定风格 vol.2]宁宁玩偶/S"
+    },
+    {
+      "id": 1078,
+      "craftTargetId": 1078,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1078,
+      "fixtureName": "[限定风格 vol.2]宁宁玩偶/M"
+    },
+    {
+      "id": 1079,
+      "craftTargetId": 1079,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1079,
+      "fixtureName": "[限定风格 vol.2]宁宁玩偶/L"
+    },
+    {
+      "id": 1080,
+      "craftTargetId": 1080,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1080,
+      "fixtureName": "[限定风格 vol.2]奏玩偶/S"
+    },
+    {
+      "id": 1081,
+      "craftTargetId": 1081,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1081,
+      "fixtureName": "[限定风格 vol.2]奏玩偶/M"
+    },
+    {
+      "id": 1082,
+      "craftTargetId": 1082,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1082,
+      "fixtureName": "[限定风格 vol.2]奏玩偶/L"
+    },
+    {
+      "id": 1083,
+      "craftTargetId": 1083,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1083,
+      "fixtureName": "[限定风格 vol.2]KAITO玩偶/S"
+    },
+    {
+      "id": 1084,
+      "craftTargetId": 1084,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1084,
+      "fixtureName": "[限定风格 vol.2]KAITO玩偶/M"
+    },
+    {
+      "id": 1085,
+      "craftTargetId": 1085,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1085,
+      "fixtureName": "[限定风格 vol.2]KAITO玩偶/L"
     },
     {
       "id": 90003,
@@ -15432,6 +15744,357 @@
       "mysekaiFixtureSubGenreId": 14,
       "mysekaiSettableLayoutType": "wall",
       "assetbundleName": "mdl_non9001_fixture_movposter3"
+    },
+    {
+      "id": 1032,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]咲希的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3small"
+    },
+    {
+      "id": 1033,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]咲希的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3medium"
+    },
+    {
+      "id": 1034,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]咲希的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3large"
+    },
+    {
+      "id": 1035,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]遥的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3small"
+    },
+    {
+      "id": 1036,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]遥的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3medium"
+    },
+    {
+      "id": 1037,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]遥的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3large"
+    },
+    {
+      "id": 1038,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]杏的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3small"
+    },
+    {
+      "id": 1039,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]杏的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3medium"
+    },
+    {
+      "id": 1040,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]杏的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3large"
+    },
+    {
+      "id": 1041,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]司的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3small"
+    },
+    {
+      "id": 1042,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]司的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3medium"
+    },
+    {
+      "id": 1043,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]司的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3large"
+    },
+    {
+      "id": 1044,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]真冬的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3small"
+    },
+    {
+      "id": 1045,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]真冬的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3medium"
+    },
+    {
+      "id": 1046,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]真冬的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3large"
+    },
+    {
+      "id": 1047,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]未来的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3small"
+    },
+    {
+      "id": 1048,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]未来的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3medium"
+    },
+    {
+      "id": 1049,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]未来的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3large"
+    },
+    {
+      "id": 1050,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]铃的玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3small"
+    },
+    {
+      "id": 1051,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]铃的玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3medium"
+    },
+    {
+      "id": 1052,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]铃的玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3large"
+    },
+    {
+      "id": 1068,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]志步玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll3small"
+    },
+    {
+      "id": 1069,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]志步玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll3medium"
+    },
+    {
+      "id": 1070,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]志步玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll3large"
+    },
+    {
+      "id": 1071,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]实乃理玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll3small"
+    },
+    {
+      "id": 1072,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]实乃理玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll3medium"
+    },
+    {
+      "id": 1073,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]实乃理玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll3large"
+    },
+    {
+      "id": 1074,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]冬弥玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll3small"
+    },
+    {
+      "id": 1075,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]冬弥玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll3medium"
+    },
+    {
+      "id": 1076,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]冬弥玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll3large"
+    },
+    {
+      "id": 1077,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]宁宁玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll3small"
+    },
+    {
+      "id": 1078,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]宁宁玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll3medium"
+    },
+    {
+      "id": 1079,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]宁宁玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll3large"
+    },
+    {
+      "id": 1080,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]奏玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll3small"
+    },
+    {
+      "id": 1081,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]奏玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll3medium"
+    },
+    {
+      "id": 1082,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]奏玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll3large"
+    },
+    {
+      "id": 1083,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]KAITO玩偶/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll3small"
+    },
+    {
+      "id": 1084,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]KAITO玩偶/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll3medium"
+    },
+    {
+      "id": 1085,
+      "mysekaiFixtureType": "normal",
+      "name": "[限定风格 vol.2]KAITO玩偶/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll3large"
     },
     {
       "id": 1469,
