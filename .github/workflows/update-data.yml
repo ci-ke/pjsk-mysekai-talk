@@ -17,6 +17,9 @@ concurrency:
 jobs:
   update-data:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - uses: actions/checkout@v4
         with:
@@ -66,4 +69,5 @@ jobs:
 
       - name: Deploy to GitHub Pages
         if: steps.commit.outputs.changed == 'true'
+        id: deployment
         uses: actions/deploy-pages@v4
