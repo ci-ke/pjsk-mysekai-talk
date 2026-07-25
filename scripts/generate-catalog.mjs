@@ -79,15 +79,6 @@ const projectRoot = path.resolve(__dirname, "..");
 
 // ── 工具函数 ──
 
-/** 从远程 URL 或本地路径中提取数据源名称 */
-function getSourceName(raw) {
-  if (/^https?:\/\//.test(raw)) {
-    const segments = new URL(raw).pathname.split("/").filter(Boolean);
-    return segments[1] || "unknown";
-  }
-  return path.basename(path.resolve(raw, ".."));
-}
-
 /** 检测 Windows 系统代理（环境变量 → WinHTTP → IE 设置） */
 function detectSystemProxy() {
   const envProxy =
@@ -252,18 +243,6 @@ function makeReader(baseSource, isRemote) {
   };
 }
 
-async function readVersion(readJson) {
-  try {
-    // 远程时尝试 versions/current_version.json
-    // 本地时也尝试相对路径
-    const version = await readJson("../versions/current_version", { required: false });
-    if (version && (version.dataVersion || version.cdnVersion)) {
-      return version.dataVersion ?? version.cdnVersion ?? version.data_version ?? null;
-    }
-  } catch { /* */ }
-  return null;
-}
-
 // ── 主逻辑 ──
 
 function asNumber(value) {
@@ -283,7 +262,7 @@ function addToMap(map, key, value) {
   map.get(key).push(value);
 }
 
-async function buildCatalog(readJson, sourceName) {
+async function buildCatalog(readJson) {
   const data = Object.fromEntries(
     await Promise.all(requiredFiles.map(async (name) => [name, await readJson(name)]))
   );
@@ -440,8 +419,6 @@ async function buildCatalog(readJson, sourceName) {
       .sort((a, b) => a.id - b.id)
   );
 
-  const masterVersion = await readVersion(readJson);
-
   // ── 无蓝图家具：所有无真实蓝图的家具 ──
   const realBlueprintCount = blueprints.length;
   const virtualCount = fixtures.filter((f) => !blueprintTargetIds.has(f.id)).length;
@@ -469,8 +446,6 @@ async function buildCatalog(readJson, sourceName) {
 
   return {
     schemaVersion: 1,
-    source: sourceName,
-    masterVersion,
     lang: null, // 由调用方设置
     blueprints: blueprints.map((blueprint) => ({
       ...blueprint,
@@ -497,20 +472,17 @@ async function main() {
   for (const lang of langs) {
     let baseSource;
     let isRemote;
-    let sourceName;
 
     if (sourceArg) {
       // 自定义源：覆盖默认 URL
       const raw = sourceArg.slice("--source=".length);
       isRemote = /^https?:\/\//.test(raw);
       baseSource = isRemote ? raw : path.resolve(raw);
-      sourceName = getSourceName(raw);
     } else {
       // 从 Haruki 获取
       const prefix = LANG_PREFIX[lang];
       baseSource = HARUKI_MASTER_TEMPLATE.replace("{prefix}", prefix ?? "");
       isRemote = true;
-      sourceName = `haruki-sekai-${prefix}master`;
     }
 
     console.log(`\n[${lang}] ${isRemote ? "远程" : "本地"}: ${baseSource}`);
@@ -518,7 +490,7 @@ async function main() {
     const readJson = makeReader(baseSource, isRemote);
 
     try {
-      const catalog = await buildCatalog(readJson, sourceName);
+      const catalog = await buildCatalog(readJson);
       catalog.lang = lang;
 
       const outDir = path.join(projectRoot, "public", "data");

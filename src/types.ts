@@ -64,8 +64,6 @@ export type Lang = "cn" | "jp" | "tw" | "en" | "kr";
 
 export interface Catalog {
   schemaVersion: number;
-  source: string;
-  masterVersion: string | number | null;
   lang: Lang;
   blueprints: BlueprintRecord[];
   fixtures: FixtureRecord[];

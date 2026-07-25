@@ -9,8 +9,6 @@ const catalog = catalogJson as Catalog;
 
 const minimalCatalog: Catalog = {
   schemaVersion: 1,
-  source: "test",
-  masterVersion: 1,
   lang: "cn",
   blueprints: [
     {

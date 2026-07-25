@@ -1,7 +1,5 @@
 {
   "schemaVersion": 1,
-  "source": "haruki-sekai-kr-master",
-  "masterVersion": "6.0.1.9",
   "lang": "kr",
   "blueprints": [
     {

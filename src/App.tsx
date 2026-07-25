@@ -207,7 +207,7 @@ export default function App() {
             把 `/msb` 带到浏览器：导入自己的抓包 JSON，快速找出还没拿到的蓝图和角色家具对话。
           </p>
           <div className="hero-meta">
-            <span>{LANG_LABELS[catalog.lang]} · {catalog.source ?? "—"} v{catalog.masterVersion ?? "—"}</span>
+            <span>{LANG_LABELS[catalog.lang]}</span>
             <span>纯本地计算</span>
             <span>无需账号</span>
           </div>
@@ -329,7 +329,7 @@ export default function App() {
         <footer className="app-footer">
           <div>
             <strong>My SEKAI 蓝图与对话</strong>
-            <span>数据目录：{catalog.source} · MasterData v{catalog.masterVersion ?? "—"}</span>
+            <span>数据语言：{LANG_LABELS[catalog.lang]}</span>
           </div>
           <div>
             <span>蓝图完成率：{progress.blueprintDataAvailable ? formatPercent(allSummary.ownedBlueprints, allSummary.totalBlueprints) : "—"}</span>
