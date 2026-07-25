@@ -46,7 +46,8 @@ export function filterBlueprintEntries(
         ]
           .join(" ")
           .toLocaleLowerCase();
-        if (!haystack.includes(search)) return false;
+        const terms = search.split(/\s+/).filter(Boolean);
+        if (!terms.every((term) => haystack.includes(term))) return false;
       }
 
       if (
