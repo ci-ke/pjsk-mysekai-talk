@@ -6971,6 +6971,54 @@
       "fixtureName": "[限量設計vol.2] KAITO的玩偶/L"
     },
     {
+      "id": 10000001,
+      "craftTargetId": 9000008,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000008,
+      "fixtureName": "消暑涼品"
+    },
+    {
+      "id": 10000002,
+      "craftTargetId": 9000009,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000009,
+      "fixtureName": "鈴音窗"
+    },
+    {
+      "id": 10000003,
+      "craftTargetId": 9000010,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000010,
+      "fixtureName": "清涼風扇"
+    },
+    {
+      "id": 10000004,
+      "craftTargetId": 9000011,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000011,
+      "fixtureName": "汽水嘉年華入口"
+    },
+    {
+      "id": 10000005,
+      "craftTargetId": 9000012,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000012,
+      "fixtureName": "汽水彈珠路燈"
+    },
+    {
+      "id": 10000006,
+      "craftTargetId": 9000013,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 9000013,
+      "fixtureName": "兔兔會場柵欄"
+    },
+    {
       "id": -9000007,
       "craftTargetId": 9000007,
       "isVirtual": true,
@@ -15962,6 +16010,60 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_twcollect_fixture_gazebo1"
+    },
+    {
+      "id": 9000008,
+      "mysekaiFixtureType": "normal",
+      "name": "消暑涼品",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 3,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_twcollect_fixture_table2"
+    },
+    {
+      "id": 9000009,
+      "mysekaiFixtureType": "normal",
+      "name": "鈴音窗",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_twcollect_window_window1"
+    },
+    {
+      "id": 9000010,
+      "mysekaiFixtureType": "normal",
+      "name": "清涼風扇",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_twcollect_fixture_fan1"
+    },
+    {
+      "id": 9000011,
+      "mysekaiFixtureType": "normal",
+      "name": "汽水嘉年華入口",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_twcollect_fixture_gazebo2"
+    },
+    {
+      "id": 9000012,
+      "mysekaiFixtureType": "normal",
+      "name": "汽水彈珠路燈",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_twcollect_fixture_lamp1"
+    },
+    {
+      "id": 9000013,
+      "mysekaiFixtureType": "normal",
+      "name": "兔兔會場柵欄",
+      "mysekaiFixtureMainGenreId": 13,
+      "mysekaiFixtureSubGenreId": 23,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_twcollect_fence_venue1"
     }
   ],
   "talkGroups": [
