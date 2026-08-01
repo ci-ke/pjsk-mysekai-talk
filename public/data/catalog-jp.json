@@ -7147,6 +7147,46 @@
       "fixtureName": "バースデーチェア（杏）"
     },
     {
+      "id": 954,
+      "craftTargetId": 954,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 954,
+      "fixtureName": "バースデーケーキ（一歌）"
+    },
+    {
+      "id": 955,
+      "craftTargetId": 955,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 955,
+      "fixtureName": "バースデーバルーン（一歌）"
+    },
+    {
+      "id": 956,
+      "craftTargetId": 956,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 956,
+      "fixtureName": "バースデーブーケ（一歌）"
+    },
+    {
+      "id": 957,
+      "craftTargetId": 957,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 957,
+      "fixtureName": "バースデーガーランド（一歌）"
+    },
+    {
+      "id": 958,
+      "craftTargetId": 958,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 958,
+      "fixtureName": "バースデーチェア（一歌）"
+    },
+    {
       "id": 974,
       "craftTargetId": 974,
       "isEnableSketch": true,
@@ -11361,6 +11401,150 @@
       "isObtainedByConvert": true,
       "fixtureId": 1635,
       "fixtureName": "和風の橋"
+    },
+    {
+      "id": 1659,
+      "craftTargetId": 1659,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1659,
+      "fixtureName": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/S"
+    },
+    {
+      "id": 1660,
+      "craftTargetId": 1660,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1660,
+      "fixtureName": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/M"
+    },
+    {
+      "id": 1661,
+      "craftTargetId": 1661,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1661,
+      "fixtureName": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/L"
+    },
+    {
+      "id": 1662,
+      "craftTargetId": 1662,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1662,
+      "fixtureName": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/S"
+    },
+    {
+      "id": 1663,
+      "craftTargetId": 1663,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1663,
+      "fixtureName": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/M"
+    },
+    {
+      "id": 1664,
+      "craftTargetId": 1664,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1664,
+      "fixtureName": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/L"
+    },
+    {
+      "id": 1665,
+      "craftTargetId": 1665,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1665,
+      "fixtureName": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/S"
+    },
+    {
+      "id": 1666,
+      "craftTargetId": 1666,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1666,
+      "fixtureName": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/M"
+    },
+    {
+      "id": 1667,
+      "craftTargetId": 1667,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1667,
+      "fixtureName": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/L"
+    },
+    {
+      "id": 1668,
+      "craftTargetId": 1668,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1668,
+      "fixtureName": "[リミテッドスタイル vol.4] えむのぬいぐるみ/S"
+    },
+    {
+      "id": 1669,
+      "craftTargetId": 1669,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1669,
+      "fixtureName": "[リミテッドスタイル vol.4] えむのぬいぐるみ/M"
+    },
+    {
+      "id": 1670,
+      "craftTargetId": 1670,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1670,
+      "fixtureName": "[リミテッドスタイル vol.4] えむのぬいぐるみ/L"
+    },
+    {
+      "id": 1671,
+      "craftTargetId": 1671,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1671,
+      "fixtureName": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/S"
+    },
+    {
+      "id": 1672,
+      "craftTargetId": 1672,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1672,
+      "fixtureName": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/M"
+    },
+    {
+      "id": 1673,
+      "craftTargetId": 1673,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1673,
+      "fixtureName": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/L"
+    },
+    {
+      "id": 1674,
+      "craftTargetId": 1674,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1674,
+      "fixtureName": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/S"
+    },
+    {
+      "id": 1675,
+      "craftTargetId": 1675,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1675,
+      "fixtureName": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/M"
+    },
+    {
+      "id": 1676,
+      "craftTargetId": 1676,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1676,
+      "fixtureName": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/L"
     },
     {
       "id": -900002,
@@ -20356,6 +20540,51 @@
       "assetbundleName": "mdl_bir1110_fixture_chair1"
     },
     {
+      "id": 954,
+      "mysekaiFixtureType": "system",
+      "name": "バースデーケーキ（一歌）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1101_fixture_cake1"
+    },
+    {
+      "id": 955,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーバルーン（一歌）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1101_fixture_balloon1"
+    },
+    {
+      "id": 956,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーブーケ（一歌）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1101_fixture_flower1"
+    },
+    {
+      "id": 957,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーガーランド（一歌）",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1101_fixture_garland1"
+    },
+    {
+      "id": 958,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーチェア（一歌）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1101_fixture_chair1"
+    },
+    {
       "id": 974,
       "mysekaiFixtureType": "normal",
       "name": "和風の素朴な座布団",
@@ -25142,6 +25371,168 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_ext0029_fixture_bridge1"
+    },
+    {
+      "id": 1659,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll5small"
+    },
+    {
+      "id": 1660,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll5medium"
+    },
+    {
+      "id": 1661,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 咲希のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll5large"
+    },
+    {
+      "id": 1662,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll5small"
+    },
+    {
+      "id": 1663,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll5medium"
+    },
+    {
+      "id": 1664,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] みのりのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll5large"
+    },
+    {
+      "id": 1665,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll5small"
+    },
+    {
+      "id": 1666,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll5medium"
+    },
+    {
+      "id": 1667,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 冬弥のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll5large"
+    },
+    {
+      "id": 1668,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] えむのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll5small"
+    },
+    {
+      "id": 1669,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] えむのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll5medium"
+    },
+    {
+      "id": 1670,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] えむのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll5large"
+    },
+    {
+      "id": 1671,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll5small"
+    },
+    {
+      "id": 1672,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll5medium"
+    },
+    {
+      "id": 1673,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] 瑞希のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll5large"
+    },
+    {
+      "id": 1674,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll5small"
+    },
+    {
+      "id": 1675,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll5medium"
+    },
+    {
+      "id": 1676,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll5large"
     },
     {
       "id": 900002,
@@ -131527,6 +131918,26 @@
           "id": 8486,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_japanstyle_031_001"
+        }
+      ]
+    },
+    {
+      "id": 7941,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        958
+      ],
+      "talkIds": [
+        8488
+      ],
+      "characterUnitIds": [
+        1
+      ],
+      "talks": [
+        {
+          "id": 8488,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2026_001_004"
         }
       ]
     }
