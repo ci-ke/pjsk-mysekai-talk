@@ -29,7 +29,7 @@ function TalkState({ group, checkedOff }: { group: EnrichedTalkGroup; checkedOff
 export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang, checkedOffIds, onToggleCheckOff }: BlueprintCardProps) {
   const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
-  const imageUrl = imageFailed ? "/placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
+  const imageUrl = imageFailed ? import.meta.env.BASE_URL + "placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
   const totalGroups = entry.talkGroups.length;
   const readGroups = entry.talkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
   const uniqueCharacters = useMemo(

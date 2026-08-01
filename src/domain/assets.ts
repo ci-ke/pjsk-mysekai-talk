@@ -13,7 +13,7 @@ export function getAssetBaseUrl(lang: Lang) {
 }
 
 export function getFixtureThumbnailUrl(fixture: FixtureRecord | null, lang: Lang) {
-  if (!fixture?.assetbundleName) return "/placeholder.svg";
+  if (!fixture?.assetbundleName) return import.meta.env.BASE_URL + "placeholder.svg";
   const base = getAssetBaseUrl(lang);
   if (fixture.mysekaiFixtureType === "surface_appearance") {
     const layout = fixture.mysekaiSettableLayoutType || "wall_appearance";
