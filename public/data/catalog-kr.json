@@ -6659,6 +6659,54 @@
       "fixtureName": "로맨틱 가든 사이프러스"
     },
     {
+      "id": 10000001,
+      "craftTargetId": 90011,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90011,
+      "fixtureName": "인어의 조개 침대"
+    },
+    {
+      "id": 10000002,
+      "craftTargetId": 90012,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90012,
+      "fixtureName": "파도 소리 책상"
+    },
+    {
+      "id": 10000003,
+      "craftTargetId": 90013,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90013,
+      "fixtureName": "해변 세면대"
+    },
+    {
+      "id": 10000004,
+      "craftTargetId": 90014,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90014,
+      "fixtureName": "버스 정류장"
+    },
+    {
+      "id": 10000005,
+      "craftTargetId": 90015,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90015,
+      "fixtureName": "버스 정류장 표지판"
+    },
+    {
+      "id": 10000006,
+      "craftTargetId": 90016,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 90016,
+      "fixtureName": "버스 정류장 쓰레기통"
+    },
+    {
       "id": -900002,
       "craftTargetId": 900002,
       "isVirtual": true,
@@ -15326,6 +15374,60 @@
       "mysekaiFixtureSubGenreId": 33,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_krcollect_fixture_niwa1_2"
+    },
+    {
+      "id": 90011,
+      "mysekaiFixtureType": "normal",
+      "name": "인어의 조개 침대",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 2,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_room4"
+    },
+    {
+      "id": 90012,
+      "mysekaiFixtureType": "normal",
+      "name": "파도 소리 책상",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 3,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_room5"
+    },
+    {
+      "id": 90013,
+      "mysekaiFixtureType": "normal",
+      "name": "해변 세면대",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_room6"
+    },
+    {
+      "id": 90014,
+      "mysekaiFixtureType": "normal",
+      "name": "버스 정류장",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_niwa4"
+    },
+    {
+      "id": 90015,
+      "mysekaiFixtureType": "normal",
+      "name": "버스 정류장 표지판",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_niwa5"
+    },
+    {
+      "id": 90016,
+      "mysekaiFixtureType": "normal",
+      "name": "버스 정류장 쓰레기통",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_krcollect_fixture_niwa6"
     },
     {
       "id": 900002,
