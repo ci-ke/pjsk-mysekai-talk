@@ -30,8 +30,8 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
   const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
   const imageUrl = imageFailed ? import.meta.env.BASE_URL + "placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
-  const totalGroups = entry.talkGroups.length;
-  const readGroups = entry.talkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
+  const totalGroups = entry.allTalkGroups.length;
+  const readGroups = entry.allTalkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
   const uniqueCharacters = useMemo(
     () => [...new Set(entry.talkGroups.flatMap((group) => getGroupCharacterNames(catalog, group)))],
     [catalog, entry.talkGroups]

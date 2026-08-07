@@ -143,6 +143,64 @@ describe("catalog and filters", () => {
     expect(result[0].talkGroups[0].talkIds).toEqual([200, 201]);
   });
 
+  it("allRead matches entries whose every talk group is read", () => {
+    const twoGroupCatalog: Catalog = {
+      ...minimalCatalog,
+      talkGroups: [
+        {
+          id: 7,
+          fixtureIds: [100],
+          talkIds: [200, 201],
+          characterUnitIds: [1],
+          talks: [],
+        },
+        {
+          id: 8,
+          fixtureIds: [100],
+          talkIds: [202, 203],
+          characterUnitIds: [1],
+          talks: [],
+        },
+      ],
+    };
+
+    // 每个组都处于已读状态（各组至少读了一条，与卡片 "xx / xx" 计数一致）→ 命中
+    const groupLevelRead = createBlueprintEntries(
+      twoGroupCatalog,
+      parseUserJson({
+        updatedResources: {
+          userMysekaiBlueprints: [],
+          userMysekaiCharacterTalks: [[200, true], [202, true]],
+        },
+      })
+    );
+    expect(filterBlueprintEntries(groupLevelRead, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
+
+    // 一个组已读、另一个组一条都没读 → 不命中
+    const partial = createBlueprintEntries(
+      twoGroupCatalog,
+      parseUserJson({
+        updatedResources: {
+          userMysekaiBlueprints: [],
+          userMysekaiCharacterTalks: [[200, true], [201, true], [202, false], [203, false]],
+        },
+      })
+    );
+    expect(filterBlueprintEntries(partial, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(0);
+
+    // 两个组都完整读完 → 命中
+    const complete = createBlueprintEntries(
+      twoGroupCatalog,
+      parseUserJson({
+        updatedResources: {
+          userMysekaiBlueprints: [],
+          userMysekaiCharacterTalks: [[200, true], [201, true], [202, true], [203, true]],
+        },
+      })
+    );
+    expect(filterBlueprintEntries(complete, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
+  });
+
   it("returns unit IDs for a selected character", () => {
     expect(getCharacterUnitIds(minimalCatalog, 1, "light_sound")).toEqual(new Set([1]));
     expect(getCharacterUnitIds(minimalCatalog, null, null)).toBeNull();

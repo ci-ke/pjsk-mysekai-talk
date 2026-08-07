@@ -29,7 +29,10 @@ export function filterBlueprintEntries(
           group.characterUnitIds.some((unitId) => selectedUnitIds.has(unitId))
         );
       }
-      talkGroups = talkGroups.filter((group) => groupMatchesTalkFilter(group, state.talk));
+      // allRead 不做组级过滤，改为条目级判断"所有组都完整读完"
+      if (state.talk !== "allRead") {
+        talkGroups = talkGroups.filter((group) => groupMatchesTalkFilter(group, state.talk));
+      }
       return { ...entry, talkGroups };
     })
     .filter((entry) => {
@@ -63,7 +66,15 @@ export function filterBlueprintEntries(
         return false;
       }
 
-      if ((characterFilterActive || talkFilterActive) && entry.talkGroups.length === 0) {
+      if (talkFilterActive) {
+        if (state.talk === "allRead") {
+          // 全部已读：与卡片 "xx / xx" 计数一致，所有对话组都处于已读状态
+          if (entry.talkGroups.length === 0) return false;
+          if (!entry.talkGroups.every((group) => group.readState === "read")) return false;
+        } else if (entry.talkGroups.length === 0) {
+          return false;
+        }
+      } else if (characterFilterActive && entry.talkGroups.length === 0) {
         return false;
       }
       return true;
@@ -84,8 +95,9 @@ export function sortBlueprintEntries(
         "zh-CN"
       );
     } else if (sortBy === "progress") {
-      const aRead = a.talkGroups.reduce((sum, group) => sum + group.readCount, 0);
-      const bRead = b.talkGroups.reduce((sum, group) => sum + group.readCount, 0);
+      // 组级语义：读了一条即该对话组已读，进度按已读对话组数计
+      const aRead = a.talkGroups.filter((group) => group.readState === "read").length;
+      const bRead = b.talkGroups.filter((group) => group.readState === "read").length;
       result = aRead - bRead;
     } else {
       result = a.blueprint.craftTargetId - b.blueprint.craftTargetId;

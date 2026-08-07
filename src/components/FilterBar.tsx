@@ -182,6 +182,7 @@ export default function FilterBar({
               <>
                 <option value="unread">仅未读</option>
                 <option value="read">仅已读</option>
+                <option value="allRead">全部已读</option>
               </>
             )}
           </select>
