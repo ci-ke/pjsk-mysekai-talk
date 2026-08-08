@@ -3771,6 +3771,14 @@
       "fixtureName": "Retro Kitchen Flooring"
     },
     {
+      "id": 528,
+      "craftTargetId": 528,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 528,
+      "fixtureName": "Kitchen Shelf"
+    },
+    {
       "id": 529,
       "craftTargetId": 529,
       "isEnableSketch": true,
@@ -5953,6 +5961,286 @@
       "isObtainedByConvert": false,
       "fixtureId": 801,
       "fixtureName": "Morgana Figure"
+    },
+    {
+      "id": 802,
+      "craftTargetId": 802,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 802,
+      "fixtureName": "Weeping Fig"
+    },
+    {
+      "id": 803,
+      "craftTargetId": 803,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 803,
+      "fixtureName": "Lemon Cypress"
+    },
+    {
+      "id": 804,
+      "craftTargetId": 804,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 804,
+      "fixtureName": "Begonia"
+    },
+    {
+      "id": 805,
+      "craftTargetId": 805,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 805,
+      "fixtureName": "Smiley Taiyaki Vendor Food Truck"
+    },
+    {
+      "id": 806,
+      "craftTargetId": 806,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 806,
+      "fixtureName": "Smiley Taiyaki Vendor Menu"
+    },
+    {
+      "id": 807,
+      "craftTargetId": 807,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 807,
+      "fixtureName": "Smiley Taiyaki Vendor Garbage Can"
+    },
+    {
+      "id": 808,
+      "craftTargetId": 808,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 808,
+      "fixtureName": "Smiley Taiyaki Vendor Garland"
+    },
+    {
+      "id": 809,
+      "craftTargetId": 809,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 809,
+      "fixtureName": "Smiley Taiyaki Vendor Taiyaki"
+    },
+    {
+      "id": 810,
+      "craftTargetId": 810,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 810,
+      "fixtureName": "Fluffy Friend Wallpaper"
+    },
+    {
+      "id": 811,
+      "craftTargetId": 811,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 811,
+      "fixtureName": "Fluffy Friend Flooring"
+    },
+    {
+      "id": 812,
+      "craftTargetId": 812,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 812,
+      "fixtureName": "Fluffy Friend Wall Shelf"
+    },
+    {
+      "id": 813,
+      "craftTargetId": 813,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 813,
+      "fixtureName": "Fluffy Friend Bed"
+    },
+    {
+      "id": 814,
+      "craftTargetId": 814,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 814,
+      "fixtureName": "Fluffy Friend Armchair"
+    },
+    {
+      "id": 815,
+      "craftTargetId": 815,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 815,
+      "fixtureName": "Pristine Powder Room Window"
+    },
+    {
+      "id": 816,
+      "craftTargetId": 816,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 816,
+      "fixtureName": "Limited Style #1 Honami Plushie (S)"
+    },
+    {
+      "id": 817,
+      "craftTargetId": 817,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 817,
+      "fixtureName": "Limited Style #1 Honami Plushie (M)"
+    },
+    {
+      "id": 818,
+      "craftTargetId": 818,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 818,
+      "fixtureName": "Limited Style #1 Honami Plushie (L)"
+    },
+    {
+      "id": 819,
+      "craftTargetId": 819,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 819,
+      "fixtureName": "Limited Style #1 Shizuku Plushie (S)"
+    },
+    {
+      "id": 820,
+      "craftTargetId": 820,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 820,
+      "fixtureName": "Limited Style #1 Shizuku Plushie (M)"
+    },
+    {
+      "id": 821,
+      "craftTargetId": 821,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 821,
+      "fixtureName": "Limited Style #1 Shizuku Plushie (L)"
+    },
+    {
+      "id": 822,
+      "craftTargetId": 822,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 822,
+      "fixtureName": "Limited Style #1 Toya Plushie (S)"
+    },
+    {
+      "id": 823,
+      "craftTargetId": 823,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 823,
+      "fixtureName": "Limited Style #1 Toya Plushie (M)"
+    },
+    {
+      "id": 824,
+      "craftTargetId": 824,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 824,
+      "fixtureName": "Limited Style #1 Toya Plushie (L)"
+    },
+    {
+      "id": 825,
+      "craftTargetId": 825,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 825,
+      "fixtureName": "Limited Style #1 Nene Plushie (S)"
+    },
+    {
+      "id": 826,
+      "craftTargetId": 826,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 826,
+      "fixtureName": "Limited Style #1 Nene Plushie (M)"
+    },
+    {
+      "id": 827,
+      "craftTargetId": 827,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 827,
+      "fixtureName": "Limited Style #1 Nene Plushie (L)"
+    },
+    {
+      "id": 828,
+      "craftTargetId": 828,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 828,
+      "fixtureName": "Limited Style #1 Ena Plushie (S)"
+    },
+    {
+      "id": 829,
+      "craftTargetId": 829,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 829,
+      "fixtureName": "Limited Style #1 Ena Plushie (M)"
+    },
+    {
+      "id": 830,
+      "craftTargetId": 830,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 830,
+      "fixtureName": "Limited Style #1 Ena Plushie (L)"
+    },
+    {
+      "id": 831,
+      "craftTargetId": 831,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 831,
+      "fixtureName": "Limited Style #1 Luka Plushie (S)"
+    },
+    {
+      "id": 832,
+      "craftTargetId": 832,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 832,
+      "fixtureName": "Limited Style #1 Luka Plushie (M)"
+    },
+    {
+      "id": 833,
+      "craftTargetId": 833,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 833,
+      "fixtureName": "Limited Style #1 Luka Plushie (L)"
+    },
+    {
+      "id": 834,
+      "craftTargetId": 834,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 834,
+      "fixtureName": "Limited Style #1 KAITO Plushie (S)"
+    },
+    {
+      "id": 835,
+      "craftTargetId": 835,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 835,
+      "fixtureName": "Limited Style #1 KAITO Plushie (M)"
+    },
+    {
+      "id": 836,
+      "craftTargetId": 836,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 836,
+      "fixtureName": "Limited Style #1 KAITO Plushie (L)"
     },
     {
       "id": 841,
@@ -11150,6 +11438,15 @@
       "assetbundleName": "ext0002"
     },
     {
+      "id": 528,
+      "mysekaiFixtureType": "normal",
+      "name": "Kitchen Shelf",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 5,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0002_fixture_shelf1"
+    },
+    {
       "id": 529,
       "mysekaiFixtureType": "normal",
       "name": "Kitchen Wall Cabinet",
@@ -13605,6 +13902,321 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_clb1103_fixture_morgana1"
+    },
+    {
+      "id": 802,
+      "mysekaiFixtureType": "normal",
+      "name": "Weeping Fig",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 7,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0018_fixture_benjamin1"
+    },
+    {
+      "id": 803,
+      "mysekaiFixtureType": "normal",
+      "name": "Lemon Cypress",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 7,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0018_fixture_goldcrest1"
+    },
+    {
+      "id": 804,
+      "mysekaiFixtureType": "normal",
+      "name": "Begonia",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0018_fixture_begonia1"
+    },
+    {
+      "id": 805,
+      "mysekaiFixtureType": "normal",
+      "name": "Smiley Taiyaki Vendor Food Truck",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0003_fixture_kitchencar1"
+    },
+    {
+      "id": 806,
+      "mysekaiFixtureType": "normal",
+      "name": "Smiley Taiyaki Vendor Menu",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0003_fixture_menusign1"
+    },
+    {
+      "id": 807,
+      "mysekaiFixtureType": "normal",
+      "name": "Smiley Taiyaki Vendor Garbage Can",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0003_fixture_dustbox1"
+    },
+    {
+      "id": 808,
+      "mysekaiFixtureType": "normal",
+      "name": "Smiley Taiyaki Vendor Garland",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0003_fixture_garland1"
+    },
+    {
+      "id": 809,
+      "mysekaiFixtureType": "normal",
+      "name": "Smiley Taiyaki Vendor Taiyaki",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0003_fixture_taiyaki1"
+    },
+    {
+      "id": 810,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "Fluffy Friend Wallpaper",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "con0004"
+    },
+    {
+      "id": 811,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "Fluffy Friend Flooring",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "con0004"
+    },
+    {
+      "id": 812,
+      "mysekaiFixtureType": "normal",
+      "name": "Fluffy Friend Wall Shelf",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_con0004_fixture_wallshelf1"
+    },
+    {
+      "id": 813,
+      "mysekaiFixtureType": "normal",
+      "name": "Fluffy Friend Bed",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 2,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0004_fixture_bed1"
+    },
+    {
+      "id": 814,
+      "mysekaiFixtureType": "normal",
+      "name": "Fluffy Friend Armchair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0004_fixture_sofa1"
+    },
+    {
+      "id": 815,
+      "mysekaiFixtureType": "normal",
+      "name": "Pristine Powder Room Window",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_ext0003_window_window1"
+    },
+    {
+      "id": 816,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Honami Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll2small"
+    },
+    {
+      "id": 817,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Honami Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll2medium"
+    },
+    {
+      "id": 818,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Honami Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll2large"
+    },
+    {
+      "id": 819,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Shizuku Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll2small"
+    },
+    {
+      "id": 820,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Shizuku Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll2medium"
+    },
+    {
+      "id": 821,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Shizuku Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll2large"
+    },
+    {
+      "id": 822,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Toya Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll2small"
+    },
+    {
+      "id": 823,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Toya Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll2medium"
+    },
+    {
+      "id": 824,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Toya Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll2large"
+    },
+    {
+      "id": 825,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Nene Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll2small"
+    },
+    {
+      "id": 826,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Nene Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll2medium"
+    },
+    {
+      "id": 827,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Nene Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas115_fixture_doll2large"
+    },
+    {
+      "id": 828,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Ena Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas119_fixture_doll2small"
+    },
+    {
+      "id": 829,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Ena Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas119_fixture_doll2medium"
+    },
+    {
+      "id": 830,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Ena Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas119_fixture_doll2large"
+    },
+    {
+      "id": 831,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Luka Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll2small"
+    },
+    {
+      "id": 832,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Luka Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll2medium"
+    },
+    {
+      "id": 833,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 Luka Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll2large"
+    },
+    {
+      "id": 834,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 KAITO Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll2small"
+    },
+    {
+      "id": 835,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 KAITO Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll2medium"
+    },
+    {
+      "id": 836,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #1 KAITO Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll2large"
     },
     {
       "id": 837,
