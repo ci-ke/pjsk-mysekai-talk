@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 import catalogJson from "../../public/data/catalog-cn.json";
-import { createBlueprintEntries, getCharacterUnitIds, getEntrySummary } from "./catalog";
+import { createBlueprintEntries, getEntrySummary } from "./catalog";
 import { filterBlueprintEntries } from "./filters";
 import { parseUserJson, normalizeTalkStatuses, UserDataError } from "./userData";
 import type { Catalog, FilterState } from "../types";
@@ -58,7 +58,7 @@ const baseFilters: FilterState = {
   search: "",
   mainGenreId: null,
   subGenreId: null,
-  character: { characterId: null, unit: null },
+  characterUnitIds: [],
 };
 
 describe("user data normalization", () => {
@@ -133,11 +133,11 @@ describe("catalog and filters", () => {
       },
     });
     const entries = createBlueprintEntries(minimalCatalog, progress);
-    const result = filterBlueprintEntries(entries, minimalCatalog, {
+    const result = filterBlueprintEntries(entries, {
       ...baseFilters,
       ownership: "unowned",
       talk: "unread",
-      character: { characterId: 1, unit: null },
+      characterUnitIds: [1],
     });
     expect(result).toHaveLength(1);
     expect(result[0].talkGroups[0].talkIds).toEqual([200, 201]);
@@ -174,7 +174,7 @@ describe("catalog and filters", () => {
         },
       })
     );
-    expect(filterBlueprintEntries(groupLevelRead, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
+    expect(filterBlueprintEntries(groupLevelRead, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
 
     // 一个组已读、另一个组一条都没读 → 不命中
     const partial = createBlueprintEntries(
@@ -186,7 +186,7 @@ describe("catalog and filters", () => {
         },
       })
     );
-    expect(filterBlueprintEntries(partial, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(0);
+    expect(filterBlueprintEntries(partial, { ...baseFilters, talk: "allRead" })).toHaveLength(0);
 
     // 两个组都完整读完 → 命中
     const complete = createBlueprintEntries(
@@ -198,12 +198,46 @@ describe("catalog and filters", () => {
         },
       })
     );
-    expect(filterBlueprintEntries(complete, twoGroupCatalog, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
+    expect(filterBlueprintEntries(complete, { ...baseFilters, talk: "allRead" })).toHaveLength(1);
   });
 
-  it("returns unit IDs for a selected character", () => {
-    expect(getCharacterUnitIds(minimalCatalog, 1, "light_sound")).toEqual(new Set([1]));
-    expect(getCharacterUnitIds(minimalCatalog, null, null)).toBeNull();
+  it("matches talk groups of any selected character when multiple are chosen", () => {
+    const multiCharCatalog: Catalog = {
+      ...minimalCatalog,
+      characters: [
+        ...minimalCatalog.characters,
+        { id: 2, name: "测试角色二", unitVariants: [{ id: 2, gameCharacterId: 2, unit: "light_sound", colorCode: "#222" }] },
+      ],
+      characterUnits: [
+        ...minimalCatalog.characterUnits,
+        { id: 2, gameCharacterId: 2, unit: "light_sound", colorCode: "#222" },
+      ],
+      talkGroups: [
+        ...minimalCatalog.talkGroups,
+        { id: 9, fixtureIds: [100], talkIds: [204], characterUnitIds: [2], talks: [] },
+      ],
+    };
+    const progress = parseUserJson({
+      updatedResources: {
+        userMysekaiBlueprints: [],
+        userMysekaiCharacterTalks: [[200, true], [201, true], [204, true]],
+      },
+    });
+    const entries = createBlueprintEntries(multiCharCatalog, progress);
+    // 多选角色 1 和 2：两个角色各自的对话组都应保留
+    const result = filterBlueprintEntries(entries, {
+      ...baseFilters,
+      characterUnitIds: [1, 2],
+    });
+    expect(result).toHaveLength(1);
+    expect(result[0].talkGroups).toHaveLength(2);
+    // 只选角色 2：仅保留其对话组
+    const onlyTwo = filterBlueprintEntries(entries, {
+      ...baseFilters,
+      characterUnitIds: [2],
+    });
+    expect(onlyTwo[0].talkGroups).toHaveLength(1);
+    expect(onlyTwo[0].talkGroups[0].talkIds).toEqual([204]);
   });
 
   it("summarizes unique talk IDs", () => {

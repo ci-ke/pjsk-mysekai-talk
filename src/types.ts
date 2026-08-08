@@ -113,18 +113,14 @@ export type OwnershipFilter = "all" | "owned" | "unowned" | "realOnly" | "noBlue
 export type TalkFilter = "all" | "hasTalks" | "read" | "unread" | "allRead";
 export type DataSourceFormat = "mysekai" | "suite";
 
-export interface CharacterSelection {
-  characterId: number | null;
-  unit: UnitKey | null;
-}
-
 export interface FilterState {
   ownership: OwnershipFilter;
   talk: TalkFilter;
   search: string;
   mainGenreId: number | null;
   subGenreId: number | null;
-  character: CharacterSelection;
+  /** 选中的角色（characterUnit id 列表，可多选） */
+  characterUnitIds: number[];
 }
 
 export interface EntrySummary {

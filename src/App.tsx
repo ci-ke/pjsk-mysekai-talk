@@ -26,7 +26,7 @@ const initialFilters: FilterState = {
   search: "",
   mainGenreId: null,
   subGenreId: null,
-  character: { characterId: null, unit: null },
+  characterUnitIds: [],
 };
 
 function emptyProgress(): UserProgress {
@@ -85,7 +85,7 @@ export default function App() {
   );
   const filteredEntries = useMemo(() => {
     if (!catalog) return [];
-    const filtered = filterBlueprintEntries(allEntries, catalog, filters);
+    const filtered = filterBlueprintEntries(allEntries, filters);
     return sortBlueprintEntries(filtered, sortBy, sortDirection);
   }, [catalog, allEntries, filters, sortBy, sortDirection]);
   const allSummary = useMemo(() => getEntrySummary(allEntries), [allEntries]);
@@ -174,7 +174,7 @@ export default function App() {
     Boolean(filters.search) ||
     filters.mainGenreId !== null ||
     filters.subGenreId !== null ||
-    filters.character.characterId !== null;
+    filters.characterUnitIds.length > 0;
 
   return (
     <div className="app-shell">

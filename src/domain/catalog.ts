@@ -86,20 +86,6 @@ export function createBlueprintEntries(
   });
 }
 
-export function getCharacterUnitIds(
-  catalog: Catalog,
-  characterId: number | null,
-  unit: string | null
-): Set<number> | null {
-  if (characterId === null) return null;
-  const character = catalog.characters.find((item) => item.id === characterId);
-  if (!character) return new Set();
-  const variants = unit
-    ? character.unitVariants.filter((variant) => variant.unit === unit)
-    : character.unitVariants;
-  return new Set(variants.map((variant) => variant.id));
-}
-
 export function getCharacterName(catalog: Catalog, characterId: number): string {
   return catalog.characters.find((character) => character.id === characterId)?.name || `角色 ${characterId}`;
 }

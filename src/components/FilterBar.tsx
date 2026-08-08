@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { getGenreUsage } from "../domain/catalog";
 import type { Catalog, FilterState, Lang, OwnershipFilter, TalkFilter } from "../types";
 
@@ -52,32 +53,25 @@ export default function FilterBar({
     }
   }
 
-  // 当前选中的 characterUnitId
-  const selectedUnitId = (() => {
-    const { characterId, unit } = filters.character;
-    if (characterId === null) return "";
-    const match = catalog.characterUnits.find(
-      (u) => u.gameCharacterId === characterId && u.unit === unit
-    );
-    if (match) return String(match.id);
-    // 未选 unit 时回退到该角色的第一个 variant
-    const first = catalog.characterUnits.find((u) => u.gameCharacterId === characterId);
-    return first ? String(first.id) : "";
-  })();
-
-  const handleCharacterChange = (raw: string) => {
-    if (!raw) {
-      onChange({ ...filters, character: { characterId: null, unit: null } });
-      return;
-    }
-    const unitId = Number(raw);
-    const unitRecord = catalog.characterUnits.find((u) => u.id === unitId);
-    if (!unitRecord) return;
-    onChange({
-      ...filters,
-      character: { characterId: unitRecord.gameCharacterId, unit: unitRecord.unit },
-    });
+  // 角色多选下拉：展开状态、勾选切换、全部清除
+  const [characterOpen, setCharacterOpen] = useState(false);
+  const toggleCharacterUnit = (unitId: number) => {
+    const current = filters.characterUnitIds;
+    const next = current.includes(unitId)
+      ? current.filter((id) => id !== unitId)
+      : [...current, unitId];
+    onChange({ ...filters, characterUnitIds: next });
   };
+  const clearCharacterUnits = () => {
+    onChange({ ...filters, characterUnitIds: [] });
+  };
+  const selectedCount = filters.characterUnitIds.length;
+  const characterTriggerLabel =
+    selectedCount === 0
+      ? "全部角色"
+      : selectedCount === 1
+        ? characterOptions.find((opt) => opt.unitId === filters.characterUnitIds[0])?.label ?? "已选 1 个角色"
+        : `已选 ${selectedCount} 个角色`;
 
   const genreUsage = getGenreUsage(catalog);
   const activeMainGenres = catalog.genres.main.filter(
@@ -161,15 +155,49 @@ export default function FilterBar({
             <option value="noBlueprint">无需蓝图</option>
           </select>
         </label>
-        <label className="field">
+        <div className="field">
           <span>角色</span>
-          <select value={selectedUnitId} onChange={(e) => handleCharacterChange(e.target.value)}>
-            <option value="">全部角色</option>
-            {characterOptions.map((opt) => (
-              <option key={opt.unitId} value={opt.unitId}>{opt.label}</option>
-            ))}
-          </select>
-        </label>
+          <div
+            className={`multiselect${characterOpen ? " is-open" : ""}`}
+            tabIndex={-1}
+            onBlur={(event) => {
+              if (!event.currentTarget.contains(event.relatedTarget as Node | null)) {
+                setCharacterOpen(false);
+              }
+            }}
+          >
+            <button
+              type="button"
+              className="multiselect-trigger"
+              aria-expanded={characterOpen}
+              onClick={() => setCharacterOpen((open) => !open)}
+            >
+              <span className="multiselect-trigger-label">{characterTriggerLabel}</span>
+            </button>
+            {characterOpen && (
+              <div className="multiselect-menu">
+                <div className="multiselect-menu-header">
+                  <span>已选 {selectedCount} / {characterOptions.length}</span>
+                  <button type="button" className="button button-link" onClick={clearCharacterUnits}>
+                    全部清除
+                  </button>
+                </div>
+                <div className="multiselect-options">
+                  {characterOptions.map((opt) => (
+                    <label key={opt.unitId} className="multiselect-option">
+                      <input
+                        type="checkbox"
+                        checked={filters.characterUnitIds.includes(opt.unitId)}
+                        onChange={() => toggleCharacterUnit(opt.unitId)}
+                      />
+                      <span>{opt.label}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
         <label className="field">
           <span>对话状态</span>
           <select

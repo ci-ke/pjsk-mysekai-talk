@@ -1,5 +1,4 @@
-import { getCharacterUnitIds } from "./catalog";
-import type { BlueprintEntry, Catalog, FilterState, EnrichedTalkGroup } from "../types";
+import type { BlueprintEntry, FilterState, EnrichedTalkGroup } from "../types";
 
 function groupMatchesTalkFilter(group: EnrichedTalkGroup, filter: FilterState["talk"]) {
   if (filter === "all" || filter === "hasTalks" || group.readState === "unknown") return true;
@@ -9,22 +8,17 @@ function groupMatchesTalkFilter(group: EnrichedTalkGroup, filter: FilterState["t
 
 export function filterBlueprintEntries(
   entries: BlueprintEntry[],
-  catalog: Catalog,
   state: FilterState
 ): BlueprintEntry[] {
   const search = state.search.trim().toLocaleLowerCase();
-  const selectedUnitIds = getCharacterUnitIds(
-    catalog,
-    state.character.characterId,
-    state.character.unit
-  );
-  const characterFilterActive = state.character.characterId !== null;
+  const selectedUnitIds = new Set(state.characterUnitIds);
+  const characterFilterActive = state.characterUnitIds.length > 0;
   const talkFilterActive = state.talk !== "all";
 
   return entries
     .map((entry) => {
       let talkGroups = entry.allTalkGroups;
-      if (selectedUnitIds !== null) {
+      if (selectedUnitIds.size > 0) {
         talkGroups = talkGroups.filter((group) =>
           group.characterUnitIds.some((unitId) => selectedUnitIds.has(unitId))
         );
