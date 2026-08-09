@@ -128,12 +128,14 @@ export default function App() {
       const rawText = await file.text();
       const parsed = parseUserJsonText(rawText, file.name);
       if (source === "mysekai") {
-        saveMysekaiData(rawText, file.name);
+        saveMysekaiData(parsed);
         setMysekaiProgress(parsed);
       } else {
-        saveSuiteData(rawText, file.name);
+        saveSuiteData(parsed);
         setSuiteProgress(parsed);
       }
+      clearCheckedOff();
+      setCheckedOffIds(new Set());
       setPage(1);
       setExpandedIds(new Set());
     } catch (error) {
@@ -149,6 +151,8 @@ export default function App() {
       clearSuiteData();
       setSuiteProgress(emptyProgress());
     }
+    clearCheckedOff();
+    setCheckedOffIds(new Set());
     setPage(1);
   }
 

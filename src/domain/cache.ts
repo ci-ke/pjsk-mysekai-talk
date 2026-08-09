@@ -1,46 +1,44 @@
 import type { Lang, UserProgress } from "../types";
-import { parseUserJsonText } from "./userData";
 
-const STORAGE_KEY = "mysekai-user-data";
 const LANG_KEY = "mysekai-lang";
 const CHECKED_OFF_KEY = "mysekai-checked-off";
 const MYSEKAI_STORAGE_KEY = "mysekai-mysekai-data";
 const SUITE_STORAGE_KEY = "mysekai-suite-data";
 
-interface CachedPayload {
-  rawText: string;
+interface CachedProgress {
+  v: 1;
+  ownedBlueprintIds: number[];
+  talkReadById: [number, boolean][];
+  blueprintDataAvailable: boolean;
+  talkDataAvailable: boolean;
   sourceFileName?: string;
+  updatedAt?: number;
+  detectedFormat?: string;
 }
 
-/** 从 localStorage 恢复用户进度，无缓存时返回 null */
-export function loadProgress(): UserProgress | null {
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY);
-    if (!raw) return null;
-    const payload: CachedPayload = JSON.parse(raw);
-    return parseUserJsonText(payload.rawText, payload.sourceFileName);
-  } catch {
-    return null;
-  }
+function progressToCache(progress: UserProgress): CachedProgress {
+  return {
+    v: 1,
+    ownedBlueprintIds: [...progress.ownedBlueprintIds],
+    talkReadById: [...progress.talkReadById],
+    blueprintDataAvailable: progress.blueprintDataAvailable,
+    talkDataAvailable: progress.talkDataAvailable,
+    sourceFileName: progress.sourceFileName,
+    updatedAt: progress.updatedAt,
+    detectedFormat: progress.detectedFormat,
+  };
 }
 
-/** 将用户 JSON 原文存入 localStorage */
-export function saveProgress(rawText: string, sourceFileName?: string) {
-  try {
-    const payload: CachedPayload = { rawText, sourceFileName };
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(payload));
-  } catch {
-    // localStorage 满或不可用时静默忽略
-  }
-}
-
-/** 清除 localStorage 中的用户缓存 */
-export function clearProgress() {
-  try {
-    localStorage.removeItem(STORAGE_KEY);
-  } catch {
-    // 静默忽略
-  }
+function cacheToProgress(cached: CachedProgress): UserProgress {
+  return {
+    ownedBlueprintIds: new Set(cached.ownedBlueprintIds),
+    talkReadById: new Map(cached.talkReadById),
+    blueprintDataAvailable: cached.blueprintDataAvailable,
+    talkDataAvailable: cached.talkDataAvailable,
+    sourceFileName: cached.sourceFileName,
+    updatedAt: cached.updatedAt,
+    detectedFormat: cached.detectedFormat as UserProgress["detectedFormat"],
+  };
 }
 
 /** 保存语言选择 */
@@ -95,12 +93,11 @@ export function clearCheckedOff() {
 }
 
 /* ---- My SEKAI 抓包 ---- */
-export function saveMysekaiData(rawText: string, sourceFileName?: string) {
+export function saveMysekaiData(progress: UserProgress) {
   try {
-    const payload: CachedPayload = { rawText, sourceFileName };
-    localStorage.setItem(MYSEKAI_STORAGE_KEY, JSON.stringify(payload));
-  } catch {
-    // 静默忽略
+    localStorage.setItem(MYSEKAI_STORAGE_KEY, JSON.stringify(progressToCache(progress)));
+  } catch (e) {
+    console.warn("缓存 My SEKAI 数据失败", e);
   }
 }
 
@@ -108,9 +105,12 @@ export function loadMysekaiProgress(): UserProgress | null {
   try {
     const raw = localStorage.getItem(MYSEKAI_STORAGE_KEY);
     if (!raw) return null;
-    const payload: CachedPayload = JSON.parse(raw);
-    return parseUserJsonText(payload.rawText, payload.sourceFileName);
-  } catch {
+    const data: CachedProgress = JSON.parse(raw);
+    // 兼容旧格式 { rawText } — 迁移到新格式
+    if ("rawText" in data) return null;
+    return cacheToProgress(data);
+  } catch (e) {
+    console.warn("读取 My SEKAI 缓存失败", e);
     return null;
   }
 }
@@ -124,12 +124,11 @@ export function clearMysekaiData() {
 }
 
 /* ---- Suite 响应 ---- */
-export function saveSuiteData(rawText: string, sourceFileName?: string) {
+export function saveSuiteData(progress: UserProgress) {
   try {
-    const payload: CachedPayload = { rawText, sourceFileName };
-    localStorage.setItem(SUITE_STORAGE_KEY, JSON.stringify(payload));
-  } catch {
-    // 静默忽略
+    localStorage.setItem(SUITE_STORAGE_KEY, JSON.stringify(progressToCache(progress)));
+  } catch (e) {
+    console.warn("缓存 Suite 数据失败", e);
   }
 }
 
@@ -137,9 +136,12 @@ export function loadSuiteProgress(): UserProgress | null {
   try {
     const raw = localStorage.getItem(SUITE_STORAGE_KEY);
     if (!raw) return null;
-    const payload: CachedPayload = JSON.parse(raw);
-    return parseUserJsonText(payload.rawText, payload.sourceFileName);
-  } catch {
+    const data: CachedProgress = JSON.parse(raw);
+    // 兼容旧格式 { rawText } — 迁移到新格式
+    if ("rawText" in data) return null;
+    return cacheToProgress(data);
+  } catch (e) {
+    console.warn("读取 Suite 缓存失败", e);
     return null;
   }
 }
