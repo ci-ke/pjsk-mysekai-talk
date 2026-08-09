@@ -7,7 +7,7 @@ import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
 import { parseUserJsonText, UserDataError } from "./domain/userData";
-import { loadProgress, saveProgress, clearProgress, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff } from "./domain/cache";
+import { loadMysekaiProgress, loadSuiteProgress, saveMysekaiData, saveSuiteData, clearMysekaiData, clearSuiteData, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, Lang, UserProgress } from "./types";
 
@@ -38,16 +38,17 @@ function emptyProgress(): UserProgress {
   };
 }
 
-function loadInitialState(): { progress: UserProgress; lang: Lang; checkedOffIds: Set<number> } {
-  return { progress: loadProgress() ?? emptyProgress(), lang: loadLang(), checkedOffIds: loadCheckedOff() };
+function loadInitialState(): { mysekaiProgress: UserProgress; suiteProgress: UserProgress; lang: Lang; checkedOffIds: Set<number> } {
+  return { mysekaiProgress: loadMysekaiProgress() ?? emptyProgress(), suiteProgress: loadSuiteProgress() ?? emptyProgress(), lang: loadLang(), checkedOffIds: loadCheckedOff() };
 }
 
 export default function App() {
   const [lang, setLang] = useState<Lang>(loadInitialState().lang);
   const [catalog, setCatalog] = useState<Catalog | null>(null);
   const [catalogError, setCatalogError] = useState("");
-  const [{ progress: initProgress, lang: _initLang, checkedOffIds: initCheckedOffIds }] = useState(loadInitialState);
-  const [progress, setProgress] = useState<UserProgress>(initProgress);
+  const [{ mysekaiProgress: initM, suiteProgress: initS, lang: _initLang, checkedOffIds: initCheckedOffIds }] = useState(loadInitialState);
+  const [mysekaiProgress, setMysekaiProgress] = useState<UserProgress>(initM);
+  const [suiteProgress, setSuiteProgress] = useState<UserProgress>(initS);
   const [checkedOffIds, setCheckedOffIds] = useState<Set<number>>(initCheckedOffIds);
   const [uploadError, setUploadError] = useState("");
   const [filters, setFilters] = useState<FilterState>(initialFilters);
@@ -79,6 +80,22 @@ export default function App() {
     saveLang(next);
   }, []);
 
+  const progress = useMemo<UserProgress>(() => {
+    const blueprint = mysekaiProgress.sourceFileName ? mysekaiProgress : emptyProgress();
+    const suite = suiteProgress.sourceFileName ? suiteProgress : emptyProgress();
+    const sourceFileName = [blueprint.sourceFileName, suite.sourceFileName].filter(Boolean).join(" + ") || undefined;
+    const hasDualFormat = !!(blueprint.sourceFileName && suite.sourceFileName);
+    return {
+      ownedBlueprintIds: blueprint.ownedBlueprintIds,
+      talkReadById: suite.talkDataAvailable ? suite.talkReadById : blueprint.talkReadById,
+      blueprintDataAvailable: blueprint.blueprintDataAvailable,
+      talkDataAvailable: suite.talkDataAvailable || blueprint.talkDataAvailable,
+      sourceFileName,
+      updatedAt: suite.updatedAt ?? blueprint.updatedAt,
+      detectedFormat: hasDualFormat ? "dual" : blueprint.sourceFileName ? "mysekai" : suite.sourceFileName ? "suite" : undefined,
+    };
+  }, [mysekaiProgress, suiteProgress]);
+
   const allEntries = useMemo(
     () => catalog ? createBlueprintEntries(catalog, progress) : [],
     [catalog, progress]
@@ -101,32 +118,46 @@ export default function App() {
     if (page > totalPages) setPage(totalPages);
   }, [page, totalPages]);
 
-  async function handleFile(file: File) {
+  async function handleFile(source: "mysekai" | "suite", file: File) {
     setUploadError("");
-    clearProgress();
-    clearCheckedOff();
     if (file.size > 20 * 1024 * 1024) {
-      setUploadError("文件超过 20 MB，请确认上传的是单个 My SEKAI JSON。 ");
+      setUploadError("文件超过 20 MB，请确认上传的是正确的 JSON 文件。");
       return;
     }
     try {
       const rawText = await file.text();
       const parsed = parseUserJsonText(rawText, file.name);
-      saveProgress(rawText, file.name);
-      setProgress(parsed);
-      setCheckedOffIds(new Set());
-      setFilters(initialFilters);
+      if (source === "mysekai") {
+        saveMysekaiData(rawText, file.name);
+        setMysekaiProgress(parsed);
+      } else {
+        saveSuiteData(rawText, file.name);
+        setSuiteProgress(parsed);
+      }
       setPage(1);
       setExpandedIds(new Set());
     } catch (error) {
-      setUploadError(error instanceof UserDataError ? error.message : "读取文件失败，请确认 JSON 内容完整。 ");
+      setUploadError(error instanceof UserDataError ? error.message : "读取文件失败，请确认 JSON 内容完整。");
     }
   }
 
-  function clearData() {
-    clearProgress();
+  function clearSource(source: "mysekai" | "suite") {
+    if (source === "mysekai") {
+      clearMysekaiData();
+      setMysekaiProgress(emptyProgress());
+    } else {
+      clearSuiteData();
+      setSuiteProgress(emptyProgress());
+    }
+    setPage(1);
+  }
+
+  function clearAll() {
+    clearMysekaiData();
+    clearSuiteData();
     clearCheckedOff();
-    setProgress(emptyProgress());
+    setMysekaiProgress(emptyProgress());
+    setSuiteProgress(emptyProgress());
     setCheckedOffIds(new Set());
     setUploadError("");
     setFilters(initialFilters);
@@ -218,11 +249,12 @@ export default function App() {
 
       <main className="content-wrap">
         <UploadPanel
-          progress={progress}
+          mysekaiProgress={mysekaiProgress}
+          suiteProgress={suiteProgress}
           error={uploadError}
-          lang={lang}
           onFile={handleFile}
-          onClear={clearData}
+          onClear={clearSource}
+          onClearAll={clearAll}
         />
 
         {!progress.sourceFileName && (
@@ -230,9 +262,14 @@ export default function App() {
             <strong>还没有导入用户数据。</strong> 当前会展示完整的家具蓝图目录；持有状态和对话已读状态会在选择 JSON 后出现。
           </NoticeBanner>
         )}
-        {progress.sourceFileName && !progress.talkDataAvailable && (
+        {progress.blueprintDataAvailable && !progress.talkDataAvailable && (
           <NoticeBanner tone="warning">
             已识别蓝图数据，但文件中没有角色对话记录；对话目录仍会展示，状态暂时记为未知。
+          </NoticeBanner>
+        )}
+        {!progress.blueprintDataAvailable && progress.talkDataAvailable && (
+          <NoticeBanner tone="warning">
+            仅检测到 Suite 对话记录，蓝图持有状态暂不可用，但对话进度正常展示。
           </NoticeBanner>
         )}
 

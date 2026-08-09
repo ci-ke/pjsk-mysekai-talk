@@ -6,7 +6,7 @@
 
 - **全量家具目录** — 涵盖所有家具（含门 Gate），每个家具都有对应的蓝图条目（真实蓝图或无蓝图家具）
 - **多语言支持** — 简体中文 / 日本語 / 繁體中文 / English / 한국어，独立数据文件
-- **蓝图收集追踪** — 上传 My SEKAI 抓包 JSON，自动解析已持有的蓝图列表
+- **蓝图收集追踪** — 分别上传 My SEKAI 和 Suite JSON，自动解析蓝图持有与对话进度
 - **角色家具对话进度** — 以对话组为单位统计已读/未读状态（组内任一对话已读即算整组已读），含隐藏对话标记；未读对话组可手动标记为已读（浏览器缓存）
 - **多维度筛选** — 持有状态（全部家具 / 全部蓝图 / 已持有 / 未持有 / 无需蓝图）、角色（多选，Miku 按团体拆分）、对话状态（仅未读 / 仅已读 / 全部已读）、主副分类、关键词搜索
 - **对话脚本查看** — 展开对话组，加载并查看具体对话台本
@@ -33,12 +33,12 @@ npm run data:sync
 ## 使用方式
 
 1. 打开页面，选择语言（默认简体中文）
-2. 上传 My SEKAI 接口抓包 JSON 或 Suite 响应 JSON（自动识别格式）
+2. 分别上传 My SEKAI 抓包和 Suite 响应 JSON，浏览器自动合并蓝图与对话进度
 3. 页面自动计算蓝图持有状态和对话已读进度
 4. 使用筛选器定位目标家具和对话
 
 支持的输入格式：
-- **My SEKAI 抓包** — 含 `updatedResources.userMysekaiBlueprints` 和 `userMysekaiCharacterTalks`
+- **My SEKAI 抓包** — 含 `updatedResources.userMysekaiBlueprints`（蓝图），`userMysekaiCharacterTalks`（对话）可能存在也可能不存在
 - **Suite 响应** — 仅含 `userMysekaiCharacterTalks`（仅对话进度，无蓝图数据）
 
 ## 项目结构

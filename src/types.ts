@@ -111,7 +111,7 @@ export interface UserProgress {
 
 export type OwnershipFilter = "all" | "owned" | "unowned" | "realOnly" | "noBlueprint";
 export type TalkFilter = "all" | "hasTalks" | "read" | "unread" | "allRead";
-export type DataSourceFormat = "mysekai" | "suite";
+export type DataSourceFormat = "mysekai" | "suite" | "dual";
 
 export interface FilterState {
   ownership: OwnershipFilter;

@@ -4,6 +4,8 @@ import { parseUserJsonText } from "./userData";
 const STORAGE_KEY = "mysekai-user-data";
 const LANG_KEY = "mysekai-lang";
 const CHECKED_OFF_KEY = "mysekai-checked-off";
+const MYSEKAI_STORAGE_KEY = "mysekai-mysekai-data";
+const SUITE_STORAGE_KEY = "mysekai-suite-data";
 
 interface CachedPayload {
   rawText: string;
@@ -87,6 +89,64 @@ export function saveCheckedOff(ids: Set<number>) {
 export function clearCheckedOff() {
   try {
     localStorage.removeItem(CHECKED_OFF_KEY);
+  } catch {
+    // 静默忽略
+  }
+}
+
+/* ---- My SEKAI 抓包 ---- */
+export function saveMysekaiData(rawText: string, sourceFileName?: string) {
+  try {
+    const payload: CachedPayload = { rawText, sourceFileName };
+    localStorage.setItem(MYSEKAI_STORAGE_KEY, JSON.stringify(payload));
+  } catch {
+    // 静默忽略
+  }
+}
+
+export function loadMysekaiProgress(): UserProgress | null {
+  try {
+    const raw = localStorage.getItem(MYSEKAI_STORAGE_KEY);
+    if (!raw) return null;
+    const payload: CachedPayload = JSON.parse(raw);
+    return parseUserJsonText(payload.rawText, payload.sourceFileName);
+  } catch {
+    return null;
+  }
+}
+
+export function clearMysekaiData() {
+  try {
+    localStorage.removeItem(MYSEKAI_STORAGE_KEY);
+  } catch {
+    // 静默忽略
+  }
+}
+
+/* ---- Suite 响应 ---- */
+export function saveSuiteData(rawText: string, sourceFileName?: string) {
+  try {
+    const payload: CachedPayload = { rawText, sourceFileName };
+    localStorage.setItem(SUITE_STORAGE_KEY, JSON.stringify(payload));
+  } catch {
+    // 静默忽略
+  }
+}
+
+export function loadSuiteProgress(): UserProgress | null {
+  try {
+    const raw = localStorage.getItem(SUITE_STORAGE_KEY);
+    if (!raw) return null;
+    const payload: CachedPayload = JSON.parse(raw);
+    return parseUserJsonText(payload.rawText, payload.sourceFileName);
+  } catch {
+    return null;
+  }
+}
+
+export function clearSuiteData() {
+  try {
+    localStorage.removeItem(SUITE_STORAGE_KEY);
   } catch {
     // 静默忽略
   }

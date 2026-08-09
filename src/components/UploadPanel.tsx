@@ -1,90 +1,109 @@
-import { useRef, useState } from "react";
-import type { Lang, UserProgress } from "../types";
+import { useRef } from "react";
+import type { UserProgress } from "../types";
 import { formatTimestamp } from "../domain/format";
 
 const FORMAT_LABELS: Record<string, string> = {
   mysekai: "My SEKAI 抓包",
   suite: "Suite 响应",
+  dual: "My SEKAI + Suite",
 };
 
 interface UploadPanelProps {
-  progress: UserProgress;
+  mysekaiProgress: UserProgress;
+  suiteProgress: UserProgress;
   error: string;
-  lang: Lang;
-  onFile: (file: File) => Promise<void>;
-  onClear: () => void;
+  onFile: (source: "mysekai" | "suite", file: File) => Promise<void>;
+  onClear: (source: "mysekai" | "suite") => void;
+  onClearAll: () => void;
 }
 
-export default function UploadPanel({ progress, error, lang: _lang, onFile, onClear }: UploadPanelProps) {
-  const inputRef = useRef<HTMLInputElement>(null);
-  const [dragging, setDragging] = useState(false);
+interface SourceConfig {
+  key: "mysekai" | "suite";
+  label: string;
+  desc: string;
+}
 
-  const chooseFile = () => inputRef.current?.click();
-  const handleFile = async (file?: File) => {
-    if (file) await onFile(file);
+const SOURCES: SourceConfig[] = [
+  { key: "mysekai", label: "My SEKAI 抓包", desc: "蓝图（必有）· 对话（可选）" },
+  { key: "suite", label: "Suite 响应", desc: "对话（优先）· 无蓝图" },
+];
+
+export default function UploadPanel({ mysekaiProgress, suiteProgress, error, onFile, onClear, onClearAll }: UploadPanelProps) {
+  const inputRefs = useRef<Record<string, HTMLInputElement | null>>({});
+
+  const progressBySource = { mysekai: mysekaiProgress, suite: suiteProgress };
+  const hasAnyData = Boolean(mysekaiProgress.sourceFileName || suiteProgress.sourceFileName);
+
+  const handleFile = async (source: "mysekai" | "suite", file?: File) => {
+    if (file) await onFile(source, file);
   };
 
   return (
     <section className="upload-panel panel">
       <div className="upload-copy">
         <span className="eyebrow">本地处理 · 不上传</span>
-        <h2>导入 My SEKAI 抓包数据</h2>
+        <h2>导入 My SEKAI 与 Suite 数据</h2>
         <p>
-          选择 My SEKAI 抓包 JSON 或 Suite 响应 JSON，浏览器自动识别格式并在本地计算蓝图和家具对话进度。
+          分别加载两个数据源：蓝图信息从 My SEKAI 获取，对话进度优先使用 Suite 响应。
+          只上传一个文件时，缺失的部分按无数据显示。
         </p>
         <div className="upload-hints">
-          <span>自动识别 My SEKAI / Suite</span>
-          <span>支持 compact 对话格式</span>
-          <span>数据缓存于浏览器本地</span>
+          <span>蓝图从 My SEKAI 获取</span>
+          <span>对话优先使用 Suite</span>
+          <span>数据缓存于本地</span>
         </div>
       </div>
-      <div
-        className={`drop-zone${dragging ? " is-dragging" : ""}`}
-        onDragEnter={(event) => {
-          event.preventDefault();
-          setDragging(true);
-        }}
-        onDragOver={(event) => event.preventDefault()}
-        onDragLeave={(event) => {
-          event.preventDefault();
-          setDragging(false);
-        }}
-        onDrop={async (event) => {
-          event.preventDefault();
-          setDragging(false);
-          await handleFile(event.dataTransfer.files[0]);
-        }}
-      >
-        <input
-          ref={inputRef}
-          className="visually-hidden"
-          type="file"
-          accept=".json,application/json"
-          onChange={async (event) => {
-            await handleFile(event.target.files?.[0]);
-            event.target.value = "";
-          }}
-        />
-        <div className="drop-icon" aria-hidden="true">↥</div>
-        <strong>{dragging ? "松开以导入" : "拖放 JSON 到这里"}</strong>
-        <span>或</span>
-        <button className="button button-primary" type="button" onClick={chooseFile}>
-          选择文件
-        </button>
+
+      <div className="dual-upload">
+        {SOURCES.map(({ key, label, desc }) => {
+          const progress = progressBySource[key];
+          const status = progress.sourceFileName;
+
+          return (
+            <div className="source-row" key={key}>
+              <div className="source-label">{label}</div>
+              <div className="source-desc">{desc}</div>
+
+              {status ? (
+                <div className={`file-status source-file-status${key === "suite" ? " file-status-suite" : ""}`}>
+                  <div>
+                    <span className="status-dot status-dot-success" />
+                    <strong>{progress.sourceFileName}</strong>
+                    {progress.detectedFormat && (
+                      <small>格式：{FORMAT_LABELS[progress.detectedFormat] ?? progress.detectedFormat}</small>
+                    )}
+                    {progress.updatedAt && <small>数据时间：{formatTimestamp(progress.updatedAt)}</small>}
+                  </div>
+                  <button className="button button-quiet" type="button" onClick={() => onClear(key)}>清除</button>
+                </div>
+              ) : (
+                <>
+                  <input
+                    ref={(el) => { inputRefs.current[key] = el; }}
+                    className="visually-hidden"
+                    type="file"
+                    accept=".json,application/json"
+                    onChange={async (event) => {
+                      await handleFile(key, event.target.files?.[0]);
+                      event.target.value = "";
+                    }}
+                  />
+                  <button className="button button-primary source-choose-btn" type="button" onClick={() => inputRefs.current[key]?.click()}>
+                    选择文件
+                  </button>
+                </>
+              )}
+            </div>
+          );
+        })}
       </div>
-      {progress.sourceFileName && (
-        <div className="file-status">
-          <div>
-            <span className="status-dot status-dot-success" />
-            <strong>{progress.sourceFileName}</strong>
-            {progress.detectedFormat && (
-              <small>格式：{FORMAT_LABELS[progress.detectedFormat] ?? progress.detectedFormat}</small>
-            )}
-            {progress.updatedAt && <small>数据时间：{formatTimestamp(progress.updatedAt)}</small>}
-          </div>
-          <button className="button button-quiet" type="button" onClick={onClear}>清除数据</button>
+
+      {hasAnyData && (
+        <div className="upload-all-clear">
+          <button className="button button-quiet" type="button" onClick={onClearAll}>全部清除</button>
         </div>
       )}
+
       {error && <div className="notice notice-error" role="alert">{error}</div>}
     </section>
   );
