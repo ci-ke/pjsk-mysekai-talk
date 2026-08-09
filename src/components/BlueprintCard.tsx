@@ -32,6 +32,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
   const imageUrl = imageFailed ? import.meta.env.BASE_URL + "placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
   const totalGroups = entry.allTalkGroups.length;
   const readGroups = entry.allTalkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
+  const checkedOffGroupCount = entry.talkGroups.filter((group) => checkedOffIds.has(group.id)).length;
   const uniqueCharacters = useMemo(
     () => [...new Set(entry.talkGroups.flatMap((group) => getGroupCharacterNames(catalog, group)))],
     [catalog, entry.talkGroups]
@@ -93,7 +94,9 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
       </div>
       <div className="blueprint-card-footer">
         <span className="muted-label">
-          {entry.talkGroups.length ? `${entry.talkGroups.length} 个对话组` : "暂无角色家具对话"}
+          {entry.talkGroups.length
+            ? `${entry.talkGroups.length} 个对话组${checkedOffGroupCount ? `（${checkedOffGroupCount} 个已标记）` : ""}`
+            : "暂无角色家具对话"}
         </span>
         {entry.talkGroups.length > 0 && (
           <button className="button button-link" type="button" onClick={onToggle} aria-expanded={expanded}>
