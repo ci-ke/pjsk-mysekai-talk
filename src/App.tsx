@@ -7,7 +7,7 @@ import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
 import { parseUserJsonText, UserDataError } from "./domain/userData";
-import { loadMysekaiProgress, loadSuiteProgress, saveMysekaiData, saveSuiteData, clearMysekaiData, clearSuiteData, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff } from "./domain/cache";
+import { loadMysekaiProgress, loadSuiteProgress, saveMysekaiData, saveSuiteData, clearMysekaiData, clearSuiteData, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff, saveFilters, loadFilters } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, Lang, UserProgress } from "./types";
 
@@ -51,7 +51,7 @@ export default function App() {
   const [suiteProgress, setSuiteProgress] = useState<UserProgress>(initS);
   const [checkedOffIds, setCheckedOffIds] = useState<Set<number>>(initCheckedOffIds);
   const [uploadError, setUploadError] = useState("");
-  const [filters, setFilters] = useState<FilterState>(initialFilters);
+  const [filters, setFilters] = useState<FilterState>(() => loadFilters() ?? initialFilters);
   const [sortBy, setSortBy] = useState<"id" | "name" | "progress">("id");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("asc");
   const [page, setPage] = useState(1);
@@ -118,6 +118,10 @@ export default function App() {
     if (page > totalPages) setPage(totalPages);
   }, [page, totalPages]);
 
+  useEffect(() => {
+    saveFilters(filters);
+  }, [filters]);
+
   async function handleFile(source: "mysekai" | "suite", file: File) {
     setUploadError("");
     if (file.size > 20 * 1024 * 1024) {
@@ -164,7 +168,6 @@ export default function App() {
     setSuiteProgress(emptyProgress());
     setCheckedOffIds(new Set());
     setUploadError("");
-    setFilters(initialFilters);
     setPage(1);
     setExpandedIds(new Set());
   }

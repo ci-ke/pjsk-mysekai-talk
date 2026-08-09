@@ -33,7 +33,7 @@ export function filterBlueprintEntries(
       if (state.ownership === "noBlueprint" && !entry.isVirtual) return false;
       if ((state.ownership === "owned" || state.ownership === "unowned" || state.ownership === "realOnly") && entry.isVirtual) return false;
       if (state.ownership === "owned" && (!entry.ownershipKnown || !entry.owned)) return false;
-      if (state.ownership === "unowned" && entry.ownershipKnown && entry.owned) return false;
+      if (state.ownership === "unowned" && (!entry.ownershipKnown || entry.owned)) return false;
 
       if (search) {
         const haystack = [

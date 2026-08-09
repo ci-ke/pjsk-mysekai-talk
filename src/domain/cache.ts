@@ -1,7 +1,8 @@
-import type { Lang, UserProgress } from "../types";
+import type { FilterState, Lang, UserProgress } from "../types";
 
 const LANG_KEY = "mysekai-lang";
 const CHECKED_OFF_KEY = "mysekai-checked-off";
+const FILTERS_KEY = "mysekai-filters";
 const MYSEKAI_STORAGE_KEY = "mysekai-mysekai-data";
 const SUITE_STORAGE_KEY = "mysekai-suite-data";
 
@@ -151,5 +152,24 @@ export function clearSuiteData() {
     localStorage.removeItem(SUITE_STORAGE_KEY);
   } catch {
     // 静默忽略
+  }
+}
+
+/* ---- 筛选条件 ---- */
+export function saveFilters(filters: FilterState) {
+  try {
+    localStorage.setItem(FILTERS_KEY, JSON.stringify(filters));
+  } catch {
+    // 静默忽略
+  }
+}
+
+export function loadFilters(): FilterState | null {
+  try {
+    const raw = localStorage.getItem(FILTERS_KEY);
+    if (!raw) return null;
+    return JSON.parse(raw) as FilterState;
+  } catch {
+    return null;
   }
 }
