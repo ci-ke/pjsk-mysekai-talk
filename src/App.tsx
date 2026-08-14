@@ -376,7 +376,7 @@ export default function App() {
             <span>数据语言：{LANG_LABELS[catalog.lang]}</span>
           </div>
           <div>
-            <span>蓝图完成率：{progress.blueprintDataAvailable ? formatPercent(allSummary.ownedBlueprints, allSummary.totalBlueprints) : "—"}</span>
+            <span>蓝图完成率：{progress.blueprintDataAvailable ? formatPercent(allSummary.ownedBlueprints, allSummary.totalRealBlueprints) : "—"}</span>
             <span>数据仅存于当前浏览器</span>
           </div>
         </footer>
