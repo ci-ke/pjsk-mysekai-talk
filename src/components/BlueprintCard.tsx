@@ -72,7 +72,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
           </div>
           {uniqueCharacters.length > 0 && (
             <div className="character-summary">
-              {uniqueCharacters.slice(0, 4).map((name) => {
+              {uniqueCharacters.slice(0, 5).map((name) => {
                 const character = catalog.characters.find((item) => item.name === name);
                 const variant = character?.unitVariants[0];
                 return (
@@ -87,7 +87,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
                   </span>
                 );
               })}
-              {uniqueCharacters.length > 4 && <span className="character-more">+{uniqueCharacters.length - 4}</span>}
+              {uniqueCharacters.length > 5 && <span className="character-more">+{uniqueCharacters.length - 5}</span>}
             </div>
           )}
         </div>
