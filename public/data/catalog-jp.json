@@ -7267,6 +7267,46 @@
       "fixtureName": "アニバーサリーチェア（ミク）"
     },
     {
+      "id": 969,
+      "craftTargetId": 969,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 969,
+      "fixtureName": "バースデーケーキ（えむ）"
+    },
+    {
+      "id": 970,
+      "craftTargetId": 970,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 970,
+      "fixtureName": "バースデーバルーン（えむ）"
+    },
+    {
+      "id": 971,
+      "craftTargetId": 971,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 971,
+      "fixtureName": "バースデーブーケ（えむ）"
+    },
+    {
+      "id": 972,
+      "craftTargetId": 972,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 972,
+      "fixtureName": "バースデーガーランド（えむ）"
+    },
+    {
+      "id": 973,
+      "craftTargetId": 973,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 973,
+      "fixtureName": "バースデーチェア（えむ）"
+    },
+    {
       "id": 974,
       "craftTargetId": 974,
       "isEnableSketch": true,
@@ -20993,6 +21033,51 @@
       "mysekaiFixtureSubGenreId": 4,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_bir1131_fixture_chair1"
+    },
+    {
+      "id": 969,
+      "mysekaiFixtureType": "system",
+      "name": "バースデーケーキ（えむ）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1114_fixture_cake1"
+    },
+    {
+      "id": 970,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーバルーン（えむ）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1114_fixture_balloon1"
+    },
+    {
+      "id": 971,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーブーケ（えむ）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1114_fixture_flower1"
+    },
+    {
+      "id": 972,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーガーランド（えむ）",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1114_fixture_garland1"
+    },
+    {
+      "id": 973,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーチェア（えむ）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1114_fixture_chair1"
     },
     {
       "id": 974,
@@ -133858,6 +133943,26 @@
           "id": 8551,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_birthday2026_031_004"
+        }
+      ]
+    },
+    {
+      "id": 8011,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        973
+      ],
+      "talkIds": [
+        8558
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 8558,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2026_014_004"
         }
       ]
     }
