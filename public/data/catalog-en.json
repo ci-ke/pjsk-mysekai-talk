@@ -6267,6 +6267,46 @@
       "fixtureName": "Tamagotchi Planet Decoration"
     },
     {
+      "id": 974,
+      "craftTargetId": 974,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 974,
+      "fixtureName": "Rustic Japanese Floor Cushion"
+    },
+    {
+      "id": 975,
+      "craftTargetId": 975,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 975,
+      "fixtureName": "Radio"
+    },
+    {
+      "id": 976,
+      "craftTargetId": 976,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 976,
+      "fixtureName": "CD Player"
+    },
+    {
+      "id": 977,
+      "craftTargetId": 977,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 977,
+      "fixtureName": "Mini Stereo"
+    },
+    {
+      "id": 978,
+      "craftTargetId": 978,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 978,
+      "fixtureName": "Radio Cassette Player"
+    },
+    {
       "id": 1140,
       "craftTargetId": 1140,
       "isEnableSketch": false,
@@ -14280,6 +14320,51 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_clb1102_fixture_earth1"
+    },
+    {
+      "id": 974,
+      "mysekaiFixtureType": "normal",
+      "name": "Rustic Japanese Floor Cushion",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0006_fixture_cushion1"
+    },
+    {
+      "id": 975,
+      "mysekaiFixtureType": "system",
+      "name": "Radio",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 12,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0004_system_radio1"
+    },
+    {
+      "id": 976,
+      "mysekaiFixtureType": "system",
+      "name": "CD Player",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 12,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0004_system_cdplayer1"
+    },
+    {
+      "id": 977,
+      "mysekaiFixtureType": "system",
+      "name": "Mini Stereo",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 12,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0004_system_compo2"
+    },
+    {
+      "id": 978,
+      "mysekaiFixtureType": "system",
+      "name": "Radio Cassette Player",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 12,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0004_system_cassetteplayer1"
     },
     {
       "id": 1140,
