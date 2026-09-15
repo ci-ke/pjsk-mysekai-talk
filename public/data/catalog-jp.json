@@ -11595,6 +11595,118 @@
       "fixtureName": "マルシェの木箱"
     },
     {
+      "id": 1645,
+      "craftTargetId": 1645,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1645,
+      "fixtureName": "まじゅうけんきゅうしつの壁"
+    },
+    {
+      "id": 1646,
+      "craftTargetId": 1646,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1646,
+      "fixtureName": "まじゅうけんきゅうしつの床"
+    },
+    {
+      "id": 1647,
+      "craftTargetId": 1647,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1647,
+      "fixtureName": "サラマン暖炉"
+    },
+    {
+      "id": 1648,
+      "craftTargetId": 1648,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1648,
+      "fixtureName": "けもけも椅子"
+    },
+    {
+      "id": 1649,
+      "craftTargetId": 1649,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1649,
+      "fixtureName": "研究机"
+    },
+    {
+      "id": 1650,
+      "craftTargetId": 1650,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1650,
+      "fixtureName": "まじゅうけんきゅうしつの棚"
+    },
+    {
+      "id": 1651,
+      "craftTargetId": 1651,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1651,
+      "fixtureName": "帽子型鍋"
+    },
+    {
+      "id": 1652,
+      "craftTargetId": 1652,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1652,
+      "fixtureName": "おひるねばすけっと"
+    },
+    {
+      "id": 1653,
+      "craftTargetId": 1653,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1653,
+      "fixtureName": "はなどけい"
+    },
+    {
+      "id": 1654,
+      "craftTargetId": 1654,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1654,
+      "fixtureName": "おはなのいす"
+    },
+    {
+      "id": 1655,
+      "craftTargetId": 1655,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1655,
+      "fixtureName": "おはなうさぎ"
+    },
+    {
+      "id": 1656,
+      "craftTargetId": 1656,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1656,
+      "fixtureName": "おはながーらんど"
+    },
+    {
+      "id": 1657,
+      "craftTargetId": 1657,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1657,
+      "fixtureName": "おはならんぷ"
+    },
+    {
+      "id": 1658,
+      "craftTargetId": 1658,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1658,
+      "fixtureName": "きのみのかこい"
+    },
+    {
       "id": 1659,
       "craftTargetId": 1659,
       "isEnableSketch": false,
@@ -25947,6 +26059,132 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_ext0030_fixture_woodbox1"
+    },
+    {
+      "id": 1645,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "まじゅうけんきゅうしつの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "con0007"
+    },
+    {
+      "id": 1646,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "まじゅうけんきゅうしつの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "con0007"
+    },
+    {
+      "id": 1647,
+      "mysekaiFixtureType": "normal",
+      "name": "サラマン暖炉",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0007_fixture_fireplace1"
+    },
+    {
+      "id": 1648,
+      "mysekaiFixtureType": "normal",
+      "name": "けもけも椅子",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0007_fixture_chair1"
+    },
+    {
+      "id": 1649,
+      "mysekaiFixtureType": "normal",
+      "name": "研究机",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 3,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0007_fixture_desk1"
+    },
+    {
+      "id": 1650,
+      "mysekaiFixtureType": "normal",
+      "name": "まじゅうけんきゅうしつの棚",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 5,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0007_fixture_shelf1"
+    },
+    {
+      "id": 1651,
+      "mysekaiFixtureType": "normal",
+      "name": "帽子型鍋",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0007_fixture_cauldron1"
+    },
+    {
+      "id": 1652,
+      "mysekaiFixtureType": "normal",
+      "name": "おひるねばすけっと",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 2,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_bed1"
+    },
+    {
+      "id": 1653,
+      "mysekaiFixtureType": "normal",
+      "name": "はなどけい",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 8,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_clock_clock1"
+    },
+    {
+      "id": 1654,
+      "mysekaiFixtureType": "normal",
+      "name": "おはなのいす",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_chair1"
+    },
+    {
+      "id": 1655,
+      "mysekaiFixtureType": "normal",
+      "name": "おはなうさぎ",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_statue1"
+    },
+    {
+      "id": 1656,
+      "mysekaiFixtureType": "normal",
+      "name": "おはながーらんど",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_garland1"
+    },
+    {
+      "id": 1657,
+      "mysekaiFixtureType": "normal",
+      "name": "おはならんぷ",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 8,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_lamp1"
+    },
+    {
+      "id": 1658,
+      "mysekaiFixtureType": "normal",
+      "name": "きのみのかこい",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_con0008_fixture_timberrail1"
     },
     {
       "id": 1659,
