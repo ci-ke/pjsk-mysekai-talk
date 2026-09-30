@@ -11491,6 +11491,46 @@
       "fixtureName": "[リミテッドスタイル vol.4] MEIKOのぬいぐるみ/L"
     },
     {
+      "id": 1502,
+      "craftTargetId": 1502,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1502,
+      "fixtureName": "バースデーケーキ '26（遥）"
+    },
+    {
+      "id": 1503,
+      "craftTargetId": 1503,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1503,
+      "fixtureName": "バースデーバルーン '26（遥）"
+    },
+    {
+      "id": 1504,
+      "craftTargetId": 1504,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1504,
+      "fixtureName": "バースデーブーケ '26（遥）"
+    },
+    {
+      "id": 1505,
+      "craftTargetId": 1505,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1505,
+      "fixtureName": "バースデーネームブロック '26（遥）"
+    },
+    {
+      "id": 1506,
+      "craftTargetId": 1506,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1506,
+      "fixtureName": "バースデーアーチ '26（遥）"
+    },
+    {
       "id": 1632,
       "craftTargetId": 1632,
       "isEnableSketch": true,
@@ -11851,6 +11891,838 @@
       "fixtureName": "[リミテッドスタイル vol.4] ミクのぬいぐるみ/L"
     },
     {
+      "id": 1677,
+      "craftTargetId": 1677,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1677,
+      "fixtureName": "一歌のカラールームの壁"
+    },
+    {
+      "id": 1678,
+      "craftTargetId": 1678,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1678,
+      "fixtureName": "一歌のカラールームの床"
+    },
+    {
+      "id": 1679,
+      "craftTargetId": 1679,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1679,
+      "fixtureName": "一歌のカラールームの台座"
+    },
+    {
+      "id": 1680,
+      "craftTargetId": 1680,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1680,
+      "fixtureName": "一歌のカラールームのラグ"
+    },
+    {
+      "id": 1681,
+      "craftTargetId": 1681,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1681,
+      "fixtureName": "咲希のカラールームの壁"
+    },
+    {
+      "id": 1682,
+      "craftTargetId": 1682,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1682,
+      "fixtureName": "咲希のカラールームの床"
+    },
+    {
+      "id": 1683,
+      "craftTargetId": 1683,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1683,
+      "fixtureName": "咲希のカラールームの台座"
+    },
+    {
+      "id": 1684,
+      "craftTargetId": 1684,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1684,
+      "fixtureName": "咲希のカラールームのラグ"
+    },
+    {
+      "id": 1685,
+      "craftTargetId": 1685,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1685,
+      "fixtureName": "穂波のカラールームの壁"
+    },
+    {
+      "id": 1686,
+      "craftTargetId": 1686,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1686,
+      "fixtureName": "穂波のカラールームの床"
+    },
+    {
+      "id": 1687,
+      "craftTargetId": 1687,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1687,
+      "fixtureName": "穂波のカラールームの台座"
+    },
+    {
+      "id": 1688,
+      "craftTargetId": 1688,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1688,
+      "fixtureName": "穂波のカラールームのラグ"
+    },
+    {
+      "id": 1689,
+      "craftTargetId": 1689,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1689,
+      "fixtureName": "志歩のカラールームの壁"
+    },
+    {
+      "id": 1690,
+      "craftTargetId": 1690,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1690,
+      "fixtureName": "志歩のカラールームの床"
+    },
+    {
+      "id": 1691,
+      "craftTargetId": 1691,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1691,
+      "fixtureName": "志歩のカラールームの台座"
+    },
+    {
+      "id": 1692,
+      "craftTargetId": 1692,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1692,
+      "fixtureName": "志歩のカラールームのラグ"
+    },
+    {
+      "id": 1693,
+      "craftTargetId": 1693,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1693,
+      "fixtureName": "みのりのカラールームの壁"
+    },
+    {
+      "id": 1694,
+      "craftTargetId": 1694,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1694,
+      "fixtureName": "みのりのカラールームの床"
+    },
+    {
+      "id": 1695,
+      "craftTargetId": 1695,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1695,
+      "fixtureName": "みのりのカラールームの台座"
+    },
+    {
+      "id": 1696,
+      "craftTargetId": 1696,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1696,
+      "fixtureName": "みのりのカラールームのラグ"
+    },
+    {
+      "id": 1697,
+      "craftTargetId": 1697,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1697,
+      "fixtureName": "遥のカラールームの壁"
+    },
+    {
+      "id": 1698,
+      "craftTargetId": 1698,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1698,
+      "fixtureName": "遥のカラールームの床"
+    },
+    {
+      "id": 1699,
+      "craftTargetId": 1699,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1699,
+      "fixtureName": "遥のカラールームの台座"
+    },
+    {
+      "id": 1700,
+      "craftTargetId": 1700,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1700,
+      "fixtureName": "遥のカラールームのラグ"
+    },
+    {
+      "id": 1701,
+      "craftTargetId": 1701,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1701,
+      "fixtureName": "愛莉のカラールームの壁"
+    },
+    {
+      "id": 1702,
+      "craftTargetId": 1702,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1702,
+      "fixtureName": "愛莉のカラールームの床"
+    },
+    {
+      "id": 1703,
+      "craftTargetId": 1703,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1703,
+      "fixtureName": "愛莉のカラールームの台座"
+    },
+    {
+      "id": 1704,
+      "craftTargetId": 1704,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1704,
+      "fixtureName": "愛莉のカラールームのラグ"
+    },
+    {
+      "id": 1705,
+      "craftTargetId": 1705,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1705,
+      "fixtureName": "雫のカラールームの壁"
+    },
+    {
+      "id": 1706,
+      "craftTargetId": 1706,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1706,
+      "fixtureName": "雫のカラールームの床"
+    },
+    {
+      "id": 1707,
+      "craftTargetId": 1707,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1707,
+      "fixtureName": "雫のカラールームの台座"
+    },
+    {
+      "id": 1708,
+      "craftTargetId": 1708,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1708,
+      "fixtureName": "雫のカラールームのラグ"
+    },
+    {
+      "id": 1709,
+      "craftTargetId": 1709,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1709,
+      "fixtureName": "こはねのカラールームの壁"
+    },
+    {
+      "id": 1710,
+      "craftTargetId": 1710,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1710,
+      "fixtureName": "こはねのカラールームの床"
+    },
+    {
+      "id": 1711,
+      "craftTargetId": 1711,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1711,
+      "fixtureName": "こはねのカラールームの台座"
+    },
+    {
+      "id": 1712,
+      "craftTargetId": 1712,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1712,
+      "fixtureName": "こはねのカラールームのラグ"
+    },
+    {
+      "id": 1713,
+      "craftTargetId": 1713,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1713,
+      "fixtureName": "杏のカラールームの壁"
+    },
+    {
+      "id": 1714,
+      "craftTargetId": 1714,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1714,
+      "fixtureName": "杏のカラールームの床"
+    },
+    {
+      "id": 1715,
+      "craftTargetId": 1715,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1715,
+      "fixtureName": "杏のカラールームの台座"
+    },
+    {
+      "id": 1716,
+      "craftTargetId": 1716,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1716,
+      "fixtureName": "杏のカラールームのラグ"
+    },
+    {
+      "id": 1717,
+      "craftTargetId": 1717,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1717,
+      "fixtureName": "彰人のカラールームの壁"
+    },
+    {
+      "id": 1718,
+      "craftTargetId": 1718,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1718,
+      "fixtureName": "彰人のカラールームの床"
+    },
+    {
+      "id": 1719,
+      "craftTargetId": 1719,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1719,
+      "fixtureName": "彰人のカラールームの台座"
+    },
+    {
+      "id": 1720,
+      "craftTargetId": 1720,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1720,
+      "fixtureName": "彰人のカラールームのラグ"
+    },
+    {
+      "id": 1721,
+      "craftTargetId": 1721,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1721,
+      "fixtureName": "冬弥のカラールームの壁"
+    },
+    {
+      "id": 1722,
+      "craftTargetId": 1722,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1722,
+      "fixtureName": "冬弥のカラールームの床"
+    },
+    {
+      "id": 1723,
+      "craftTargetId": 1723,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1723,
+      "fixtureName": "冬弥のカラールームの台座"
+    },
+    {
+      "id": 1724,
+      "craftTargetId": 1724,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1724,
+      "fixtureName": "冬弥のカラールームのラグ"
+    },
+    {
+      "id": 1725,
+      "craftTargetId": 1725,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1725,
+      "fixtureName": "司のカラールームの壁"
+    },
+    {
+      "id": 1726,
+      "craftTargetId": 1726,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1726,
+      "fixtureName": "司のカラールームの床"
+    },
+    {
+      "id": 1727,
+      "craftTargetId": 1727,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1727,
+      "fixtureName": "司のカラールームの台座"
+    },
+    {
+      "id": 1728,
+      "craftTargetId": 1728,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1728,
+      "fixtureName": "司のカラールームのラグ"
+    },
+    {
+      "id": 1729,
+      "craftTargetId": 1729,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1729,
+      "fixtureName": "えむのカラールームの壁"
+    },
+    {
+      "id": 1730,
+      "craftTargetId": 1730,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1730,
+      "fixtureName": "えむのカラールームの床"
+    },
+    {
+      "id": 1731,
+      "craftTargetId": 1731,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1731,
+      "fixtureName": "えむのカラールームの台座"
+    },
+    {
+      "id": 1732,
+      "craftTargetId": 1732,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1732,
+      "fixtureName": "えむのカラールームのラグ"
+    },
+    {
+      "id": 1733,
+      "craftTargetId": 1733,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1733,
+      "fixtureName": "寧々のカラールームの壁"
+    },
+    {
+      "id": 1734,
+      "craftTargetId": 1734,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1734,
+      "fixtureName": "寧々のカラールームの床"
+    },
+    {
+      "id": 1735,
+      "craftTargetId": 1735,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1735,
+      "fixtureName": "寧々のカラールームの台座"
+    },
+    {
+      "id": 1736,
+      "craftTargetId": 1736,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1736,
+      "fixtureName": "寧々のカラールームのラグ"
+    },
+    {
+      "id": 1737,
+      "craftTargetId": 1737,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1737,
+      "fixtureName": "類のカラールームの壁"
+    },
+    {
+      "id": 1738,
+      "craftTargetId": 1738,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1738,
+      "fixtureName": "類のカラールームの床"
+    },
+    {
+      "id": 1739,
+      "craftTargetId": 1739,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1739,
+      "fixtureName": "類のカラールームの台座"
+    },
+    {
+      "id": 1740,
+      "craftTargetId": 1740,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1740,
+      "fixtureName": "類のカラールームのラグ"
+    },
+    {
+      "id": 1741,
+      "craftTargetId": 1741,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1741,
+      "fixtureName": "奏のカラールームの壁"
+    },
+    {
+      "id": 1742,
+      "craftTargetId": 1742,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1742,
+      "fixtureName": "奏のカラールームの床"
+    },
+    {
+      "id": 1743,
+      "craftTargetId": 1743,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1743,
+      "fixtureName": "奏のカラールームの台座"
+    },
+    {
+      "id": 1744,
+      "craftTargetId": 1744,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1744,
+      "fixtureName": "奏のカラールームのラグ"
+    },
+    {
+      "id": 1745,
+      "craftTargetId": 1745,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1745,
+      "fixtureName": "まふゆのカラールームの壁"
+    },
+    {
+      "id": 1746,
+      "craftTargetId": 1746,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1746,
+      "fixtureName": "まふゆのカラールームの床"
+    },
+    {
+      "id": 1747,
+      "craftTargetId": 1747,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1747,
+      "fixtureName": "まふゆのカラールームの台座"
+    },
+    {
+      "id": 1748,
+      "craftTargetId": 1748,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1748,
+      "fixtureName": "まふゆのカラールームのラグ"
+    },
+    {
+      "id": 1749,
+      "craftTargetId": 1749,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1749,
+      "fixtureName": "絵名のカラールームの壁"
+    },
+    {
+      "id": 1750,
+      "craftTargetId": 1750,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1750,
+      "fixtureName": "絵名のカラールームの床"
+    },
+    {
+      "id": 1751,
+      "craftTargetId": 1751,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1751,
+      "fixtureName": "絵名のカラールームの台座"
+    },
+    {
+      "id": 1752,
+      "craftTargetId": 1752,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1752,
+      "fixtureName": "絵名のカラールームのラグ"
+    },
+    {
+      "id": 1753,
+      "craftTargetId": 1753,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1753,
+      "fixtureName": "瑞希のカラールームの壁"
+    },
+    {
+      "id": 1754,
+      "craftTargetId": 1754,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1754,
+      "fixtureName": "瑞希のカラールームの床"
+    },
+    {
+      "id": 1755,
+      "craftTargetId": 1755,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1755,
+      "fixtureName": "瑞希のカラールームの台座"
+    },
+    {
+      "id": 1756,
+      "craftTargetId": 1756,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1756,
+      "fixtureName": "瑞希のカラールームのラグ"
+    },
+    {
+      "id": 1757,
+      "craftTargetId": 1757,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1757,
+      "fixtureName": "ミクのカラールームの壁"
+    },
+    {
+      "id": 1758,
+      "craftTargetId": 1758,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1758,
+      "fixtureName": "ミクのカラールームの床"
+    },
+    {
+      "id": 1759,
+      "craftTargetId": 1759,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1759,
+      "fixtureName": "ミクのカラールームの台座"
+    },
+    {
+      "id": 1760,
+      "craftTargetId": 1760,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1760,
+      "fixtureName": "ミクのカラールームのラグ"
+    },
+    {
+      "id": 1761,
+      "craftTargetId": 1761,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1761,
+      "fixtureName": "リンのカラールームの壁"
+    },
+    {
+      "id": 1762,
+      "craftTargetId": 1762,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1762,
+      "fixtureName": "リンのカラールームの床"
+    },
+    {
+      "id": 1763,
+      "craftTargetId": 1763,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1763,
+      "fixtureName": "リンのカラールームの台座"
+    },
+    {
+      "id": 1764,
+      "craftTargetId": 1764,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1764,
+      "fixtureName": "リンのカラールームのラグ"
+    },
+    {
+      "id": 1765,
+      "craftTargetId": 1765,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1765,
+      "fixtureName": "レンのカラールームの壁"
+    },
+    {
+      "id": 1766,
+      "craftTargetId": 1766,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1766,
+      "fixtureName": "レンのカラールームの床"
+    },
+    {
+      "id": 1767,
+      "craftTargetId": 1767,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1767,
+      "fixtureName": "レンのカラールームの台座"
+    },
+    {
+      "id": 1768,
+      "craftTargetId": 1768,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1768,
+      "fixtureName": "レンのカラールームのラグ"
+    },
+    {
+      "id": 1769,
+      "craftTargetId": 1769,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1769,
+      "fixtureName": "ルカのカラールームの壁"
+    },
+    {
+      "id": 1770,
+      "craftTargetId": 1770,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1770,
+      "fixtureName": "ルカのカラールームの床"
+    },
+    {
+      "id": 1771,
+      "craftTargetId": 1771,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1771,
+      "fixtureName": "ルカのカラールームの台座"
+    },
+    {
+      "id": 1772,
+      "craftTargetId": 1772,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1772,
+      "fixtureName": "ルカのカラールームのラグ"
+    },
+    {
+      "id": 1773,
+      "craftTargetId": 1773,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1773,
+      "fixtureName": "MEIKOのカラールームの壁"
+    },
+    {
+      "id": 1774,
+      "craftTargetId": 1774,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1774,
+      "fixtureName": "MEIKOのカラールームの床"
+    },
+    {
+      "id": 1775,
+      "craftTargetId": 1775,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1775,
+      "fixtureName": "MEIKOのカラールームの台座"
+    },
+    {
+      "id": 1776,
+      "craftTargetId": 1776,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1776,
+      "fixtureName": "MEIKOのカラールームのラグ"
+    },
+    {
+      "id": 1777,
+      "craftTargetId": 1777,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1777,
+      "fixtureName": "KAITOのカラールームの壁"
+    },
+    {
+      "id": 1778,
+      "craftTargetId": 1778,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1778,
+      "fixtureName": "KAITOのカラールームの床"
+    },
+    {
+      "id": 1779,
+      "craftTargetId": 1779,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1779,
+      "fixtureName": "KAITOのカラールームの台座"
+    },
+    {
+      "id": 1780,
+      "craftTargetId": 1780,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1780,
+      "fixtureName": "KAITOのカラールームのラグ"
+    },
+    {
       "id": 1796,
       "craftTargetId": 1796,
       "isEnableSketch": false,
@@ -12019,6 +12891,150 @@
       "fixtureName": "[リミテッドスタイル vol.4] KAITOのぬいぐるみ/L"
     },
     {
+      "id": 1845,
+      "craftTargetId": 1845,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1845,
+      "fixtureName": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/S"
+    },
+    {
+      "id": 1846,
+      "craftTargetId": 1846,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1846,
+      "fixtureName": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/M"
+    },
+    {
+      "id": 1847,
+      "craftTargetId": 1847,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1847,
+      "fixtureName": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/L"
+    },
+    {
+      "id": 1848,
+      "craftTargetId": 1848,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1848,
+      "fixtureName": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/S"
+    },
+    {
+      "id": 1849,
+      "craftTargetId": 1849,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1849,
+      "fixtureName": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/M"
+    },
+    {
+      "id": 1850,
+      "craftTargetId": 1850,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1850,
+      "fixtureName": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/L"
+    },
+    {
+      "id": 1851,
+      "craftTargetId": 1851,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1851,
+      "fixtureName": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/S"
+    },
+    {
+      "id": 1852,
+      "craftTargetId": 1852,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1852,
+      "fixtureName": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/M"
+    },
+    {
+      "id": 1853,
+      "craftTargetId": 1853,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1853,
+      "fixtureName": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/L"
+    },
+    {
+      "id": 1854,
+      "craftTargetId": 1854,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1854,
+      "fixtureName": "[リミテッドスタイル vol.5] えむのぬいぐるみ/S"
+    },
+    {
+      "id": 1855,
+      "craftTargetId": 1855,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1855,
+      "fixtureName": "[リミテッドスタイル vol.5] えむのぬいぐるみ/M"
+    },
+    {
+      "id": 1856,
+      "craftTargetId": 1856,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1856,
+      "fixtureName": "[リミテッドスタイル vol.5] えむのぬいぐるみ/L"
+    },
+    {
+      "id": 1857,
+      "craftTargetId": 1857,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1857,
+      "fixtureName": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/S"
+    },
+    {
+      "id": 1858,
+      "craftTargetId": 1858,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1858,
+      "fixtureName": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/M"
+    },
+    {
+      "id": 1859,
+      "craftTargetId": 1859,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1859,
+      "fixtureName": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/L"
+    },
+    {
+      "id": 1860,
+      "craftTargetId": 1860,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1860,
+      "fixtureName": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/S"
+    },
+    {
+      "id": 1861,
+      "craftTargetId": 1861,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1861,
+      "fixtureName": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/M"
+    },
+    {
+      "id": 1862,
+      "craftTargetId": 1862,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1862,
+      "fixtureName": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/L"
+    },
+    {
       "id": -900002,
       "craftTargetId": 900002,
       "isVirtual": true,
@@ -12026,6 +13042,15 @@
       "isObtainedByConvert": false,
       "fixtureId": 900002,
       "fixtureName": "ゲート"
+    },
+    {
+      "id": -1795,
+      "craftTargetId": 1795,
+      "isVirtual": true,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1795,
+      "fixtureName": "[6周年記念]メモリアルオブジェ"
     },
     {
       "id": -1469,
@@ -25944,6 +26969,51 @@
       "assetbundleName": "mdl_pas125_fixture_doll5large"
     },
     {
+      "id": 1502,
+      "mysekaiFixtureType": "system",
+      "name": "バースデーケーキ '26（遥）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2106_fixture_cake1"
+    },
+    {
+      "id": 1503,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーバルーン '26（遥）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2106_fixture_balloon1"
+    },
+    {
+      "id": 1504,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーブーケ '26（遥）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2106_fixture_flower1"
+    },
+    {
+      "id": 1505,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーネームブロック '26（遥）",
+      "mysekaiFixtureMainGenreId": 32,
+      "mysekaiFixtureSubGenreId": 38,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2106_fixture_nameobject1"
+    },
+    {
+      "id": 1506,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーアーチ '26（遥）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2106_fixture_arch1"
+    },
+    {
       "id": 1632,
       "mysekaiFixtureType": "normal",
       "name": "甘味処",
@@ -26349,6 +27419,951 @@
       "assetbundleName": "mdl_pas121_fixture_doll5large"
     },
     {
+      "id": 1677,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "一歌のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3101"
+    },
+    {
+      "id": 1678,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "一歌のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3101"
+    },
+    {
+      "id": 1679,
+      "mysekaiFixtureType": "normal",
+      "name": "一歌のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3101_fixture_stand1"
+    },
+    {
+      "id": 1680,
+      "mysekaiFixtureType": "normal",
+      "name": "一歌のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3101_rug_rug1"
+    },
+    {
+      "id": 1681,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "咲希のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3102"
+    },
+    {
+      "id": 1682,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "咲希のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3102"
+    },
+    {
+      "id": 1683,
+      "mysekaiFixtureType": "normal",
+      "name": "咲希のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3102_fixture_stand1"
+    },
+    {
+      "id": 1684,
+      "mysekaiFixtureType": "normal",
+      "name": "咲希のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3102_rug_rug1"
+    },
+    {
+      "id": 1685,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "穂波のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3103"
+    },
+    {
+      "id": 1686,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "穂波のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3103"
+    },
+    {
+      "id": 1687,
+      "mysekaiFixtureType": "normal",
+      "name": "穂波のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3103_fixture_stand1"
+    },
+    {
+      "id": 1688,
+      "mysekaiFixtureType": "normal",
+      "name": "穂波のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3103_rug_rug1"
+    },
+    {
+      "id": 1689,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "志歩のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3104"
+    },
+    {
+      "id": 1690,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "志歩のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3104"
+    },
+    {
+      "id": 1691,
+      "mysekaiFixtureType": "normal",
+      "name": "志歩のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3104_fixture_stand1"
+    },
+    {
+      "id": 1692,
+      "mysekaiFixtureType": "normal",
+      "name": "志歩のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3104_rug_rug1"
+    },
+    {
+      "id": 1693,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "みのりのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3105"
+    },
+    {
+      "id": 1694,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "みのりのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3105"
+    },
+    {
+      "id": 1695,
+      "mysekaiFixtureType": "normal",
+      "name": "みのりのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3105_fixture_stand1"
+    },
+    {
+      "id": 1696,
+      "mysekaiFixtureType": "normal",
+      "name": "みのりのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3105_rug_rug1"
+    },
+    {
+      "id": 1697,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "遥のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3106"
+    },
+    {
+      "id": 1698,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "遥のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3106"
+    },
+    {
+      "id": 1699,
+      "mysekaiFixtureType": "normal",
+      "name": "遥のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3106_fixture_stand1"
+    },
+    {
+      "id": 1700,
+      "mysekaiFixtureType": "normal",
+      "name": "遥のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3106_rug_rug1"
+    },
+    {
+      "id": 1701,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "愛莉のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3107"
+    },
+    {
+      "id": 1702,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "愛莉のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3107"
+    },
+    {
+      "id": 1703,
+      "mysekaiFixtureType": "normal",
+      "name": "愛莉のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3107_fixture_stand1"
+    },
+    {
+      "id": 1704,
+      "mysekaiFixtureType": "normal",
+      "name": "愛莉のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3107_rug_rug1"
+    },
+    {
+      "id": 1705,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "雫のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3108"
+    },
+    {
+      "id": 1706,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "雫のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3108"
+    },
+    {
+      "id": 1707,
+      "mysekaiFixtureType": "normal",
+      "name": "雫のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3108_fixture_stand1"
+    },
+    {
+      "id": 1708,
+      "mysekaiFixtureType": "normal",
+      "name": "雫のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3108_rug_rug1"
+    },
+    {
+      "id": 1709,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "こはねのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3109"
+    },
+    {
+      "id": 1710,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "こはねのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3109"
+    },
+    {
+      "id": 1711,
+      "mysekaiFixtureType": "normal",
+      "name": "こはねのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3109_fixture_stand1"
+    },
+    {
+      "id": 1712,
+      "mysekaiFixtureType": "normal",
+      "name": "こはねのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3109_rug_rug1"
+    },
+    {
+      "id": 1713,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "杏のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3110"
+    },
+    {
+      "id": 1714,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "杏のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3110"
+    },
+    {
+      "id": 1715,
+      "mysekaiFixtureType": "normal",
+      "name": "杏のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3110_fixture_stand1"
+    },
+    {
+      "id": 1716,
+      "mysekaiFixtureType": "normal",
+      "name": "杏のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3110_rug_rug1"
+    },
+    {
+      "id": 1717,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "彰人のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3111"
+    },
+    {
+      "id": 1718,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "彰人のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3111"
+    },
+    {
+      "id": 1719,
+      "mysekaiFixtureType": "normal",
+      "name": "彰人のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3111_fixture_stand1"
+    },
+    {
+      "id": 1720,
+      "mysekaiFixtureType": "normal",
+      "name": "彰人のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3111_rug_rug1"
+    },
+    {
+      "id": 1721,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "冬弥のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3112"
+    },
+    {
+      "id": 1722,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "冬弥のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3112"
+    },
+    {
+      "id": 1723,
+      "mysekaiFixtureType": "normal",
+      "name": "冬弥のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3112_fixture_stand1"
+    },
+    {
+      "id": 1724,
+      "mysekaiFixtureType": "normal",
+      "name": "冬弥のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3112_rug_rug1"
+    },
+    {
+      "id": 1725,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "司のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3113"
+    },
+    {
+      "id": 1726,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "司のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3113"
+    },
+    {
+      "id": 1727,
+      "mysekaiFixtureType": "normal",
+      "name": "司のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3113_fixture_stand1"
+    },
+    {
+      "id": 1728,
+      "mysekaiFixtureType": "normal",
+      "name": "司のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3113_rug_rug1"
+    },
+    {
+      "id": 1729,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "えむのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3114"
+    },
+    {
+      "id": 1730,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "えむのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3114"
+    },
+    {
+      "id": 1731,
+      "mysekaiFixtureType": "normal",
+      "name": "えむのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3114_fixture_stand1"
+    },
+    {
+      "id": 1732,
+      "mysekaiFixtureType": "normal",
+      "name": "えむのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3114_rug_rug1"
+    },
+    {
+      "id": 1733,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "寧々のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3115"
+    },
+    {
+      "id": 1734,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "寧々のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3115"
+    },
+    {
+      "id": 1735,
+      "mysekaiFixtureType": "normal",
+      "name": "寧々のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3115_fixture_stand1"
+    },
+    {
+      "id": 1736,
+      "mysekaiFixtureType": "normal",
+      "name": "寧々のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3115_rug_rug1"
+    },
+    {
+      "id": 1737,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "類のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3116"
+    },
+    {
+      "id": 1738,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "類のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3116"
+    },
+    {
+      "id": 1739,
+      "mysekaiFixtureType": "normal",
+      "name": "類のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3116_fixture_stand1"
+    },
+    {
+      "id": 1740,
+      "mysekaiFixtureType": "normal",
+      "name": "類のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3116_rug_rug1"
+    },
+    {
+      "id": 1741,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "奏のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3117"
+    },
+    {
+      "id": 1742,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "奏のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3117"
+    },
+    {
+      "id": 1743,
+      "mysekaiFixtureType": "normal",
+      "name": "奏のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3117_fixture_stand1"
+    },
+    {
+      "id": 1744,
+      "mysekaiFixtureType": "normal",
+      "name": "奏のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3117_rug_rug1"
+    },
+    {
+      "id": 1745,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "まふゆのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3118"
+    },
+    {
+      "id": 1746,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "まふゆのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3118"
+    },
+    {
+      "id": 1747,
+      "mysekaiFixtureType": "normal",
+      "name": "まふゆのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3118_fixture_stand1"
+    },
+    {
+      "id": 1748,
+      "mysekaiFixtureType": "normal",
+      "name": "まふゆのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3118_rug_rug1"
+    },
+    {
+      "id": 1749,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "絵名のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3119"
+    },
+    {
+      "id": 1750,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "絵名のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3119"
+    },
+    {
+      "id": 1751,
+      "mysekaiFixtureType": "normal",
+      "name": "絵名のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3119_fixture_stand1"
+    },
+    {
+      "id": 1752,
+      "mysekaiFixtureType": "normal",
+      "name": "絵名のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3119_rug_rug1"
+    },
+    {
+      "id": 1753,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "瑞希のカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3120"
+    },
+    {
+      "id": 1754,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "瑞希のカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3120"
+    },
+    {
+      "id": 1755,
+      "mysekaiFixtureType": "normal",
+      "name": "瑞希のカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3120_fixture_stand1"
+    },
+    {
+      "id": 1756,
+      "mysekaiFixtureType": "normal",
+      "name": "瑞希のカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3120_rug_rug1"
+    },
+    {
+      "id": 1757,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "ミクのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3121"
+    },
+    {
+      "id": 1758,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "ミクのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3121"
+    },
+    {
+      "id": 1759,
+      "mysekaiFixtureType": "normal",
+      "name": "ミクのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3121_fixture_stand1"
+    },
+    {
+      "id": 1760,
+      "mysekaiFixtureType": "normal",
+      "name": "ミクのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3121_rug_rug1"
+    },
+    {
+      "id": 1761,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "リンのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3122"
+    },
+    {
+      "id": 1762,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "リンのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3122"
+    },
+    {
+      "id": 1763,
+      "mysekaiFixtureType": "normal",
+      "name": "リンのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3122_fixture_stand1"
+    },
+    {
+      "id": 1764,
+      "mysekaiFixtureType": "normal",
+      "name": "リンのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3122_rug_rug1"
+    },
+    {
+      "id": 1765,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "レンのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3123"
+    },
+    {
+      "id": 1766,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "レンのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3123"
+    },
+    {
+      "id": 1767,
+      "mysekaiFixtureType": "normal",
+      "name": "レンのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3123_fixture_stand1"
+    },
+    {
+      "id": 1768,
+      "mysekaiFixtureType": "normal",
+      "name": "レンのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3123_rug_rug1"
+    },
+    {
+      "id": 1769,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "ルカのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3124"
+    },
+    {
+      "id": 1770,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "ルカのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3124"
+    },
+    {
+      "id": 1771,
+      "mysekaiFixtureType": "normal",
+      "name": "ルカのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3124_fixture_stand1"
+    },
+    {
+      "id": 1772,
+      "mysekaiFixtureType": "normal",
+      "name": "ルカのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3124_rug_rug1"
+    },
+    {
+      "id": 1773,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "MEIKOのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3125"
+    },
+    {
+      "id": 1774,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "MEIKOのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3125"
+    },
+    {
+      "id": 1775,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKOのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3125_fixture_stand1"
+    },
+    {
+      "id": 1776,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKOのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3125_rug_rug1"
+    },
+    {
+      "id": 1777,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "KAITOのカラールームの壁",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "chr3126"
+    },
+    {
+      "id": 1778,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "KAITOのカラールームの床",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "chr3126"
+    },
+    {
+      "id": 1779,
+      "mysekaiFixtureType": "normal",
+      "name": "KAITOのカラールームの台座",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_chr3126_fixture_stand1"
+    },
+    {
+      "id": 1780,
+      "mysekaiFixtureType": "normal",
+      "name": "KAITOのカラールームのラグ",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": 21,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_chr3126_rug_rug1"
+    },
+    {
+      "id": 1795,
+      "mysekaiFixtureType": "normal",
+      "name": "[6周年記念]メモリアルオブジェ",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0099_fixture_6annivobj"
+    },
+    {
       "id": 1796,
       "mysekaiFixtureType": "normal",
       "name": "[リミテッドスタイル vol.4] 志歩のぬいぐるみ/S",
@@ -26536,6 +28551,168 @@
       "mysekaiFixtureSubGenreId": 10,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_pas126_fixture_doll5large"
+    },
+    {
+      "id": 1845,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll6small"
+    },
+    {
+      "id": 1846,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll6medium"
+    },
+    {
+      "id": 1847,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 穂波のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas103_fixture_doll6large"
+    },
+    {
+      "id": 1848,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll6small"
+    },
+    {
+      "id": 1849,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll6medium"
+    },
+    {
+      "id": 1850,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] みのりのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas105_fixture_doll6large"
+    },
+    {
+      "id": 1851,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll6small"
+    },
+    {
+      "id": 1852,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll6medium"
+    },
+    {
+      "id": 1853,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 冬弥のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas112_fixture_doll6large"
+    },
+    {
+      "id": 1854,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] えむのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll6small"
+    },
+    {
+      "id": 1855,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] えむのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll6medium"
+    },
+    {
+      "id": 1856,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] えむのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas114_fixture_doll6large"
+    },
+    {
+      "id": 1857,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll6small"
+    },
+    {
+      "id": 1858,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll6medium"
+    },
+    {
+      "id": 1859,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] まふゆのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll6large"
+    },
+    {
+      "id": 1860,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll6small"
+    },
+    {
+      "id": 1861,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll6medium"
+    },
+    {
+      "id": 1862,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas124_fixture_doll6large"
     },
     {
       "id": 900002,
@@ -134203,6 +136380,26 @@
           "lua": "mysekai_talk_birthday2026_014_004"
         }
       ]
+    },
+    {
+      "id": 8132,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1506
+      ],
+      "talkIds": [
+        8679
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 8679,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2026_006_004"
+        }
+      ]
     }
   ],
   "characters": [
@@ -135160,6 +137357,10 @@
       {
         "id": 37,
         "name": "丸"
+      },
+      {
+        "id": 38,
+        "name": "その他"
       }
     ]
   },

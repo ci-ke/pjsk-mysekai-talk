@@ -6267,6 +6267,46 @@
       "fixtureName": "Tamagotchi Planet Decoration"
     },
     {
+      "id": 844,
+      "craftTargetId": 844,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 844,
+      "fixtureName": "Haruka's Birthday Cake"
+    },
+    {
+      "id": 845,
+      "craftTargetId": 845,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 845,
+      "fixtureName": "Haruka's Birthday Balloons"
+    },
+    {
+      "id": 846,
+      "craftTargetId": 846,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 846,
+      "fixtureName": "Haruka's Birthday Bouquet"
+    },
+    {
+      "id": 847,
+      "craftTargetId": 847,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 847,
+      "fixtureName": "Haruka's Birthday Garland"
+    },
+    {
+      "id": 848,
+      "craftTargetId": 848,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 848,
+      "fixtureName": "Haruka's Birthday Chair"
+    },
+    {
       "id": 974,
       "craftTargetId": 974,
       "isEnableSketch": true,
@@ -6305,6 +6345,254 @@
       "isObtainedByConvert": true,
       "fixtureId": 978,
       "fixtureName": "Radio Cassette Player"
+    },
+    {
+      "id": 979,
+      "craftTargetId": 979,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 979,
+      "fixtureName": "SEKAI Stage House"
+    },
+    {
+      "id": 980,
+      "craftTargetId": 980,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 980,
+      "fixtureName": "SEKAI Stage Wallpaper"
+    },
+    {
+      "id": 981,
+      "craftTargetId": 981,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 981,
+      "fixtureName": "SEKAI Stage Flooring"
+    },
+    {
+      "id": 982,
+      "craftTargetId": 982,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 982,
+      "fixtureName": "SEKAI Stage Window"
+    },
+    {
+      "id": 983,
+      "craftTargetId": 983,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 983,
+      "fixtureName": "SEKAI Stage Dance Floor"
+    },
+    {
+      "id": 984,
+      "craftTargetId": 984,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 984,
+      "fixtureName": "SEKAI Stage Mic Stand"
+    },
+    {
+      "id": 985,
+      "craftTargetId": 985,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 985,
+      "fixtureName": "SEKAI Stage Tall Table"
+    },
+    {
+      "id": 986,
+      "craftTargetId": 986,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 986,
+      "fixtureName": "SEKAI Stage Sofa"
+    },
+    {
+      "id": 987,
+      "craftTargetId": 987,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 987,
+      "fixtureName": "SEKAI Stage Table"
+    },
+    {
+      "id": 988,
+      "craftTargetId": 988,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 988,
+      "fixtureName": "SEKAI Stage Counter Chair"
+    },
+    {
+      "id": 989,
+      "craftTargetId": 989,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 989,
+      "fixtureName": "SEKAI Stage Speaker"
+    },
+    {
+      "id": 990,
+      "craftTargetId": 990,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 990,
+      "fixtureName": "SEKAI Stage Stage Light"
+    },
+    {
+      "id": 991,
+      "craftTargetId": 991,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 991,
+      "fixtureName": "SEKAI Stage DJ Booth"
+    },
+    {
+      "id": 993,
+      "craftTargetId": 993,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 993,
+      "fixtureName": "Limited Style #2 Ichika Plushie (S)"
+    },
+    {
+      "id": 994,
+      "craftTargetId": 994,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 994,
+      "fixtureName": "Limited Style #2 Ichika Plushie (M)"
+    },
+    {
+      "id": 995,
+      "craftTargetId": 995,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 995,
+      "fixtureName": "Limited Style #2 Ichika Plushie (L)"
+    },
+    {
+      "id": 996,
+      "craftTargetId": 996,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 996,
+      "fixtureName": "Limited Style #2 Airi Plushie (S)"
+    },
+    {
+      "id": 997,
+      "craftTargetId": 997,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 997,
+      "fixtureName": "Limited Style #2 Airi Plushie (M)"
+    },
+    {
+      "id": 998,
+      "craftTargetId": 998,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 998,
+      "fixtureName": "Limited Style #2 Airi Plushie (L)"
+    },
+    {
+      "id": 999,
+      "craftTargetId": 999,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 999,
+      "fixtureName": "Limited Style #2 Kohane Plushie (S)"
+    },
+    {
+      "id": 1000,
+      "craftTargetId": 1000,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1000,
+      "fixtureName": "Limited Style #2 Kohane Plushie (M)"
+    },
+    {
+      "id": 1001,
+      "craftTargetId": 1001,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1001,
+      "fixtureName": "Limited Style #2 Kohane Plushie (L)"
+    },
+    {
+      "id": 1002,
+      "craftTargetId": 1002,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1002,
+      "fixtureName": "Limited Style #2 Rui Plushie (S)"
+    },
+    {
+      "id": 1003,
+      "craftTargetId": 1003,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1003,
+      "fixtureName": "Limited Style #2 Rui Plushie (M)"
+    },
+    {
+      "id": 1004,
+      "craftTargetId": 1004,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1004,
+      "fixtureName": "Limited Style #2 Rui Plushie (L)"
+    },
+    {
+      "id": 1005,
+      "craftTargetId": 1005,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1005,
+      "fixtureName": "Limited Style #2 Mizuki Plushie (S)"
+    },
+    {
+      "id": 1006,
+      "craftTargetId": 1006,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1006,
+      "fixtureName": "Limited Style #2 Mizuki Plushie (M)"
+    },
+    {
+      "id": 1007,
+      "craftTargetId": 1007,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1007,
+      "fixtureName": "Limited Style #2 Mizuki Plushie (L)"
+    },
+    {
+      "id": 1008,
+      "craftTargetId": 1008,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1008,
+      "fixtureName": "Limited Style #2 MEIKO Plushie (S)"
+    },
+    {
+      "id": 1009,
+      "craftTargetId": 1009,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1009,
+      "fixtureName": "Limited Style #2 MEIKO Plushie (M)"
+    },
+    {
+      "id": 1010,
+      "craftTargetId": 1010,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1010,
+      "fixtureName": "Limited Style #2 MEIKO Plushie (L)"
     },
     {
       "id": 1140,
@@ -6371,6 +6659,15 @@
       "isObtainedByConvert": false,
       "fixtureId": 1469,
       "fixtureName": "Mirai Figure"
+    },
+    {
+      "id": -992,
+      "craftTargetId": 992,
+      "isVirtual": true,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 992,
+      "fixtureName": "JP 5th Anniversary Memorial Plaque"
     },
     {
       "id": -840,
@@ -14322,6 +14619,51 @@
       "assetbundleName": "mdl_clb1102_fixture_earth1"
     },
     {
+      "id": 844,
+      "mysekaiFixtureType": "system",
+      "name": "Haruka's Birthday Cake",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1106_fixture_cake1"
+    },
+    {
+      "id": 845,
+      "mysekaiFixtureType": "normal",
+      "name": "Haruka's Birthday Balloons",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1106_fixture_balloon1"
+    },
+    {
+      "id": 846,
+      "mysekaiFixtureType": "normal",
+      "name": "Haruka's Birthday Bouquet",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1106_fixture_flower1"
+    },
+    {
+      "id": 847,
+      "mysekaiFixtureType": "normal",
+      "name": "Haruka's Birthday Garland",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1106_fixture_garland1"
+    },
+    {
+      "id": 848,
+      "mysekaiFixtureType": "normal",
+      "name": "Haruka's Birthday Chair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1106_fixture_chair1"
+    },
+    {
       "id": 974,
       "mysekaiFixtureType": "normal",
       "name": "Rustic Japanese Floor Cushion",
@@ -14365,6 +14707,294 @@
       "mysekaiFixtureSubGenreId": 12,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_non0004_system_cassetteplayer1"
+    },
+    {
+      "id": 979,
+      "mysekaiFixtureType": "system",
+      "name": "SEKAI Stage House",
+      "mysekaiFixtureMainGenreId": 11,
+      "mysekaiFixtureSubGenreId": null,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_house_house1"
+    },
+    {
+      "id": 980,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "SEKAI Stage Wallpaper",
+      "mysekaiFixtureMainGenreId": 7,
+      "mysekaiFixtureSubGenreId": 19,
+      "mysekaiSettableLayoutType": "wall_appearance",
+      "assetbundleName": "env0007"
+    },
+    {
+      "id": 981,
+      "mysekaiFixtureType": "surface_appearance",
+      "name": "SEKAI Stage Flooring",
+      "mysekaiFixtureMainGenreId": 8,
+      "mysekaiFixtureSubGenreId": 20,
+      "mysekaiSettableLayoutType": "floor_appearance",
+      "assetbundleName": "env0007"
+    },
+    {
+      "id": 982,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Window",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": null,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_env0007_window_window1"
+    },
+    {
+      "id": 983,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Dance Floor",
+      "mysekaiFixtureMainGenreId": 9,
+      "mysekaiFixtureSubGenreId": null,
+      "mysekaiSettableLayoutType": "rug",
+      "assetbundleName": "mdl_env0007_rug_rug1"
+    },
+    {
+      "id": 984,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Mic Stand",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_mic1"
+    },
+    {
+      "id": 985,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Tall Table",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 3,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_table1"
+    },
+    {
+      "id": 986,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Sofa",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_sofa1"
+    },
+    {
+      "id": 987,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Table",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 3,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_table2"
+    },
+    {
+      "id": 988,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Counter Chair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_highchair1"
+    },
+    {
+      "id": 989,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Speaker",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 8,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_speaker1"
+    },
+    {
+      "id": 990,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage Stage Light",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 8,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_stagelight1"
+    },
+    {
+      "id": 991,
+      "mysekaiFixtureType": "normal",
+      "name": "SEKAI Stage DJ Booth",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 8,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_env0007_fixture_djbooth1"
+    },
+    {
+      "id": 992,
+      "mysekaiFixtureType": "normal",
+      "name": "JP 5th Anniversary Memorial Plaque",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_non0099_fixture_5annivobj"
+    },
+    {
+      "id": 993,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Ichika Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas101_fixture_doll3small"
+    },
+    {
+      "id": 994,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Ichika Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas101_fixture_doll3medium"
+    },
+    {
+      "id": 995,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Ichika Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas101_fixture_doll3large"
+    },
+    {
+      "id": 996,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Airi Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas107_fixture_doll3small"
+    },
+    {
+      "id": 997,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Airi Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas107_fixture_doll3medium"
+    },
+    {
+      "id": 998,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Airi Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas107_fixture_doll3large"
+    },
+    {
+      "id": 999,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Kohane Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas109_fixture_doll3small"
+    },
+    {
+      "id": 1000,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Kohane Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas109_fixture_doll3medium"
+    },
+    {
+      "id": 1001,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Kohane Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas109_fixture_doll3large"
+    },
+    {
+      "id": 1002,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rui Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas116_fixture_doll3small"
+    },
+    {
+      "id": 1003,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rui Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas116_fixture_doll3medium"
+    },
+    {
+      "id": 1004,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rui Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas116_fixture_doll3large"
+    },
+    {
+      "id": 1005,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mizuki Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll3small"
+    },
+    {
+      "id": 1006,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mizuki Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll3medium"
+    },
+    {
+      "id": 1007,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mizuki Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas120_fixture_doll3large"
+    },
+    {
+      "id": 1008,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 MEIKO Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas125_fixture_doll3small"
+    },
+    {
+      "id": 1009,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 MEIKO Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas125_fixture_doll3medium"
+    },
+    {
+      "id": 1010,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 MEIKO Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas125_fixture_doll3large"
     },
     {
       "id": 1140,
@@ -20115,10 +20745,12 @@
       "id": 312,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        312
+        312,
+        7118
       ],
       "characterUnitIds": [
         1
@@ -20126,6 +20758,11 @@
       "talks": [
         {
           "id": 312,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_001_0070"
+        },
+        {
+          "id": 7118,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_001_0070"
         }
@@ -24178,10 +24815,12 @@
       "id": 518,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        518
+        518,
+        7133
       ],
       "characterUnitIds": [
         4
@@ -24189,6 +24828,11 @@
       "talks": [
         {
           "id": 518,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_004_0067"
+        },
+        {
+          "id": 7133,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_004_0067"
         }
@@ -35712,10 +36356,12 @@
       "id": 1094,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        1094
+        1094,
+        7169
       ],
       "characterUnitIds": [
         12
@@ -35723,6 +36369,11 @@
       "talks": [
         {
           "id": 1094,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_012_0084"
+        },
+        {
+          "id": 7169,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_012_0084"
         }
@@ -39721,10 +40372,12 @@
       "id": 1289,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        1289
+        1289,
+        7185
       ],
       "characterUnitIds": [
         15
@@ -39732,6 +40385,11 @@
       "talks": [
         {
           "id": 1289,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_015_0067"
+        },
+        {
+          "id": 7185,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_015_0067"
         }
@@ -46386,10 +47044,12 @@
       "id": 1622,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        1622
+        1622,
+        7207
       ],
       "characterUnitIds": [
         20
@@ -46397,6 +47057,11 @@
       "talks": [
         {
           "id": 1622,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_020_0073"
+        },
+        {
+          "id": 7207,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_020_0073"
         }
@@ -47829,10 +48494,12 @@
       "id": 1691,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        1691
+        1691,
+        7217
       ],
       "characterUnitIds": [
         42
@@ -47840,6 +48507,11 @@
       "talks": [
         {
           "id": 1691,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_042_0068"
+        },
+        {
+          "id": 7217,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_042_0068"
         }
@@ -50795,10 +51467,12 @@
       "id": 1833,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        1833
+        1833,
+        7234
       ],
       "characterUnitIds": [
         39
@@ -50806,6 +51480,11 @@
       "talks": [
         {
           "id": 1833,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_039_0071"
+        },
+        {
+          "id": 7234,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_039_0071"
         }
@@ -56086,10 +56765,12 @@
       "id": 2093,
       "hasHiddenTalks": false,
       "fixtureIds": [
-        303
+        303,
+        984
       ],
       "talkIds": [
-        2093
+        2093,
+        7212
       ],
       "characterUnitIds": [
         27
@@ -56097,6 +56778,11 @@
       "talks": [
         {
           "id": 2093,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_release_027_0057"
+        },
+        {
+          "id": 7212,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_release_027_0057"
         }
@@ -98872,6 +99558,1386 @@
           "id": 7117,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_egg_055_004"
+        }
+      ]
+    },
+    {
+      "id": 6685,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        987
+      ],
+      "talkIds": [
+        7119
+      ],
+      "characterUnitIds": [
+        1
+      ],
+      "talks": [
+        {
+          "id": 7119,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_001_002"
+        }
+      ]
+    },
+    {
+      "id": 6687,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7121
+      ],
+      "characterUnitIds": [
+        1
+      ],
+      "talks": [
+        {
+          "id": 7121,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_001_004"
+        }
+      ]
+    },
+    {
+      "id": 6690,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        988
+      ],
+      "talkIds": [
+        7124
+      ],
+      "characterUnitIds": [
+        2
+      ],
+      "talks": [
+        {
+          "id": 7124,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_002_002"
+        }
+      ]
+    },
+    {
+      "id": 6691,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7125
+      ],
+      "characterUnitIds": [
+        2
+      ],
+      "talks": [
+        {
+          "id": 7125,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_002_003"
+        }
+      ]
+    },
+    {
+      "id": 6692,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7126
+      ],
+      "characterUnitIds": [
+        2
+      ],
+      "talks": [
+        {
+          "id": 7126,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_002_004"
+        }
+      ]
+    },
+    {
+      "id": 6695,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7129
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7129,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_003_002"
+        }
+      ]
+    },
+    {
+      "id": 6696,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7130
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7130,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_003_003"
+        }
+      ]
+    },
+    {
+      "id": 6697,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7131
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7131,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_003_004"
+        }
+      ]
+    },
+    {
+      "id": 6700,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7135
+      ],
+      "characterUnitIds": [
+        4
+      ],
+      "talks": [
+        {
+          "id": 7135,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_004_003"
+        }
+      ]
+    },
+    {
+      "id": 6701,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7136
+      ],
+      "characterUnitIds": [
+        4
+      ],
+      "talks": [
+        {
+          "id": 7136,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_004_004"
+        }
+      ]
+    },
+    {
+      "id": 6702,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7137
+      ],
+      "characterUnitIds": [
+        4
+      ],
+      "talks": [
+        {
+          "id": 7137,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_004_005"
+        }
+      ]
+    },
+    {
+      "id": 6705,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7140
+      ],
+      "characterUnitIds": [
+        5
+      ],
+      "talks": [
+        {
+          "id": 7140,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_005_002"
+        }
+      ]
+    },
+    {
+      "id": 6706,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7141
+      ],
+      "characterUnitIds": [
+        5
+      ],
+      "talks": [
+        {
+          "id": 7141,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_005_003"
+        }
+      ]
+    },
+    {
+      "id": 6707,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7142
+      ],
+      "characterUnitIds": [
+        5
+      ],
+      "talks": [
+        {
+          "id": 7142,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_005_004"
+        }
+      ]
+    },
+    {
+      "id": 6709,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        987
+      ],
+      "talkIds": [
+        7144
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7144,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_006_001"
+        }
+      ]
+    },
+    {
+      "id": 6711,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7146
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7146,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_006_003"
+        }
+      ]
+    },
+    {
+      "id": 6712,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7147
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7147,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_006_004"
+        }
+      ]
+    },
+    {
+      "id": 6715,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7150
+      ],
+      "characterUnitIds": [
+        7
+      ],
+      "talks": [
+        {
+          "id": 7150,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_007_002"
+        }
+      ]
+    },
+    {
+      "id": 6716,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7151
+      ],
+      "characterUnitIds": [
+        7
+      ],
+      "talks": [
+        {
+          "id": 7151,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_007_003"
+        }
+      ]
+    },
+    {
+      "id": 6719,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        988
+      ],
+      "talkIds": [
+        7154
+      ],
+      "characterUnitIds": [
+        8
+      ],
+      "talks": [
+        {
+          "id": 7154,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_008_002"
+        }
+      ]
+    },
+    {
+      "id": 6720,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7155
+      ],
+      "characterUnitIds": [
+        8
+      ],
+      "talks": [
+        {
+          "id": 7155,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_008_003"
+        }
+      ]
+    },
+    {
+      "id": 6723,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7158
+      ],
+      "characterUnitIds": [
+        9
+      ],
+      "talks": [
+        {
+          "id": 7158,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_009_002"
+        }
+      ]
+    },
+    {
+      "id": 6724,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7159
+      ],
+      "characterUnitIds": [
+        9
+      ],
+      "talks": [
+        {
+          "id": 7159,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_009_003"
+        }
+      ]
+    },
+    {
+      "id": 6727,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7162
+      ],
+      "characterUnitIds": [
+        10
+      ],
+      "talks": [
+        {
+          "id": 7162,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_010_002"
+        }
+      ]
+    },
+    {
+      "id": 6728,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7163
+      ],
+      "characterUnitIds": [
+        10
+      ],
+      "talks": [
+        {
+          "id": 7163,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_010_003"
+        }
+      ]
+    },
+    {
+      "id": 6731,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7166
+      ],
+      "characterUnitIds": [
+        11
+      ],
+      "talks": [
+        {
+          "id": 7166,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_011_002"
+        }
+      ]
+    },
+    {
+      "id": 6732,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7167
+      ],
+      "characterUnitIds": [
+        11
+      ],
+      "talks": [
+        {
+          "id": 7167,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_011_003"
+        }
+      ]
+    },
+    {
+      "id": 6736,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7172
+      ],
+      "characterUnitIds": [
+        12
+      ],
+      "talks": [
+        {
+          "id": 7172,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_012_004"
+        }
+      ]
+    },
+    {
+      "id": 6737,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7173
+      ],
+      "characterUnitIds": [
+        12
+      ],
+      "talks": [
+        {
+          "id": 7173,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_012_005"
+        }
+      ]
+    },
+    {
+      "id": 6739,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        987
+      ],
+      "talkIds": [
+        7175
+      ],
+      "characterUnitIds": [
+        13
+      ],
+      "talks": [
+        {
+          "id": 7175,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_013_002"
+        }
+      ]
+    },
+    {
+      "id": 6741,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7177
+      ],
+      "characterUnitIds": [
+        13
+      ],
+      "talks": [
+        {
+          "id": 7177,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_013_003"
+        }
+      ]
+    },
+    {
+      "id": 6742,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7178
+      ],
+      "characterUnitIds": [
+        13
+      ],
+      "talks": [
+        {
+          "id": 7178,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_013_004"
+        }
+      ]
+    },
+    {
+      "id": 6745,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        988
+      ],
+      "talkIds": [
+        7181
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 7181,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_014_002"
+        }
+      ]
+    },
+    {
+      "id": 6746,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7182
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 7182,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_014_003"
+        }
+      ]
+    },
+    {
+      "id": 6747,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7183
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 7183,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_014_004"
+        }
+      ]
+    },
+    {
+      "id": 6750,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7187
+      ],
+      "characterUnitIds": [
+        15
+      ],
+      "talks": [
+        {
+          "id": 7187,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_015_003"
+        }
+      ]
+    },
+    {
+      "id": 6751,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7188
+      ],
+      "characterUnitIds": [
+        15
+      ],
+      "talks": [
+        {
+          "id": 7188,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_015_004"
+        }
+      ]
+    },
+    {
+      "id": 6754,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7191
+      ],
+      "characterUnitIds": [
+        16
+      ],
+      "talks": [
+        {
+          "id": 7191,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_016_002"
+        }
+      ]
+    },
+    {
+      "id": 6755,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7192
+      ],
+      "characterUnitIds": [
+        16
+      ],
+      "talks": [
+        {
+          "id": 7192,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_016_003"
+        }
+      ]
+    },
+    {
+      "id": 6757,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        987
+      ],
+      "talkIds": [
+        7194
+      ],
+      "characterUnitIds": [
+        17
+      ],
+      "talks": [
+        {
+          "id": 7194,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_017_001"
+        }
+      ]
+    },
+    {
+      "id": 6759,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        988
+      ],
+      "talkIds": [
+        7196
+      ],
+      "characterUnitIds": [
+        17
+      ],
+      "talks": [
+        {
+          "id": 7196,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_017_003"
+        }
+      ]
+    },
+    {
+      "id": 6760,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7197
+      ],
+      "characterUnitIds": [
+        17
+      ],
+      "talks": [
+        {
+          "id": 7197,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_017_004"
+        }
+      ]
+    },
+    {
+      "id": 6763,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7200
+      ],
+      "characterUnitIds": [
+        18
+      ],
+      "talks": [
+        {
+          "id": 7200,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_018_002"
+        }
+      ]
+    },
+    {
+      "id": 6764,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7201
+      ],
+      "characterUnitIds": [
+        18
+      ],
+      "talks": [
+        {
+          "id": 7201,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_018_003"
+        }
+      ]
+    },
+    {
+      "id": 6767,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7204
+      ],
+      "characterUnitIds": [
+        19
+      ],
+      "talks": [
+        {
+          "id": 7204,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_019_002"
+        }
+      ]
+    },
+    {
+      "id": 6768,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7205
+      ],
+      "characterUnitIds": [
+        19
+      ],
+      "talks": [
+        {
+          "id": 7205,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_019_003"
+        }
+      ]
+    },
+    {
+      "id": 6771,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7209
+      ],
+      "characterUnitIds": [
+        20
+      ],
+      "talks": [
+        {
+          "id": 7209,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_020_003"
+        }
+      ]
+    },
+    {
+      "id": 6772,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7210
+      ],
+      "characterUnitIds": [
+        20
+      ],
+      "talks": [
+        {
+          "id": 7210,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_020_004"
+        }
+      ]
+    },
+    {
+      "id": 6775,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7214
+      ],
+      "characterUnitIds": [
+        27
+      ],
+      "talks": [
+        {
+          "id": 7214,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_027_003"
+        }
+      ]
+    },
+    {
+      "id": 6776,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7215
+      ],
+      "characterUnitIds": [
+        27
+      ],
+      "talks": [
+        {
+          "id": 7215,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_027_004"
+        }
+      ]
+    },
+    {
+      "id": 6779,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7219
+      ],
+      "characterUnitIds": [
+        42
+      ],
+      "talks": [
+        {
+          "id": 7219,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_042_003"
+        }
+      ]
+    },
+    {
+      "id": 6780,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7220
+      ],
+      "characterUnitIds": [
+        42
+      ],
+      "talks": [
+        {
+          "id": 7220,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_042_004"
+        }
+      ]
+    },
+    {
+      "id": 6783,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7223
+      ],
+      "characterUnitIds": [
+        28
+      ],
+      "talks": [
+        {
+          "id": 7223,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_028_002"
+        }
+      ]
+    },
+    {
+      "id": 6784,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7224
+      ],
+      "characterUnitIds": [
+        28
+      ],
+      "talks": [
+        {
+          "id": 7224,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_028_003"
+        }
+      ]
+    },
+    {
+      "id": 6787,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        988
+      ],
+      "talkIds": [
+        7227
+      ],
+      "characterUnitIds": [
+        33
+      ],
+      "talks": [
+        {
+          "id": 7227,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_033_002"
+        }
+      ]
+    },
+    {
+      "id": 6788,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7228
+      ],
+      "characterUnitIds": [
+        33
+      ],
+      "talks": [
+        {
+          "id": 7228,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_033_003"
+        }
+      ]
+    },
+    {
+      "id": 6791,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        985
+      ],
+      "talkIds": [
+        7231
+      ],
+      "characterUnitIds": [
+        29
+      ],
+      "talks": [
+        {
+          "id": 7231,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_029_002"
+        }
+      ]
+    },
+    {
+      "id": 6792,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7232
+      ],
+      "characterUnitIds": [
+        29
+      ],
+      "talks": [
+        {
+          "id": 7232,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_029_003"
+        }
+      ]
+    },
+    {
+      "id": 6795,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7236
+      ],
+      "characterUnitIds": [
+        39
+      ],
+      "talks": [
+        {
+          "id": 7236,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_039_003"
+        }
+      ]
+    },
+    {
+      "id": 6796,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7237
+      ],
+      "characterUnitIds": [
+        39
+      ],
+      "talks": [
+        {
+          "id": 7237,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_039_004"
+        }
+      ]
+    },
+    {
+      "id": 6798,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        987
+      ],
+      "talkIds": [
+        7239
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 7239,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_049_001"
+        }
+      ]
+    },
+    {
+      "id": 6800,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7241
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 7241,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_049_003"
+        }
+      ]
+    },
+    {
+      "id": 6803,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7244
+      ],
+      "characterUnitIds": [
+        30
+      ],
+      "talks": [
+        {
+          "id": 7244,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_030_002"
+        }
+      ]
+    },
+    {
+      "id": 6804,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7245
+      ],
+      "characterUnitIds": [
+        30
+      ],
+      "talks": [
+        {
+          "id": 7245,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_030_003"
+        }
+      ]
+    },
+    {
+      "id": 6807,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        990
+      ],
+      "talkIds": [
+        7248
+      ],
+      "characterUnitIds": [
+        55
+      ],
+      "talks": [
+        {
+          "id": 7248,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_055_002"
+        }
+      ]
+    },
+    {
+      "id": 6808,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7249
+      ],
+      "characterUnitIds": [
+        55
+      ],
+      "talks": [
+        {
+          "id": 7249,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_055_003"
+        }
+      ]
+    },
+    {
+      "id": 6811,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        989
+      ],
+      "talkIds": [
+        7252
+      ],
+      "characterUnitIds": [
+        31
+      ],
+      "talks": [
+        {
+          "id": 7252,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_031_002"
+        }
+      ]
+    },
+    {
+      "id": 6812,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        991
+      ],
+      "talkIds": [
+        7253
+      ],
+      "characterUnitIds": [
+        31
+      ],
+      "talks": [
+        {
+          "id": 7253,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_018sekaistage_031_003"
+        }
+      ]
+    },
+    {
+      "id": 6815,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        848
+      ],
+      "talkIds": [
+        7256
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7256,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2025_006_004"
         }
       ]
     },
