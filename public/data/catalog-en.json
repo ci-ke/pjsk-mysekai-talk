@@ -6307,6 +6307,46 @@
       "fixtureName": "Haruka's Birthday Chair"
     },
     {
+      "id": 849,
+      "craftTargetId": 849,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 849,
+      "fixtureName": "Honami's Birthday Cake"
+    },
+    {
+      "id": 850,
+      "craftTargetId": 850,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 850,
+      "fixtureName": "Honami's Birthday Balloons"
+    },
+    {
+      "id": 851,
+      "craftTargetId": 851,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 851,
+      "fixtureName": "Honami's Birthday Bouquet"
+    },
+    {
+      "id": 852,
+      "craftTargetId": 852,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 852,
+      "fixtureName": "Honami's Birthday Garland"
+    },
+    {
+      "id": 853,
+      "craftTargetId": 853,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 853,
+      "fixtureName": "Honami's Birthday Chair"
+    },
+    {
       "id": 974,
       "craftTargetId": 974,
       "isEnableSketch": true,
@@ -14662,6 +14702,51 @@
       "mysekaiFixtureSubGenreId": 4,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_bir1106_fixture_chair1"
+    },
+    {
+      "id": 849,
+      "mysekaiFixtureType": "system",
+      "name": "Honami's Birthday Cake",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1103_fixture_cake1"
+    },
+    {
+      "id": 850,
+      "mysekaiFixtureType": "normal",
+      "name": "Honami's Birthday Balloons",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1103_fixture_balloon1"
+    },
+    {
+      "id": 851,
+      "mysekaiFixtureType": "normal",
+      "name": "Honami's Birthday Bouquet",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1103_fixture_flower1"
+    },
+    {
+      "id": 852,
+      "mysekaiFixtureType": "normal",
+      "name": "Honami's Birthday Garland",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1103_fixture_garland1"
+    },
+    {
+      "id": 853,
+      "mysekaiFixtureType": "normal",
+      "name": "Honami's Birthday Chair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1103_fixture_chair1"
     },
     {
       "id": 974,
@@ -100938,6 +101023,26 @@
           "id": 7256,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_birthday2025_006_004"
+        }
+      ]
+    },
+    {
+      "id": 7059,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        853
+      ],
+      "talkIds": [
+        7530
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7530,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2025_003_004"
         }
       ]
     },
