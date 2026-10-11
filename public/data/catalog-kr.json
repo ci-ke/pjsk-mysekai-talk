@@ -106194,6 +106194,26 @@
       ]
     },
     {
+      "id": 6815,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        848
+      ],
+      "talkIds": [
+        7256
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7256,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2025_006_004"
+        }
+      ]
+    },
+    {
       "id": 6817,
       "hasHiddenTalks": false,
       "fixtureIds": [
