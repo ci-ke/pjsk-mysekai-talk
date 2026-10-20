@@ -1,8 +1,10 @@
 import type { FilterState, Lang, UserProgress } from "../types";
+import { isHarukiServer, type HarukiServer } from "./haruki";
 
 const LANG_KEY = "mysekai-lang";
 const CHECKED_OFF_KEY = "mysekai-checked-off";
 const FILTERS_KEY = "mysekai-filters";
+const HARUKI_SETTINGS_KEY = "mysekai-haruki-settings";
 const MYSEKAI_STORAGE_KEY = "mysekai-mysekai-data";
 const SUITE_STORAGE_KEY = "mysekai-suite-data";
 
@@ -152,6 +154,38 @@ export function clearSuiteData() {
     localStorage.removeItem(SUITE_STORAGE_KEY);
   } catch {
     // 静默忽略
+  }
+}
+
+/* ---- Haruki 获取设置（区服 / 游戏 ID / 代理地址） ---- */
+export interface HarukiSettings {
+  server: HarukiServer;
+  gameId: string;
+  apiBase: string;
+}
+
+export function saveHarukiSettings(settings: HarukiSettings) {
+  try {
+    localStorage.setItem(HARUKI_SETTINGS_KEY, JSON.stringify(settings));
+  } catch {
+    // 静默忽略
+  }
+}
+
+export function loadHarukiSettings(): Partial<HarukiSettings> | null {
+  try {
+    const raw = localStorage.getItem(HARUKI_SETTINGS_KEY);
+    if (!raw) return null;
+    const parsed: unknown = JSON.parse(raw);
+    if (typeof parsed !== "object" || parsed === null) return null;
+    const record = parsed as Record<string, unknown>;
+    const result: Partial<HarukiSettings> = {};
+    if (isHarukiServer(record.server)) result.server = record.server;
+    if (typeof record.gameId === "string") result.gameId = record.gameId;
+    if (typeof record.apiBase === "string") result.apiBase = record.apiBase;
+    return result;
+  } catch {
+    return null;
   }
 }
 

@@ -17,10 +17,22 @@ function normalizeBasePath(value: string | undefined) {
   return last ? `/${last}/` : "/";
 }
 
-export default defineConfig(({ mode }) => {
+export default defineConfig(() => {
+  // Haruki 公开接口只为白名单来源返回 CORS 头，浏览器直连会被拦；
+  // dev/preview 用同源代理转发，静态部署时需要自建反代或改用下载后上传。
+  const harukiProxy = {
+    "/api/haruki-public": {
+      target: "https://suite-api.haruki.seiunx.com",
+      changeOrigin: true,
+      rewrite: (path: string) => path.replace(/^\/api\/haruki-public/, "/public"),
+    },
+  };
+
   return {
     base: normalizeBasePath(process.env.VITE_BASE_PATH),
     plugins: [react()],
+    server: { proxy: harukiProxy },
+    preview: { proxy: harukiProxy },
     test: {
       environment: "node",
       globals: true,

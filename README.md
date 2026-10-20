@@ -7,6 +7,7 @@
 - **全量家具目录** — 涵盖所有家具（含门 Gate），每个家具都有对应的蓝图条目（真实蓝图或无蓝图家具）
 - **多语言支持** — 简体中文 / 日本語 / 繁體中文 / English / 한국어，独立数据文件
 - **蓝图收集追踪** — 分别上传 My SEKAI 和 Suite JSON，自动解析蓝图持有与对话进度
+- **Haruki 数据源获取** — 填写区服与游戏 ID，直接拿到 Haruki 工具箱公开的抓包 JSON（下载后上传，或本地运行时一键导入）
 - **角色家具对话进度** — 以对话组为单位统计已读/未读状态（组内任一对话已读即算整组已读），含隐藏对话标记；未读对话组可手动标记为已读（浏览器缓存）
 - **多维度筛选** — 持有状态（全部家具 / 全部蓝图 / 已持有 / 未持有 / 无需蓝图）、角色（多选，Miku 按团体拆分）、对话状态（仅未读 / 仅已读 / 全部已读）、主副分类、关键词搜索
 - **对话脚本查看** — 展开对话组，加载并查看具体对话台本
@@ -41,6 +42,24 @@ npm run data:sync
 - **My SEKAI 抓包** — 含 `updatedResources.userMysekaiBlueprints`（蓝图），`userMysekaiCharacterTalks`（对话）可能存在也可能不存在
 - **Suite 响应** — 仅含 `userMysekaiCharacterTalks`（仅对话进度，无蓝图数据）
 
+## 从 Haruki 获取数据
+
+[Haruki 工具箱](https://haruki.seiunx.com/) 收集玩家上传的 Suite / My SEKAI 抓包，并在数据公开后提供只读接口。页面上的「用区服和游戏 ID 获取数据」面板会按区服和游戏 ID 生成两个链接：
+
+| 数据源 | 接口 | 内容 |
+| --- | --- | --- |
+| My SEKAI | `/public/{server}/mysekai/{gameId}` | 蓝图 + 对话（完整响应） |
+| Suite | `/public/{server}/suite/{gameId}?key=userMysekaiCharacterTalks,upload_time` | 仅对话进度（已裁剪成最小子集） |
+
+两种用法：
+
+1. **下载后上传（任何环境可用）** — 点「打开 JSON」，在浏览器里按 `Ctrl+S` / 右键另存为，再把保存的文件拖到上面的上传框。浏览器打开链接属于普通导航，不受跨域限制。
+2. **一键导入（需要代理）** — 点「通过代理导入」由页面直接解析。Haruki 接口只为白名单来源返回 `Access-Control-Allow-Origin`，所以必须走同源代理：
+   - 本地 `npm run dev` / `npm run preview` 已内置代理：`/api/haruki-public` → `https://suite-api.haruki.seiunx.com/public`。
+   - 静态部署（GitHub Pages）没有服务端转发，可用「高级：接口地址」填入自建反代（需允许跨域），或用构建期环境变量 `VITE_HARUKI_API_BASE` 指定。
+
+区服可选 `cn`（简中）/ `jp`（日服）/ `tw`（繁中）/ `kr`（韩服）/ `en`（国际服）。接口按数据类型分别授权，某个账号可能只公开了 Suite 而 My SEKAI 返回 404。
+
 ## 项目结构
 
 ```
@@ -54,6 +73,7 @@ npm run data:sync
 │   ├── components/        # React UI 组件
 │   │   ├── BlueprintCard.tsx   # 蓝图卡片（含对话组展开）
 │   │   ├── FilterBar.tsx       # 筛选栏
+│   │   ├── HarukiImportPanel.tsx # Haruki 数据源面板（区服 + 游戏 ID）
 │   │   ├── NoticeBanner.tsx    # 提示横幅
 │   │   ├── ProgressSummary.tsx # 统计概览
 │   │   ├── TalkViewer.tsx      # 对话脚本查看器
@@ -64,13 +84,15 @@ npm run data:sync
 │   │   ├── catalog.ts     # 蓝图条目构建与统计
 │   │   ├── filters.ts     # 筛选与排序
 │   │   ├── format.ts      # 格式化工具
+│   │   ├── haruki.ts      # Haruki 公开接口链接构建与抓取
 │   │   ├── userData.ts    # 用户 JSON 解析（双格式自动识别）
-│   │   └── domain.test.ts # 单元测试
+│   │   ├── domain.test.ts # 单元测试
+│   │   └── haruki.test.ts # Haruki 链接与错误映射测试
 │   ├── types.ts           # 类型定义
 │   ├── styles.css         # 全局样式
 │   ├── App.tsx            # 根组件
 │   └── main.tsx           # 入口
-├── vite.config.ts
+├── vite.config.ts        # 含 /api/haruki-public 开发代理
 └── tsconfig.json
 ```
 

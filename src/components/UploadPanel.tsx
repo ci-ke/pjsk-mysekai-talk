@@ -82,7 +82,8 @@ export default function UploadPanel({ mysekaiProgress, suiteProgress, error, onF
                     ref={(el) => { inputRefs.current[key] = el; }}
                     className="visually-hidden"
                     type="file"
-                    accept=".json,application/json"
+                    // 兼容浏览器「另存为」得到的 JSON（可能没有 .json 后缀或 MIME 不规范）。
+                    accept=".json,application/json,text/plain,application/octet-stream"
                     onChange={async (event) => {
                       await handleFile(key, event.target.files?.[0]);
                       event.target.value = "";

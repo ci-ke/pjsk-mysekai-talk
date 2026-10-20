@@ -169,7 +169,8 @@ function parseMysekaiFormat(input: Record<string, unknown>, sourceFileName?: str
 
   const talkValue = talkSource.found ? talkSource.value : historySource.value;
   const talkDataAvailable = talkSource.found || historySource.found;
-  const updatedAt = asFiniteNumber(resources.now ?? resources.updatedAt);
+  // Haruki 公开接口在响应顶层额外带 upload_time，作为 updatedResources.now 的兜底。
+  const updatedAt = asFiniteNumber(resources.now ?? resources.updatedAt ?? input.upload_time);
 
   return {
     ownedBlueprintIds: normalizeBlueprintIds(blueprintSource.value),
@@ -185,7 +186,8 @@ function parseMysekaiFormat(input: Record<string, unknown>, sourceFileName?: str
 function parseSuiteFormat(input: Record<string, unknown>, sourceFileName?: string): UserProgress {
   const talkValue = input.userMysekaiCharacterTalks;
   const talkDataAvailable = talkValue !== undefined;
-  const updatedAt = asFiniteNumber(input.now);
+  // Haruki 公开接口的 suite 子集用 upload_time 记录上传时间。
+  const updatedAt = asFiniteNumber(input.now ?? input.upload_time);
 
   return {
     ownedBlueprintIds: new Set(),

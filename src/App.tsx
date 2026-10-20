@@ -1,12 +1,14 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
 import UploadPanel from "./components/UploadPanel";
+import HarukiImportPanel from "./components/HarukiImportPanel";
 import ProgressSummary from "./components/ProgressSummary";
 import FilterBar from "./components/FilterBar";
 import BlueprintCard from "./components/BlueprintCard";
 import NoticeBanner from "./components/NoticeBanner";
 import { createBlueprintEntries, getEntrySummary } from "./domain/catalog";
 import { filterBlueprintEntries, sortBlueprintEntries } from "./domain/filters";
-import { parseUserJsonText, UserDataError } from "./domain/userData";
+import { parseUserJson, parseUserJsonText, UserDataError } from "./domain/userData";
+import type { HarukiSource } from "./domain/haruki";
 import { loadMysekaiProgress, loadSuiteProgress, saveMysekaiData, saveSuiteData, clearMysekaiData, clearSuiteData, saveLang, loadLang, loadCheckedOff, saveCheckedOff, clearCheckedOff, saveFilters, loadFilters } from "./domain/cache";
 import { formatPercent } from "./domain/format";
 import type { Catalog, FilterState, Lang, UserProgress } from "./types";
@@ -122,6 +124,20 @@ export default function App() {
     saveFilters(filters);
   }, [filters]);
 
+  function applyProgress(source: "mysekai" | "suite", parsed: UserProgress) {
+    if (source === "mysekai") {
+      saveMysekaiData(parsed);
+      setMysekaiProgress(parsed);
+    } else {
+      saveSuiteData(parsed);
+      setSuiteProgress(parsed);
+    }
+    clearCheckedOff();
+    setCheckedOffIds(new Set());
+    setPage(1);
+    setExpandedIds(new Set());
+  }
+
   async function handleFile(source: "mysekai" | "suite", file: File) {
     setUploadError("");
     if (file.size > 20 * 1024 * 1024) {
@@ -130,20 +146,18 @@ export default function App() {
     }
     try {
       const rawText = await file.text();
-      const parsed = parseUserJsonText(rawText, file.name);
-      if (source === "mysekai") {
-        saveMysekaiData(parsed);
-        setMysekaiProgress(parsed);
-      } else {
-        saveSuiteData(parsed);
-        setSuiteProgress(parsed);
-      }
-      clearCheckedOff();
-      setCheckedOffIds(new Set());
-      setPage(1);
-      setExpandedIds(new Set());
+      applyProgress(source, parseUserJsonText(rawText, file.name));
     } catch (error) {
       setUploadError(error instanceof UserDataError ? error.message : "读取文件失败，请确认 JSON 内容完整。");
+    }
+  }
+
+  function handleHarukiImport(source: HarukiSource, json: unknown, label: string) {
+    setUploadError("");
+    try {
+      applyProgress(source, parseUserJson(json, label));
+    } catch (error) {
+      setUploadError(error instanceof UserDataError ? error.message : "解析 Haruki 数据失败，请改用下载后上传。");
     }
   }
 
@@ -263,6 +277,8 @@ export default function App() {
           onClear={clearSource}
           onClearAll={clearAll}
         />
+
+        <HarukiImportPanel onImport={handleHarukiImport} />
 
         {!progress.sourceFileName && (
           <NoticeBanner tone="info">
