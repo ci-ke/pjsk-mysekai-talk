@@ -7195,6 +7195,46 @@
       "fixtureName": "[限量設計vol.2] MEIKO的玩偶/L"
     },
     {
+      "id": 1011,
+      "craftTargetId": 1011,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1011,
+      "fixtureName": "[萬聖節]南瓜"
+    },
+    {
+      "id": 1012,
+      "craftTargetId": 1012,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1012,
+      "fixtureName": "[萬聖節]南瓜組合"
+    },
+    {
+      "id": 1013,
+      "craftTargetId": 1013,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1013,
+      "fixtureName": "[萬聖節]枯樹"
+    },
+    {
+      "id": 1014,
+      "craftTargetId": 1014,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1014,
+      "fixtureName": "[萬聖節]糖果"
+    },
+    {
+      "id": 1015,
+      "craftTargetId": 1015,
+      "isEnableSketch": true,
+      "isObtainedByConvert": true,
+      "fixtureId": 1015,
+      "fixtureName": "[萬聖節]妖怪稻草人"
+    },
+    {
       "id": 1016,
       "craftTargetId": 1016,
       "isEnableSketch": true,
@@ -7504,7 +7544,7 @@
       "isEnableSketch": true,
       "isObtainedByConvert": true,
       "fixtureId": 1057,
-      "fixtureName": "[復古風格]"
+      "fixtureName": "[復古風格]鏡子"
     },
     {
       "id": 1058,
@@ -17923,6 +17963,51 @@
       "assetbundleName": "mdl_pas125_fixture_doll3large"
     },
     {
+      "id": 1011,
+      "mysekaiFixtureType": "normal",
+      "name": "[萬聖節]南瓜",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0021_fixture_pumpkin1"
+    },
+    {
+      "id": 1012,
+      "mysekaiFixtureType": "normal",
+      "name": "[萬聖節]南瓜組合",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0021_fixture_pumpkin2"
+    },
+    {
+      "id": 1013,
+      "mysekaiFixtureType": "normal",
+      "name": "[萬聖節]枯樹",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 7,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0021_fixture_deadtree1"
+    },
+    {
+      "id": 1014,
+      "mysekaiFixtureType": "normal",
+      "name": "[萬聖節]糖果",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0021_fixture_candy1"
+    },
+    {
+      "id": 1015,
+      "mysekaiFixtureType": "normal",
+      "name": "[萬聖節]妖怪稻草人",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_ext0021_fixture_scarecrow1"
+    },
+    {
       "id": 1016,
       "mysekaiFixtureType": "system",
       "name": "[浪漫花園]房子",
@@ -18294,7 +18379,7 @@
     {
       "id": 1057,
       "mysekaiFixtureType": "normal",
-      "name": "[復古風格]",
+      "name": "[復古風格]鏡子",
       "mysekaiFixtureMainGenreId": 2,
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
@@ -109823,6 +109908,1482 @@
           "id": 7425,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_019romantic_099_012"
+        }
+      ]
+    },
+    {
+      "id": 6985,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7456
+      ],
+      "characterUnitIds": [
+        1
+      ],
+      "talks": [
+        {
+          "id": 7456,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_001_001"
+        }
+      ]
+    },
+    {
+      "id": 6986,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7457
+      ],
+      "characterUnitIds": [
+        1
+      ],
+      "talks": [
+        {
+          "id": 7457,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_001_002"
+        }
+      ]
+    },
+    {
+      "id": 6987,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7458
+      ],
+      "characterUnitIds": [
+        2
+      ],
+      "talks": [
+        {
+          "id": 7458,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_002_001"
+        }
+      ]
+    },
+    {
+      "id": 6988,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7459
+      ],
+      "characterUnitIds": [
+        2
+      ],
+      "talks": [
+        {
+          "id": 7459,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_002_002"
+        }
+      ]
+    },
+    {
+      "id": 6989,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7460
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7460,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_003_001"
+        }
+      ]
+    },
+    {
+      "id": 6990,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7461
+      ],
+      "characterUnitIds": [
+        3
+      ],
+      "talks": [
+        {
+          "id": 7461,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_003_002"
+        }
+      ]
+    },
+    {
+      "id": 6991,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7462
+      ],
+      "characterUnitIds": [
+        4
+      ],
+      "talks": [
+        {
+          "id": 7462,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_004_001"
+        }
+      ]
+    },
+    {
+      "id": 6992,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7463
+      ],
+      "characterUnitIds": [
+        4
+      ],
+      "talks": [
+        {
+          "id": 7463,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_004_002"
+        }
+      ]
+    },
+    {
+      "id": 6993,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7464
+      ],
+      "characterUnitIds": [
+        5
+      ],
+      "talks": [
+        {
+          "id": 7464,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_005_001"
+        }
+      ]
+    },
+    {
+      "id": 6994,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7465
+      ],
+      "characterUnitIds": [
+        5
+      ],
+      "talks": [
+        {
+          "id": 7465,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_005_002"
+        }
+      ]
+    },
+    {
+      "id": 6995,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7466
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7466,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_006_001"
+        }
+      ]
+    },
+    {
+      "id": 6996,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7467
+      ],
+      "characterUnitIds": [
+        6
+      ],
+      "talks": [
+        {
+          "id": 7467,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_006_002"
+        }
+      ]
+    },
+    {
+      "id": 6997,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7468
+      ],
+      "characterUnitIds": [
+        7
+      ],
+      "talks": [
+        {
+          "id": 7468,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_007_001"
+        }
+      ]
+    },
+    {
+      "id": 6998,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7469
+      ],
+      "characterUnitIds": [
+        7
+      ],
+      "talks": [
+        {
+          "id": 7469,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_007_002"
+        }
+      ]
+    },
+    {
+      "id": 6999,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7470
+      ],
+      "characterUnitIds": [
+        8
+      ],
+      "talks": [
+        {
+          "id": 7470,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_008_001"
+        }
+      ]
+    },
+    {
+      "id": 7000,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7471
+      ],
+      "characterUnitIds": [
+        8
+      ],
+      "talks": [
+        {
+          "id": 7471,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_008_002"
+        }
+      ]
+    },
+    {
+      "id": 7001,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7472
+      ],
+      "characterUnitIds": [
+        9
+      ],
+      "talks": [
+        {
+          "id": 7472,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_009_001"
+        }
+      ]
+    },
+    {
+      "id": 7002,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7473
+      ],
+      "characterUnitIds": [
+        9
+      ],
+      "talks": [
+        {
+          "id": 7473,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_009_002"
+        }
+      ]
+    },
+    {
+      "id": 7003,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7474
+      ],
+      "characterUnitIds": [
+        10
+      ],
+      "talks": [
+        {
+          "id": 7474,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_010_001"
+        }
+      ]
+    },
+    {
+      "id": 7004,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7475
+      ],
+      "characterUnitIds": [
+        10
+      ],
+      "talks": [
+        {
+          "id": 7475,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_010_002"
+        }
+      ]
+    },
+    {
+      "id": 7005,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7476
+      ],
+      "characterUnitIds": [
+        11
+      ],
+      "talks": [
+        {
+          "id": 7476,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_011_001"
+        }
+      ]
+    },
+    {
+      "id": 7006,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7477
+      ],
+      "characterUnitIds": [
+        12
+      ],
+      "talks": [
+        {
+          "id": 7477,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_012_001"
+        }
+      ]
+    },
+    {
+      "id": 7007,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7478
+      ],
+      "characterUnitIds": [
+        12
+      ],
+      "talks": [
+        {
+          "id": 7478,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_012_002"
+        }
+      ]
+    },
+    {
+      "id": 7008,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7479
+      ],
+      "characterUnitIds": [
+        13
+      ],
+      "talks": [
+        {
+          "id": 7479,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_013_001"
+        }
+      ]
+    },
+    {
+      "id": 7009,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7480
+      ],
+      "characterUnitIds": [
+        13
+      ],
+      "talks": [
+        {
+          "id": 7480,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_013_002"
+        }
+      ]
+    },
+    {
+      "id": 7010,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7481
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 7481,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_014_001"
+        }
+      ]
+    },
+    {
+      "id": 7011,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7482
+      ],
+      "characterUnitIds": [
+        14
+      ],
+      "talks": [
+        {
+          "id": 7482,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_014_002"
+        }
+      ]
+    },
+    {
+      "id": 7012,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7483
+      ],
+      "characterUnitIds": [
+        15
+      ],
+      "talks": [
+        {
+          "id": 7483,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_015_001"
+        }
+      ]
+    },
+    {
+      "id": 7013,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7484
+      ],
+      "characterUnitIds": [
+        15
+      ],
+      "talks": [
+        {
+          "id": 7484,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_015_002"
+        }
+      ]
+    },
+    {
+      "id": 7014,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7485
+      ],
+      "characterUnitIds": [
+        16
+      ],
+      "talks": [
+        {
+          "id": 7485,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_016_001"
+        }
+      ]
+    },
+    {
+      "id": 7015,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7486
+      ],
+      "characterUnitIds": [
+        17
+      ],
+      "talks": [
+        {
+          "id": 7486,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_017_001"
+        }
+      ]
+    },
+    {
+      "id": 7016,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7487
+      ],
+      "characterUnitIds": [
+        17
+      ],
+      "talks": [
+        {
+          "id": 7487,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_017_002"
+        }
+      ]
+    },
+    {
+      "id": 7017,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7488
+      ],
+      "characterUnitIds": [
+        18
+      ],
+      "talks": [
+        {
+          "id": 7488,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_018_001"
+        }
+      ]
+    },
+    {
+      "id": 7018,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7489
+      ],
+      "characterUnitIds": [
+        18
+      ],
+      "talks": [
+        {
+          "id": 7489,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_018_002"
+        }
+      ]
+    },
+    {
+      "id": 7019,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7490
+      ],
+      "characterUnitIds": [
+        19
+      ],
+      "talks": [
+        {
+          "id": 7490,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_019_001"
+        }
+      ]
+    },
+    {
+      "id": 7020,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7491
+      ],
+      "characterUnitIds": [
+        20
+      ],
+      "talks": [
+        {
+          "id": 7491,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_020_001"
+        }
+      ]
+    },
+    {
+      "id": 7021,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7492
+      ],
+      "characterUnitIds": [
+        27
+      ],
+      "talks": [
+        {
+          "id": 7492,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_027_001"
+        }
+      ]
+    },
+    {
+      "id": 7022,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7493
+      ],
+      "characterUnitIds": [
+        27
+      ],
+      "talks": [
+        {
+          "id": 7493,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_027_002"
+        }
+      ]
+    },
+    {
+      "id": 7023,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7494
+      ],
+      "characterUnitIds": [
+        42
+      ],
+      "talks": [
+        {
+          "id": 7494,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_042_001"
+        }
+      ]
+    },
+    {
+      "id": 7024,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7495
+      ],
+      "characterUnitIds": [
+        42
+      ],
+      "talks": [
+        {
+          "id": 7495,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_042_002"
+        }
+      ]
+    },
+    {
+      "id": 7025,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7496
+      ],
+      "characterUnitIds": [
+        28
+      ],
+      "talks": [
+        {
+          "id": 7496,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_028_001"
+        }
+      ]
+    },
+    {
+      "id": 7026,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7497
+      ],
+      "characterUnitIds": [
+        28
+      ],
+      "talks": [
+        {
+          "id": 7497,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_028_002"
+        }
+      ]
+    },
+    {
+      "id": 7027,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7498
+      ],
+      "characterUnitIds": [
+        33
+      ],
+      "talks": [
+        {
+          "id": 7498,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_033_001"
+        }
+      ]
+    },
+    {
+      "id": 7028,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7499
+      ],
+      "characterUnitIds": [
+        33
+      ],
+      "talks": [
+        {
+          "id": 7499,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_033_002"
+        }
+      ]
+    },
+    {
+      "id": 7029,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7500
+      ],
+      "characterUnitIds": [
+        29
+      ],
+      "talks": [
+        {
+          "id": 7500,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_029_001"
+        }
+      ]
+    },
+    {
+      "id": 7030,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7501
+      ],
+      "characterUnitIds": [
+        29
+      ],
+      "talks": [
+        {
+          "id": 7501,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_029_002"
+        }
+      ]
+    },
+    {
+      "id": 7031,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7502
+      ],
+      "characterUnitIds": [
+        29
+      ],
+      "talks": [
+        {
+          "id": 7502,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_029_003"
+        }
+      ]
+    },
+    {
+      "id": 7032,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7503
+      ],
+      "characterUnitIds": [
+        39
+      ],
+      "talks": [
+        {
+          "id": 7503,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_039_001"
+        }
+      ]
+    },
+    {
+      "id": 7033,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7504
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 7504,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_049_001"
+        }
+      ]
+    },
+    {
+      "id": 7034,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7505
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 7505,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_049_002"
+        }
+      ]
+    },
+    {
+      "id": 7035,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7506
+      ],
+      "characterUnitIds": [
+        30
+      ],
+      "talks": [
+        {
+          "id": 7506,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_030_001"
+        }
+      ]
+    },
+    {
+      "id": 7036,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7507
+      ],
+      "characterUnitIds": [
+        30
+      ],
+      "talks": [
+        {
+          "id": 7507,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_030_002"
+        }
+      ]
+    },
+    {
+      "id": 7037,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7508
+      ],
+      "characterUnitIds": [
+        30
+      ],
+      "talks": [
+        {
+          "id": 7508,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_030_003"
+        }
+      ]
+    },
+    {
+      "id": 7038,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7509
+      ],
+      "characterUnitIds": [
+        55
+      ],
+      "talks": [
+        {
+          "id": 7509,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_055_001"
+        }
+      ]
+    },
+    {
+      "id": 7039,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7510
+      ],
+      "characterUnitIds": [
+        55
+      ],
+      "talks": [
+        {
+          "id": 7510,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_055_002"
+        }
+      ]
+    },
+    {
+      "id": 7040,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7511
+      ],
+      "characterUnitIds": [
+        31
+      ],
+      "talks": [
+        {
+          "id": 7511,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_031_001"
+        }
+      ]
+    },
+    {
+      "id": 7041,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1013
+      ],
+      "talkIds": [
+        7512
+      ],
+      "characterUnitIds": [
+        31
+      ],
+      "talks": [
+        {
+          "id": 7512,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_031_002"
+        }
+      ]
+    },
+    {
+      "id": 7042,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7513
+      ],
+      "characterUnitIds": [
+        1,
+        2
+      ],
+      "talks": [
+        {
+          "id": 7513,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_001"
+        }
+      ]
+    },
+    {
+      "id": 7043,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7514
+      ],
+      "characterUnitIds": [
+        4,
+        42
+      ],
+      "talks": [
+        {
+          "id": 7514,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_002"
+        }
+      ]
+    },
+    {
+      "id": 7044,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7515
+      ],
+      "characterUnitIds": [
+        3,
+        27
+      ],
+      "talks": [
+        {
+          "id": 7515,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_003"
+        }
+      ]
+    },
+    {
+      "id": 7045,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7516
+      ],
+      "characterUnitIds": [
+        6,
+        33
+      ],
+      "talks": [
+        {
+          "id": 7516,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_004"
+        }
+      ]
+    },
+    {
+      "id": 7046,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7517
+      ],
+      "characterUnitIds": [
+        5,
+        7
+      ],
+      "talks": [
+        {
+          "id": 7517,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_005"
+        }
+      ]
+    },
+    {
+      "id": 7047,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7518
+      ],
+      "characterUnitIds": [
+        8,
+        28
+      ],
+      "talks": [
+        {
+          "id": 7518,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_006"
+        }
+      ]
+    },
+    {
+      "id": 7048,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7519
+      ],
+      "characterUnitIds": [
+        11,
+        12
+      ],
+      "talks": [
+        {
+          "id": 7519,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_007"
+        }
+      ]
+    },
+    {
+      "id": 7049,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7520
+      ],
+      "characterUnitIds": [
+        39,
+        49
+      ],
+      "talks": [
+        {
+          "id": 7520,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_008"
+        }
+      ]
+    },
+    {
+      "id": 7050,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7521
+      ],
+      "characterUnitIds": [
+        9,
+        10
+      ],
+      "talks": [
+        {
+          "id": 7521,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_009"
+        }
+      ]
+    },
+    {
+      "id": 7051,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7522
+      ],
+      "characterUnitIds": [
+        11,
+        39
+      ],
+      "talks": [
+        {
+          "id": 7522,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_010"
+        }
+      ]
+    },
+    {
+      "id": 7052,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7523
+      ],
+      "characterUnitIds": [
+        13,
+        16
+      ],
+      "talks": [
+        {
+          "id": 7523,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_011"
+        }
+      ]
+    },
+    {
+      "id": 7053,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7524
+      ],
+      "characterUnitIds": [
+        15,
+        55
+      ],
+      "talks": [
+        {
+          "id": 7524,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_012"
+        }
+      ]
+    },
+    {
+      "id": 7054,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7525
+      ],
+      "characterUnitIds": [
+        14,
+        16
+      ],
+      "talks": [
+        {
+          "id": 7525,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_013"
+        }
+      ]
+    },
+    {
+      "id": 7055,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1011
+      ],
+      "talkIds": [
+        7526
+      ],
+      "characterUnitIds": [
+        17,
+        20
+      ],
+      "talks": [
+        {
+          "id": 7526,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_014"
+        }
+      ]
+    },
+    {
+      "id": 7056,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1014
+      ],
+      "talkIds": [
+        7527
+      ],
+      "characterUnitIds": [
+        18,
+        19
+      ],
+      "talks": [
+        {
+          "id": 7527,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_015"
+        }
+      ]
+    },
+    {
+      "id": 7057,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1015
+      ],
+      "talkIds": [
+        7528
+      ],
+      "characterUnitIds": [
+        19,
+        31
+      ],
+      "talks": [
+        {
+          "id": 7528,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_halloween2025_099_016"
         }
       ]
     },
