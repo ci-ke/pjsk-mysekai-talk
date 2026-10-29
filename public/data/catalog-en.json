@@ -6347,6 +6347,86 @@
       "fixtureName": "Honami's Birthday Chair"
     },
     {
+      "id": 854,
+      "craftTargetId": 854,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 854,
+      "fixtureName": "MEIKO's Anniversary Cake"
+    },
+    {
+      "id": 855,
+      "craftTargetId": 855,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 855,
+      "fixtureName": "MEIKO's Anniversary Balloons"
+    },
+    {
+      "id": 856,
+      "craftTargetId": 856,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 856,
+      "fixtureName": "MEIKO's Anniversary Bouquet"
+    },
+    {
+      "id": 857,
+      "craftTargetId": 857,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 857,
+      "fixtureName": "MEIKO's Anniversary Garland"
+    },
+    {
+      "id": 858,
+      "craftTargetId": 858,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 858,
+      "fixtureName": "MEIKO's Anniversary Chair"
+    },
+    {
+      "id": 859,
+      "craftTargetId": 859,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 859,
+      "fixtureName": "Akito's Birthday Cake"
+    },
+    {
+      "id": 860,
+      "craftTargetId": 860,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 860,
+      "fixtureName": "Akito's Birthday Balloons"
+    },
+    {
+      "id": 861,
+      "craftTargetId": 861,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 861,
+      "fixtureName": "Akito's Birthday Bouquet"
+    },
+    {
+      "id": 862,
+      "craftTargetId": 862,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 862,
+      "fixtureName": "Akito's Birthday Garland"
+    },
+    {
+      "id": 863,
+      "craftTargetId": 863,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 863,
+      "fixtureName": "Akito's Birthday Chair"
+    },
+    {
       "id": 974,
       "craftTargetId": 974,
       "isEnableSketch": true,
@@ -6777,6 +6857,174 @@
       "isObtainedByConvert": true,
       "fixtureId": 1028,
       "fixtureName": "Romantic Garden Cypress"
+    },
+    {
+      "id": 1032,
+      "craftTargetId": 1032,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1032,
+      "fixtureName": "Limited Style #2 Saki Plushie (S)"
+    },
+    {
+      "id": 1033,
+      "craftTargetId": 1033,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1033,
+      "fixtureName": "Limited Style #2 Saki Plushie (M)"
+    },
+    {
+      "id": 1034,
+      "craftTargetId": 1034,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1034,
+      "fixtureName": "Limited Style #2 Saki Plushie (L)"
+    },
+    {
+      "id": 1035,
+      "craftTargetId": 1035,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1035,
+      "fixtureName": "Limited Style #2 Haruka Plushie (S)"
+    },
+    {
+      "id": 1036,
+      "craftTargetId": 1036,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1036,
+      "fixtureName": "Limited Style #2 Haruka Plushie (M)"
+    },
+    {
+      "id": 1037,
+      "craftTargetId": 1037,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1037,
+      "fixtureName": "Limited Style #2 Haruka Plushie (L)"
+    },
+    {
+      "id": 1038,
+      "craftTargetId": 1038,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1038,
+      "fixtureName": "Limited Style #2 An Plushie (S)"
+    },
+    {
+      "id": 1039,
+      "craftTargetId": 1039,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1039,
+      "fixtureName": "Limited Style #2 An Plushie (M)"
+    },
+    {
+      "id": 1040,
+      "craftTargetId": 1040,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1040,
+      "fixtureName": "Limited Style #2 An Plushie (L)"
+    },
+    {
+      "id": 1041,
+      "craftTargetId": 1041,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1041,
+      "fixtureName": "Limited Style #2 Tsukasa Plushie (S)"
+    },
+    {
+      "id": 1042,
+      "craftTargetId": 1042,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1042,
+      "fixtureName": "Limited Style #2 Tsukasa Plushie (M)"
+    },
+    {
+      "id": 1043,
+      "craftTargetId": 1043,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1043,
+      "fixtureName": "Limited Style #2 Tsukasa Plushie (L)"
+    },
+    {
+      "id": 1044,
+      "craftTargetId": 1044,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1044,
+      "fixtureName": "Limited Style #2 Mafuyu Plushie (S)"
+    },
+    {
+      "id": 1045,
+      "craftTargetId": 1045,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1045,
+      "fixtureName": "Limited Style #2 Mafuyu Plushie (M)"
+    },
+    {
+      "id": 1046,
+      "craftTargetId": 1046,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1046,
+      "fixtureName": "Limited Style #2 Mafuyu Plushie (L)"
+    },
+    {
+      "id": 1047,
+      "craftTargetId": 1047,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1047,
+      "fixtureName": "Limited Style #2 Miku Plushie (S)"
+    },
+    {
+      "id": 1048,
+      "craftTargetId": 1048,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1048,
+      "fixtureName": "Limited Style #2 Miku Plushie (M)"
+    },
+    {
+      "id": 1049,
+      "craftTargetId": 1049,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1049,
+      "fixtureName": "Limited Style #2 Miku Plushie (L)"
+    },
+    {
+      "id": 1050,
+      "craftTargetId": 1050,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1050,
+      "fixtureName": "Limited Style #2 Rin Plushie (S)"
+    },
+    {
+      "id": 1051,
+      "craftTargetId": 1051,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1051,
+      "fixtureName": "Limited Style #2 Rin Plushie (M)"
+    },
+    {
+      "id": 1052,
+      "craftTargetId": 1052,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1052,
+      "fixtureName": "Limited Style #2 Rin Plushie (L)"
     },
     {
       "id": 1140,
@@ -14893,6 +15141,96 @@
       "assetbundleName": "mdl_bir1103_fixture_chair1"
     },
     {
+      "id": 854,
+      "mysekaiFixtureType": "system",
+      "name": "MEIKO's Anniversary Cake",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1149_fixture_cake1"
+    },
+    {
+      "id": 855,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKO's Anniversary Balloons",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1149_fixture_balloon1"
+    },
+    {
+      "id": 856,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKO's Anniversary Bouquet",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1149_fixture_flower1"
+    },
+    {
+      "id": 857,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKO's Anniversary Garland",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1149_fixture_garland1"
+    },
+    {
+      "id": 858,
+      "mysekaiFixtureType": "normal",
+      "name": "MEIKO's Anniversary Chair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1149_fixture_chair1"
+    },
+    {
+      "id": 859,
+      "mysekaiFixtureType": "system",
+      "name": "Akito's Birthday Cake",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1111_fixture_cake1"
+    },
+    {
+      "id": 860,
+      "mysekaiFixtureType": "normal",
+      "name": "Akito's Birthday Balloons",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1111_fixture_balloon1"
+    },
+    {
+      "id": 861,
+      "mysekaiFixtureType": "normal",
+      "name": "Akito's Birthday Bouquet",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1111_fixture_flower1"
+    },
+    {
+      "id": 862,
+      "mysekaiFixtureType": "normal",
+      "name": "Akito's Birthday Garland",
+      "mysekaiFixtureMainGenreId": 4,
+      "mysekaiFixtureSubGenreId": 14,
+      "mysekaiSettableLayoutType": "wall",
+      "assetbundleName": "mdl_bir1111_fixture_garland1"
+    },
+    {
+      "id": 863,
+      "mysekaiFixtureType": "normal",
+      "name": "Akito's Birthday Chair",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 4,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir1111_fixture_chair1"
+    },
+    {
       "id": 974,
       "mysekaiFixtureType": "normal",
       "name": "Rustic Japanese Floor Cushion",
@@ -15386,6 +15724,195 @@
       "mysekaiFixtureSubGenreId": 7,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_ext0020_fixture_planter2"
+    },
+    {
+      "id": 1032,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Saki Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3small"
+    },
+    {
+      "id": 1033,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Saki Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3medium"
+    },
+    {
+      "id": 1034,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Saki Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas102_fixture_doll3large"
+    },
+    {
+      "id": 1035,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Haruka Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3small"
+    },
+    {
+      "id": 1036,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Haruka Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3medium"
+    },
+    {
+      "id": 1037,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Haruka Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas106_fixture_doll3large"
+    },
+    {
+      "id": 1038,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 An Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3small"
+    },
+    {
+      "id": 1039,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 An Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3medium"
+    },
+    {
+      "id": 1040,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 An Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas110_fixture_doll3large"
+    },
+    {
+      "id": 1041,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Tsukasa Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3small"
+    },
+    {
+      "id": 1042,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Tsukasa Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3medium"
+    },
+    {
+      "id": 1043,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Tsukasa Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll3large"
+    },
+    {
+      "id": 1044,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mafuyu Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3small"
+    },
+    {
+      "id": 1045,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mafuyu Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3medium"
+    },
+    {
+      "id": 1046,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Mafuyu Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas118_fixture_doll3large"
+    },
+    {
+      "id": 1047,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Miku Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3small"
+    },
+    {
+      "id": 1048,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Miku Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3medium"
+    },
+    {
+      "id": 1049,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Miku Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas121_fixture_doll3large"
+    },
+    {
+      "id": 1050,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rin Plushie (S)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3small"
+    },
+    {
+      "id": 1051,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rin Plushie (M)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3medium"
+    },
+    {
+      "id": 1052,
+      "mysekaiFixtureType": "normal",
+      "name": "Limited Style #2 Rin Plushie (L)",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas122_fixture_doll3large"
     },
     {
       "id": 1140,
@@ -106407,6 +106934,46 @@
           "id": 7530,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_birthday2025_003_004"
+        }
+      ]
+    },
+    {
+      "id": 7060,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        858
+      ],
+      "talkIds": [
+        7531
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 7531,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2025_049_004"
+        }
+      ]
+    },
+    {
+      "id": 7062,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        863
+      ],
+      "talkIds": [
+        7533
+      ],
+      "characterUnitIds": [
+        11
+      ],
+      "talks": [
+        {
+          "id": 7533,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2025_011_004"
         }
       ]
     },
