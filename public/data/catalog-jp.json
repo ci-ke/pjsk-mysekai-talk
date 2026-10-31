@@ -3320,7 +3320,7 @@
       "isEnableSketch": true,
       "isObtainedByConvert": true,
       "fixtureId": 449,
-      "fixtureName": "月が見える旅館の洋箪笥"
+      "fixtureName": "月が見える旅館の用箪笥"
     },
     {
       "id": 450,
@@ -11571,6 +11571,46 @@
       "fixtureName": "バースデーアーチ '26（穂波）"
     },
     {
+      "id": 1512,
+      "craftTargetId": 1512,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1512,
+      "fixtureName": "アニバーサリーケーキ '26（MEIKO）"
+    },
+    {
+      "id": 1513,
+      "craftTargetId": 1513,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1513,
+      "fixtureName": "アニバーサリーバルーン '26（MEIKO）"
+    },
+    {
+      "id": 1514,
+      "craftTargetId": 1514,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1514,
+      "fixtureName": "アニバーサリーブーケ '26（MEIKO）"
+    },
+    {
+      "id": 1515,
+      "craftTargetId": 1515,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1515,
+      "fixtureName": "アニバーサリーネームブロック '26（MEIKO）"
+    },
+    {
+      "id": 1516,
+      "craftTargetId": 1516,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1516,
+      "fixtureName": "アニバーサリーアーチ '26（MEIKO）"
+    },
+    {
       "id": 1632,
       "craftTargetId": 1632,
       "isEnableSketch": true,
@@ -13225,6 +13265,174 @@
       "isObtainedByConvert": false,
       "fixtureId": 1862,
       "fixtureName": "[リミテッドスタイル vol.5] ルカのぬいぐるみ/L"
+    },
+    {
+      "id": 1863,
+      "craftTargetId": 1863,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1863,
+      "fixtureName": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/S"
+    },
+    {
+      "id": 1864,
+      "craftTargetId": 1864,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1864,
+      "fixtureName": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/M"
+    },
+    {
+      "id": 1865,
+      "craftTargetId": 1865,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1865,
+      "fixtureName": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/L"
+    },
+    {
+      "id": 1866,
+      "craftTargetId": 1866,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1866,
+      "fixtureName": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/S"
+    },
+    {
+      "id": 1867,
+      "craftTargetId": 1867,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1867,
+      "fixtureName": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/M"
+    },
+    {
+      "id": 1868,
+      "craftTargetId": 1868,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1868,
+      "fixtureName": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/L"
+    },
+    {
+      "id": 1869,
+      "craftTargetId": 1869,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1869,
+      "fixtureName": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/S"
+    },
+    {
+      "id": 1870,
+      "craftTargetId": 1870,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1870,
+      "fixtureName": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/M"
+    },
+    {
+      "id": 1871,
+      "craftTargetId": 1871,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1871,
+      "fixtureName": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/L"
+    },
+    {
+      "id": 1872,
+      "craftTargetId": 1872,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1872,
+      "fixtureName": "[リミテッドスタイル vol.5] 司のぬいぐるみ/S"
+    },
+    {
+      "id": 1873,
+      "craftTargetId": 1873,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1873,
+      "fixtureName": "[リミテッドスタイル vol.5] 司のぬいぐるみ/M"
+    },
+    {
+      "id": 1874,
+      "craftTargetId": 1874,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1874,
+      "fixtureName": "[リミテッドスタイル vol.5] 司のぬいぐるみ/L"
+    },
+    {
+      "id": 1875,
+      "craftTargetId": 1875,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1875,
+      "fixtureName": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/S"
+    },
+    {
+      "id": 1876,
+      "craftTargetId": 1876,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1876,
+      "fixtureName": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/M"
+    },
+    {
+      "id": 1877,
+      "craftTargetId": 1877,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1877,
+      "fixtureName": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/L"
+    },
+    {
+      "id": 1878,
+      "craftTargetId": 1878,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1878,
+      "fixtureName": "[リミテッドスタイル vol.5] レンのぬいぐるみ/S"
+    },
+    {
+      "id": 1879,
+      "craftTargetId": 1879,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1879,
+      "fixtureName": "[リミテッドスタイル vol.5] レンのぬいぐるみ/M"
+    },
+    {
+      "id": 1880,
+      "craftTargetId": 1880,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1880,
+      "fixtureName": "[リミテッドスタイル vol.5] レンのぬいぐるみ/L"
+    },
+    {
+      "id": 1881,
+      "craftTargetId": 1881,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1881,
+      "fixtureName": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/S"
+    },
+    {
+      "id": 1882,
+      "craftTargetId": 1882,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1882,
+      "fixtureName": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/M"
+    },
+    {
+      "id": 1883,
+      "craftTargetId": 1883,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1883,
+      "fixtureName": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/L"
     },
     {
       "id": -900002,
@@ -17704,7 +17912,7 @@
     {
       "id": 449,
       "mysekaiFixtureType": "system",
-      "name": "月が見える旅館の洋箪笥",
+      "name": "月が見える旅館の用箪笥",
       "mysekaiFixtureMainGenreId": 2,
       "mysekaiFixtureSubGenreId": 5,
       "mysekaiSettableLayoutType": "floor",
@@ -27269,6 +27477,51 @@
       "assetbundleName": "mdl_bir2103_fixture_arch1"
     },
     {
+      "id": 1512,
+      "mysekaiFixtureType": "system",
+      "name": "アニバーサリーケーキ '26（MEIKO）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2149_fixture_cake1"
+    },
+    {
+      "id": 1513,
+      "mysekaiFixtureType": "normal",
+      "name": "アニバーサリーバルーン '26（MEIKO）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2149_fixture_balloon1"
+    },
+    {
+      "id": 1514,
+      "mysekaiFixtureType": "normal",
+      "name": "アニバーサリーブーケ '26（MEIKO）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2149_fixture_flower1"
+    },
+    {
+      "id": 1515,
+      "mysekaiFixtureType": "normal",
+      "name": "アニバーサリーネームブロック '26（MEIKO）",
+      "mysekaiFixtureMainGenreId": 32,
+      "mysekaiFixtureSubGenreId": 38,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2149_fixture_nameobject1"
+    },
+    {
+      "id": 1516,
+      "mysekaiFixtureType": "normal",
+      "name": "アニバーサリーアーチ '26（MEIKO）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2149_fixture_arch1"
+    },
+    {
       "id": 1632,
       "mysekaiFixtureType": "normal",
       "name": "甘味処",
@@ -29157,6 +29410,195 @@
       "mysekaiFixtureSubGenreId": 10,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_pas124_fixture_doll6large"
+    },
+    {
+      "id": 1863,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll6small"
+    },
+    {
+      "id": 1864,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll6medium"
+    },
+    {
+      "id": 1865,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 志歩のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas104_fixture_doll6large"
+    },
+    {
+      "id": 1866,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll6small"
+    },
+    {
+      "id": 1867,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll6medium"
+    },
+    {
+      "id": 1868,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 雫のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas108_fixture_doll6large"
+    },
+    {
+      "id": 1869,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas111_fixture_doll6small"
+    },
+    {
+      "id": 1870,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas111_fixture_doll6medium"
+    },
+    {
+      "id": 1871,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 彰人のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas111_fixture_doll6large"
+    },
+    {
+      "id": 1872,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 司のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll6small"
+    },
+    {
+      "id": 1873,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 司のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll6medium"
+    },
+    {
+      "id": 1874,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 司のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas113_fixture_doll6large"
+    },
+    {
+      "id": 1875,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll6small"
+    },
+    {
+      "id": 1876,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll6medium"
+    },
+    {
+      "id": 1877,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] 奏のぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas117_fixture_doll6large"
+    },
+    {
+      "id": 1878,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] レンのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas123_fixture_doll6small"
+    },
+    {
+      "id": 1879,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] レンのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas123_fixture_doll6medium"
+    },
+    {
+      "id": 1880,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] レンのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas123_fixture_doll6large"
+    },
+    {
+      "id": 1881,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/S",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll6small"
+    },
+    {
+      "id": 1882,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/M",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll6medium"
+    },
+    {
+      "id": 1883,
+      "mysekaiFixtureType": "normal",
+      "name": "[リミテッドスタイル vol.5] KAITOのぬいぐるみ/L",
+      "mysekaiFixtureMainGenreId": 29,
+      "mysekaiFixtureSubGenreId": 10,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_pas126_fixture_doll6large"
     },
     {
       "id": 900002,
@@ -139262,6 +139704,26 @@
           "id": 8801,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_birthday2026_003_004"
+        }
+      ]
+    },
+    {
+      "id": 8265,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1516
+      ],
+      "talkIds": [
+        8812
+      ],
+      "characterUnitIds": [
+        49
+      ],
+      "talks": [
+        {
+          "id": 8812,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2026_049_004"
         }
       ]
     }
