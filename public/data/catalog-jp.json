@@ -11611,6 +11611,46 @@
       "fixtureName": "アニバーサリーアーチ '26（MEIKO）"
     },
     {
+      "id": 1517,
+      "craftTargetId": 1517,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1517,
+      "fixtureName": "バースデーケーキ '26（彰人）"
+    },
+    {
+      "id": 1518,
+      "craftTargetId": 1518,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1518,
+      "fixtureName": "バースデーバルーン '26（彰人）"
+    },
+    {
+      "id": 1519,
+      "craftTargetId": 1519,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1519,
+      "fixtureName": "バースデーブーケ '26（彰人）"
+    },
+    {
+      "id": 1520,
+      "craftTargetId": 1520,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1520,
+      "fixtureName": "バースデーネームブロック '26（彰人）"
+    },
+    {
+      "id": 1521,
+      "craftTargetId": 1521,
+      "isEnableSketch": false,
+      "isObtainedByConvert": false,
+      "fixtureId": 1521,
+      "fixtureName": "バースデーアーチ '26（彰人）"
+    },
+    {
       "id": 1632,
       "craftTargetId": 1632,
       "isEnableSketch": true,
@@ -27520,6 +27560,51 @@
       "mysekaiFixtureSubGenreId": 9,
       "mysekaiSettableLayoutType": "floor",
       "assetbundleName": "mdl_bir2149_fixture_arch1"
+    },
+    {
+      "id": 1517,
+      "mysekaiFixtureType": "system",
+      "name": "バースデーケーキ '26（彰人）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2111_fixture_cake1"
+    },
+    {
+      "id": 1518,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーバルーン '26（彰人）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2111_fixture_balloon1"
+    },
+    {
+      "id": 1519,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーブーケ '26（彰人）",
+      "mysekaiFixtureMainGenreId": 3,
+      "mysekaiFixtureSubGenreId": 13,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2111_fixture_flower1"
+    },
+    {
+      "id": 1520,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーネームブロック '26（彰人）",
+      "mysekaiFixtureMainGenreId": 32,
+      "mysekaiFixtureSubGenreId": 38,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2111_fixture_nameobject1"
+    },
+    {
+      "id": 1521,
+      "mysekaiFixtureType": "normal",
+      "name": "バースデーアーチ '26（彰人）",
+      "mysekaiFixtureMainGenreId": 2,
+      "mysekaiFixtureSubGenreId": 9,
+      "mysekaiSettableLayoutType": "floor",
+      "assetbundleName": "mdl_bir2111_fixture_arch1"
     },
     {
       "id": 1632,
@@ -139724,6 +139809,26 @@
           "id": 8812,
           "assetbundleName": "mysekai/talk/scenario/talk",
           "lua": "mysekai_talk_birthday2026_049_004"
+        }
+      ]
+    },
+    {
+      "id": 8266,
+      "hasHiddenTalks": false,
+      "fixtureIds": [
+        1521
+      ],
+      "talkIds": [
+        8813
+      ],
+      "characterUnitIds": [
+        11
+      ],
+      "talks": [
+        {
+          "id": 8813,
+          "assetbundleName": "mysekai/talk/scenario/talk",
+          "lua": "mysekai_talk_birthday2026_011_004"
         }
       ]
     }
