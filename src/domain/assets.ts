@@ -1,25 +1,81 @@
 import type { FixtureRecord, Lang, TalkAssetRecord } from "../types";
 
-const ASSET_BASES: Record<Lang, string> = {
-  cn: "https://storage.exmeaning.com/sekai-cn-assets",
-  jp: "https://storage.exmeaning.com/sekai-jp-assets",
-  tw: "https://storage.exmeaning.com/sekai-tw-assets",
-  en: "https://storage.exmeaning.com/sekai-en-assets",
-  kr: "https://storage.exmeaning.com/sekai-kr-assets",
+/**
+ * 资源站（Moesekai / pjsk.moe）的 CDN。
+ * 主线路 storage.pjsk.moe（Cloudflare），备用线路 storage.exmeaning.com（EdgeOne），
+ * 两者内容一致且都开放 CORS。使用这些资源时请保留对 Moesekai (pjsk.moe) 的致谢。
+ */
+const ASSET_DOMAINS = [
+  "https://storage.pjsk.moe",
+  "https://storage.exmeaning.com",
+] as const;
+
+const ASSET_LANGS: Record<Lang, string> = {
+  cn: "cn",
+  jp: "jp",
+  tw: "tw",
+  en: "en",
+  kr: "kr",
 };
 
-export function getAssetBaseUrl(lang: Lang) {
-  return ASSET_BASES[lang] || ASSET_BASES.cn;
+/**
+ * 家具缩略图在 CDN 上有两种目录布局：
+ *   JP / EN — mysekai/thumbnail/fixture/{bundle}_1/{bundle}_1.png
+ *   CN / TW / KR — mysekai/thumbnail/fixture/{bundle}_1.png
+ * 优先使用本区服的布局，另一种作为兜底。
+ */
+const NESTED_FIXTURE_THUMBNAIL_LANGS = new Set<Lang>(["jp", "en"]);
+
+export function getAssetBaseUrls(lang: Lang): string[] {
+  const assetLang = ASSET_LANGS[lang] || ASSET_LANGS.cn;
+  return ASSET_DOMAINS.map((domain) => `${domain}/sekai-${assetLang}-assets`);
 }
 
-export function getFixtureThumbnailUrl(fixture: FixtureRecord | null, lang: Lang) {
-  if (!fixture?.assetbundleName) return import.meta.env.BASE_URL + "placeholder.svg";
-  const base = getAssetBaseUrl(lang);
+export function getAssetBaseUrl(lang: Lang) {
+  return getAssetBaseUrls(lang)[0];
+}
+
+/** 墙面 / 地板类家具的缩略图按主分类区分文件名。 */
+const SURFACE_GENRES: Record<number, string> = { 7: "wall", 8: "floor" };
+
+function getSurfaceLayout(fixture: FixtureRecord): string {
+  const byGenre = fixture.mysekaiFixtureMainGenreId
+    ? SURFACE_GENRES[fixture.mysekaiFixtureMainGenreId]
+    : undefined;
+  if (byGenre) return byGenre;
+  const layout = fixture.mysekaiSettableLayoutType || "wall_appearance";
+  return layout.replace(/_appearance$/, "");
+}
+
+function fixtureThumbnailCandidates(
+  lang: Lang,
+  directory: string,
+  bundle: string,
+  file: string
+): string[] {
+  const nested = `${directory}/${bundle}/${file}.png`;
+  const flat = `${directory}/${file}.png`;
+  const layouts = NESTED_FIXTURE_THUMBNAIL_LANGS.has(lang) ? [nested, flat] : [flat, nested];
+
+  // 主线路的两个布局都试过之后，再走备用线路。
+  return getAssetBaseUrls(lang).flatMap((base) =>
+    layouts.map((layout) => `${base}/mysekai/thumbnail/${layout}`)
+  );
+}
+
+/**
+ * 家具缩略图的候选 URL，按尝试顺序排列。
+ * 无家具或缺少 assetbundleName 时返回空数组，由调用方展示占位图。
+ */
+export function getFixtureThumbnailUrls(fixture: FixtureRecord | null, lang: Lang): string[] {
+  if (!fixture?.assetbundleName) return [];
   if (fixture.mysekaiFixtureType === "surface_appearance") {
-    const layout = fixture.mysekaiSettableLayoutType || "wall_appearance";
-    return `${base}/mysekai/thumbnail/surface_appearance/${fixture.assetbundleName}/tex_${fixture.assetbundleName}_${layout}_1.png`;
+    const surface = getSurfaceLayout(fixture);
+    const file = `tex_${fixture.assetbundleName}_${surface}_appearance_1`;
+    return fixtureThumbnailCandidates(lang, "surface_appearance", fixture.assetbundleName, file);
   }
-  return `${base}/mysekai/thumbnail/fixture/${fixture.assetbundleName}_1.webp`;
+  const name = `${fixture.assetbundleName}_1`;
+  return fixtureThumbnailCandidates(lang, "fixture", name, name);
 }
 
 export function getCharacterColor(colorCode: string | null | undefined) {
@@ -30,8 +86,14 @@ export function getInitials(text: string) {
   return text.trim().slice(0, 2) || "?";
 }
 
+export function getTalkScriptUrls(talk: TalkAssetRecord, lang: Lang): string[] {
+  return getAssetBaseUrls(lang).map(
+    (base) => `${base}/${talk.assetbundleName}/${talk.lua}.lua.txt`
+  );
+}
+
 export function getTalkScriptUrl(talk: TalkAssetRecord, lang: Lang) {
-  return `${getAssetBaseUrl(lang)}/${talk.assetbundleName}/${talk.lua}.lua`;
+  return getTalkScriptUrls(talk, lang)[0];
 }
 
 /**

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import type { Catalog, EnrichedTalkGroup, Lang } from "../types";
-import { getTalkScriptUrl, parseTalkScript } from "../domain/assets";
+import { getTalkScriptUrls, parseTalkScript } from "../domain/assets";
 
 interface TalkViewerProps {
   group: EnrichedTalkGroup;
@@ -38,10 +38,19 @@ export default function TalkViewer({ group, catalog, lang }: TalkViewerProps) {
     setLoading(true);
     setError("");
     try {
-      const url = getTalkScriptUrl(firstTalk, lang);
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`HTTP ${res.status}`);
-      const text = await res.text();
+      let text: string | null = null;
+      let lastError: unknown = null;
+      for (const url of getTalkScriptUrls(firstTalk, lang)) {
+        try {
+          const res = await fetch(url);
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+          text = await res.text();
+          break;
+        } catch (err) {
+          lastError = err;
+        }
+      }
+      if (text === null) throw lastError;
       setContent(parseTalkScript(text));
       setExpanded(true);
     } catch (err) {

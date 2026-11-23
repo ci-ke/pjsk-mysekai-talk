@@ -393,6 +393,12 @@ export default function App() {
           </div>
           <div>
             <span>蓝图完成率：{progress.blueprintDataAvailable ? formatPercent(allSummary.ownedBlueprints, allSummary.totalRealBlueprints) : "—"}</span>
+            <span>
+              资源 CDN：
+              <a href="https://pjsk.moe" target="_blank" rel="noreferrer">
+                Moesekai (pjsk.moe)
+              </a>
+            </span>
             <span>数据仅存于当前浏览器</span>
           </div>
         </footer>

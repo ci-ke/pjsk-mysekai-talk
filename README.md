@@ -130,3 +130,8 @@ node scripts/generate-catalog.mjs --lang=cn --source=../local-data/master
 - Vite 5
 - Vitest（单元测试）
 - 纯 CSS（无 UI 框架）
+
+## 致谢
+
+- 家具缩略图等静态资源由 [Moesekai (pjsk.moe)](https://pjsk.moe) 的公益 CDN 提供（`storage.pjsk.moe`，备用 `storage.exmeaning.com`）。
+- 游戏 master 数据来自 [Team Haruki](https://github.com/Team-Haruki) 的公开仓库。

@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import type { BlueprintEntry, Catalog, EnrichedTalkGroup, Lang } from "../types";
-import { getCharacterColor, getFixtureThumbnailUrl, getInitials } from "../domain/assets";
+import { getCharacterColor, getFixtureThumbnailUrls, getInitials } from "../domain/assets";
 import { getGroupCharacterNames, getUnitName } from "../domain/catalog";
 import TalkViewer from "./TalkViewer";
 
@@ -27,9 +27,16 @@ function TalkState({ group, checkedOff }: { group: EnrichedTalkGroup; checkedOff
 }
 
 export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang, checkedOffIds, onToggleCheckOff }: BlueprintCardProps) {
-  const [imageFailed, setImageFailed] = useState(false);
   const fixture = entry.fixture;
-  const imageUrl = imageFailed ? import.meta.env.BASE_URL + "placeholder.svg" : getFixtureThumbnailUrl(fixture, lang);
+  const thumbnailUrls = useMemo(() => getFixtureThumbnailUrls(fixture, lang), [fixture, lang]);
+  const [thumbnailIndex, setThumbnailIndex] = useState(0);
+
+  useEffect(() => {
+    setThumbnailIndex(0);
+  }, [thumbnailUrls]);
+
+  const imageUrl =
+    thumbnailUrls[thumbnailIndex] || import.meta.env.BASE_URL + "placeholder.svg";
   const totalGroups = entry.allTalkGroups.length;
   const readGroups = entry.allTalkGroups.filter((group) => group.readState === "read" || checkedOffIds.has(group.id)).length;
   const checkedOffGroupCount = entry.talkGroups.filter((group) => checkedOffIds.has(group.id)).length;
@@ -46,7 +53,7 @@ export default function BlueprintCard({ entry, catalog, expanded, onToggle, lang
             src={imageUrl}
             alt={fixture?.name || entry.blueprint.fixtureName || `家具 ${entry.blueprint.id}`}
             loading="lazy"
-            onError={() => setImageFailed(true)}
+            onError={() => setThumbnailIndex((index) => (index < thumbnailUrls.length ? index + 1 : index))}
           />
           <span className="fixture-id">#{entry.blueprint.id}</span>
         </div>
